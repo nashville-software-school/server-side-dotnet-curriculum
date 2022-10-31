@@ -13,7 +13,7 @@ Fair question. For web development, server has two meanings which are relevant t
  You have already been using and interacting with a number of web servers in the client-side part of the course:
  1. You might not be surprised to find out that `serve` is an application that runs a web server. When it starts, it will look for content in whatever directory you supplied when you start the application.  
  1. When you run `npm start`, the webpack development server listens for requests to `localhost:3000` and returns all of the javascript needed to run your React app in the browser. 
- 1. `json-server` is an elegant little program that listens for network requests and tries to map the url of the network request to data in a provided json file. We are going to talk a lot more about this idea of mapping routes (urls) to data resource later in the course. 
+ 1. `json-server` is a program that listens for network requests and tries to map the url of the network request to data in a provided json file. We are going to talk a lot more about this idea of mapping routes (urls) to data resources later in the course. 
 
 ### The Request/Response Cycle
  What do all of these servers have in common? They all:
@@ -24,14 +24,11 @@ Fair question. For web development, server has two meanings which are relevant t
  What kind of responses? I'm so glad you asked. All kinds! Javascript code, JSON, HTML code, PDFs of phone bills, pictures of cats -  whatever you want. They can also respond with error messages, or ruder responses like "Unauthorized", "Forbidden", or the dreaded `500: Internal Server Error` (this usually means we messed up our code somehow.)
 
 ## Web Apps with C#/.NET
-Wait a minute, if `json-server` worked on the front end, can't we just use that forever? Sigh. I wish we could. But no, even its documentation says that it is only for mocking server-side apps for a lot of good reasons:
-1. `json-server` would have a hard time handling lots of concurrent requests (imagine 1,000 customers logging in on their browsers and making changes all at the same time)
-1. `json-server` can't really guarantee data integrity for us (another topic we'll learn more about later.) For example, it will let us delete data that's needed by another collection because of a foreign key)
-1. If you imagine a production application with millions of objects in each collection, `database.json` will not scale very well. This is why we're going to teach you SQL and how to use relational databases to build production-ready apps. 
+Wait a minute, if `json-server` worked on the front end, can't we just use that forever? Sigh. I wish we could. But no, even its documentation says that it is only for mocking server-side apps. Once our applications are deployed and have a lot of data, or a lot of users, we will need more robust applications for our APIs. 
 
 ### C#
-C# is a very popular language with a rich toolchain and development environment for building web applications, and along with a SQL Server database provides solutions for the above problems. Building our own APIs (instead of using `json-server`'s automatically generated one) also lets us create custom resources tailor-made for our application's needs. There are a number of things about C# that are very different from JS, including:
-1. a strong type system (variables are declared as being strings or integers, and their type stays the same for their lifetime, among other things.)
+C#/.NET (along with a SQL Server database) is a very popular language and platform with a rich toolchain and development environment for building those robust web applications. Building our own APIs (instead of using `json-server`'s automatically generated one) also lets us create custom resources tailor-made for our application's needs. There are a number of things about C# that are very different from JS, including:
+1. a strong type system (variables are declared as being strings or integers and many other types, and their type stays the same for their lifetime, among other things.)
 1. the code is compiled first before it is run. Compilation is the process of turning code into another type of code before running it, which has a number of benefits that we don't need to enumerate here.  
 
 >You will find that despite the many differences, much of the syntax that you learned for JS will transfer directly to C#. 
@@ -41,7 +38,7 @@ The .NET runtime will actually run our compiled C# code. A runtime is just anoth
 
 
 ## What this course is not
-At this point (that is to say, the beginning) it is important to point out that despite the name, this course is _not_ a course in C#. Yes we will be learning some C# and using .NET tools and libraries to build our apps, but that is not the primary goal of the course. This course is primarily a _web development_ course that happens to use C# for the backend language. C#/.NET is a much wider and deeper topic than we can completely cover in this course. For deeper dives into the language and toolchain, see some links below. 
+At this point (that is to say, the beginning) it is important to point out that despite the name, this course is _not_ a course in C#. Yes, we will be learning a lot of C# and using .NET tools and libraries to build our apps, but that is not the primary goal of the course. This course is primarily a _web development_ course that happens to use C# for the backend language. C#/.NET is a much wider and deeper topic than we can completely cover in this course. For deeper dives into the language and platform, see some links below. 
 
 OK, got it all? I heard someone say yes, so let's get started. Work on the reflections below, and then head to the [Table of Contents](./TABLE_OF_CONTENTS.md). 
 ___
