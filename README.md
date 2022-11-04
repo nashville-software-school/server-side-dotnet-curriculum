@@ -23,6 +23,8 @@ Fair question. For web development, server has two meanings which are relevant t
 
  What kind of responses? I'm so glad you asked. All kinds! Javascript code, JSON, HTML code, PDFs of phone bills, pictures of cats -  whatever you want. They can also respond with error messages, or ruder responses like "Unauthorized", "Forbidden", or the dreaded `500: Internal Server Error` (this usually means we messed up our code somehow.)
 
+ ![HTTP Request/Response Cycle](./assets/request-response-cycle.png)
+
 ## Web Apps with C#/.NET
 Wait a minute, if `json-server` worked on the front end, can't we just use that forever? Sigh. I wish we could. But no, even its documentation says that it is only for mocking server-side apps. Once our applications are deployed and have a lot of data, or a lot of users, we will need more robust applications for our APIs. 
 
@@ -33,12 +35,16 @@ C#/.NET (along with a SQL Server database) is a very popular language and platfo
 
 >You will find that despite the many differences, much of the syntax that you learned for JS will transfer directly to C#. 
 
+![Web API with React Client](./assets/web-api-with-react.png)
+
 ### .NET Runtime
-The .NET runtime will actually run our compiled C# code. A runtime is just another program that takes our code as input and turns it into instructions that our computers' processors can understand. Just like with servers, you've already been interacting with another runtime: the Javascript runtime! When we say that our React apps run "in the browser," we really mean the Javascript engine that comes with the browser. Instead of running in a browser, the .NET Runtime will run your C# code in a separate process on your computer (or somewhere else if you app is deployed!)
+The .NET runtime will actually run our compiled C# code. A runtime is just another program that takes our code as input and turns it into instructions that our computers' processors can understand. Just like with servers, you've already been interacting with another runtime: the Javascript runtime! When we say that our React apps run "in the browser," we really mean the Javascript engine that comes with the browser. Instead of running in a browser, the .NET Runtime will run your C# code in a separate process on your computer (or somewhere else if you app is deployed!) The term .NET is bigger than just the runtime, and includes many other tools and libraries under the banner of .NET. Older versions of .NET were called .NET Framework (Windows only) and .NET Core (the precursor to the current .NET).
+
+>It's important that when you're looking for documentation or tutorials on the web, you look for documentation for .NET 5 and up. It can be difficult to search for ".NET" by itself, because that will include older versions in your search, so if you're having a hard time finding a modern enough example of something you're trying to do, adding "Core" to your search will probably help you eliminate the .NET Framework examples for web development that may contain code that simply won't work in your apps. Obviously, if you can find something for the newest versions of .NET, that's preferable.  
 
 
 ## What this course is not
-At this point (that is to say, the beginning) it is important to point out that despite the name, this course is _not_ a course in C#. Yes, we will be learning a lot of C# and using .NET tools and libraries to build our apps, but that is not the primary goal of the course. This course is primarily a _web development_ course that happens to use C# for the backend language. C#/.NET is a much wider and deeper topic than we can completely cover in this course. For deeper dives into the language and platform, see some links below. 
+It is important to point out that despite the name, this course is _not_ a course in C#. Yes, we will be learning a lot of C# and using .NET tools and libraries to build our apps, but that is not the primary goal of the course. This course is primarily a _web development_ course that happens to use C# for the backend language. C#/.NET is a much wider and deeper topic than we can completely cover in this course. For deeper dives into the language and platform, see some links below. 
 
 OK, got it all? I heard someone say yes, so let's get started. Work on the reflections below, and then head to the [Table of Contents](./TABLE_OF_CONTENTS.md). 
 ___
