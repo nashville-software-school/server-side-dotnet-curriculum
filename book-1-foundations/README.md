@@ -23,15 +23,19 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
 
 ## Table of Contents
 
+### Installations
+|Installations for Book 1 :computer:|
+|--|
+
 Start on the top left, and work you way down. When you get to the bottom, continue at the top of the column immediately to the right. 
 
 |#|Thrown for a Loop :boomerang:<br> <sub>(guided tour)</sub> |Off Quoted :speech_balloon:|Reductio & Absurdum :mage: :magic_wand:|
 |:-:|:-:|:-:|:-:|
 |1|Strings, Console|||
-|2|Integers|||
+|2|Integers|<sub style="font-size: 0.85rem;">#random</sub>||
 |3|Doubles and Decimals|||
 |3|DateTime|||
 |4|List|<sub style="font-size: 0.85rem;">#select #where #first</sub>||
 |5|User-Defined Types: Classes |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
 |6|Exceptions and Error Handling <br><sub style="font-size: 0.85rem;">#debugging</sub>|<sub style="font-size: 0.85rem;">#exception-types</sub>||
-|7| Methods |||
+|7|Methods|||
