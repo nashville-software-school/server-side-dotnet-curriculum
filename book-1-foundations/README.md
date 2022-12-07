@@ -24,7 +24,7 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
 ## Table of Contents
 
 ### Installations
-|Installations for Book 1 :computer:|
+|[Installations for Book 1](./chapters/book-1-installations.md) :computer:|
 |--|
 
 Start on the top left, and work you way down. When you get to the bottom, continue at the top of the column immediately to the right. 
