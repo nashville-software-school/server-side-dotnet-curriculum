@@ -35,7 +35,21 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |2|Integers|<sub style="font-size: 0.85rem;">#random</sub>||
 |3|Doubles and Decimals|||
 |3|DateTime|||
-|4|List|<sub style="font-size: 0.85rem;">#select #where #first</sub>||
-|5|User-Defined Types: Classes |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
-|6|Exceptions and Error Handling <br><sub style="font-size: 0.85rem;">#debugging</sub>|<sub style="font-size: 0.85rem;">#exception-types</sub>||
-|7|Methods|||
+|4|List||<sub style="font-size: 0.85rem;">#select #where #first</sub>|
+|5|Loops and Conditions|<sub style="font-size: 0.85rem;">#ternaries</sub>||
+|6|User-Defined Types: Classes |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
+|7|Exceptions and Error Handling <br><sub style="font-size: 0.85rem;">#debugging</sub>|<sub style="font-size: 0.85rem;">#exception-types</sub>||
+|8|Methods|||
+|Assessments||[Concepts Self-Assessment]()|[Coding Assessment]()|
+
+|:compass: Explorer Chapters (after you finish the table above)|
+|--|
+|Type conversions|
+|:speech_balloon: Other collection types: Dictionaries and Arrays|
+
+
+|Projects|
+|--|
+|Guessing Game|
+|Adventurer's Quest|
+|Plan Your Heist|
