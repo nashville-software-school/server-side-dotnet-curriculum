@@ -33,7 +33,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |:-:|:-:|:-:|:-:|
 |1|[Setting up a console app](./chapters/setting-up-console-app.md)|||
 |2|[Strings, Console](./chapters/interacting-with-console.md)|||
-|3|[Loops and Conditions](./chapters/control-flow.md)|<sub style="font-size: 0.85rem;">#ternaries</sub>||
+|3|[Loops and Conditions](./chapters/conditionals-and-loops.md)|<sub style="font-size: 0.85rem;">#ternaries</sub>||
 |4|Integers|<sub style="font-size: 0.85rem;">#random</sub>||
 |5|Doubles and Decimals|||
 |6|DateTime|||

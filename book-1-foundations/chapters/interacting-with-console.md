@@ -81,4 +81,4 @@ Try that as well, and see how it works by running the program.
 1. A number of terms related to variables were reviewed here, included _declare_, _initialize_, and _reference_. What does it mean to declare a variable? What does it mean to initialize it with a value? What does it mean to make a reference to a variable? Write down some answers to these questions. If you're unsure of your understanding, ask a teammate or an instructor. These are key concepts for your progress as a software developer. 
 1. `Console.WriteLine` is fairly straightforward to compare to `console.log` in JS, but `Console.ReadLine` is quite different. In introducing this method, we reviewed the idea of a method (a special kind of function) _returning_ a value. What does it mean for a function to return a value, and how is that working in the line  `string response = Console.ReadLine();`? Again, ask a teammate or instructor if you're unsure of your understanding. 
 
-Up Next: [Control Flow and more on strings](./control-flow.md)
+Up Next: [Conditionals and Loops](./conditionals-and-loops.md)
