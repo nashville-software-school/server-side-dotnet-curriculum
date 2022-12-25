@@ -8,7 +8,7 @@ Learning Objectives:
 Take a look at the code that was created by the template:
 
 ``` csharp
-Console.WriteLine("Hello World!);
+Console.WriteLine("Hello World!");
 ```
 When we ran this code in the last chapter, the program printed "Hello World!" to the terminal and ended the program (console and terminal mean the same thing for these purposes). You've interacted with the console in your browser when you ran JS code in it, and this is the same, but your terminal is the console for this program, because the program is running in your terminal, not in the browser. 
 

@@ -6,7 +6,7 @@ It's time to make your first program! When you installed the .NET SDK (Software 
 > <sub>You have worked with other CLIs in the front end part of the course already. `npm` allowed you to create a Node project, which created a `package.json` file and gave you the ability to install and maintain dependencies with `npm install` - the .NET CLI will do this as well. Just like `create-react-app` provided a pre-built React app as a template, we will also use the templates that the .NET CLI has available to provide starter code for our .NET projects.</sub>  
 
 #### Steps to set up a new C#/.NET console app:
-1. create a new director in your `workspace` directory called `csharp`
+1. create a new directory in your `workspace` directory called `csharp`
 1. Inside the `csharp` directory, run `dotnet new console -o ThrownForALoop`
 1. The previous command created a new directory called `ThrownForALoop`. `cd` into that directory
 1. run `dotnet new gitignore`
