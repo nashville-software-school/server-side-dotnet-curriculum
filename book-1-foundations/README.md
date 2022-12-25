@@ -29,15 +29,15 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
 
 Start on the top left, and work you way down. When you get to the bottom, continue at the top of the column immediately to the right. 
 
-|#|Thrown for a Loop :boomerang:<br> <sub>(guided tour)</sub> |Off Quoted :speech_balloon:|Reductio & Absurdum :mage: :magic_wand:|
+|#|Thrown for a Loop :football::boomerang:<br> <sub>(guided tour)</sub> |Off Quoted :speech_balloon:|Reductio & Absurdum :mage: :magic_wand:|
 |:-:|:-:|:-:|:-:|
 |1|[Setting up a console app](./chapters/setting-up-console-app.md)|||
 |2|[Strings, Console](./chapters/interacting-with-console.md)|||
-|3|Integers|<sub style="font-size: 0.85rem;">#random</sub>||
-|4|Doubles and Decimals|||
-|5|DateTime|||
-|6|List||<sub style="font-size: 0.85rem;">#select #where #first</sub>|
-|7|Loops and Conditions|<sub style="font-size: 0.85rem;">#ternaries</sub>||
+|3|[Loops and Conditions](./chapters/control-flow.md)|<sub style="font-size: 0.85rem;">#ternaries</sub>||
+|4|Integers|<sub style="font-size: 0.85rem;">#random</sub>||
+|5|Doubles and Decimals|||
+|6|DateTime|||
+|7|List||<sub style="font-size: 0.85rem;">#select #where #first</sub>|
 |8|User-Defined Types: Classes |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
 |9|Exceptions and Error Handling <br><sub style="font-size: 0.85rem;">#debugging</sub>|<sub style="font-size: 0.85rem;">#exception-types</sub>||
 |10|Methods|||
