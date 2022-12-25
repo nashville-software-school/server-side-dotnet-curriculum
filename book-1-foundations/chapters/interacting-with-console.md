@@ -3,7 +3,7 @@
 Learning Objectives:
 1. `Console` methods: `WriteLine` and `ReadLine`
 1. declaring variables with strong types
-1. string formatting
+1. string interpolation
 ### Hello, World!
 Take a look at the code that was created by the template:
 
