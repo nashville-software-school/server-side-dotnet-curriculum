@@ -47,6 +47,8 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |--|
 |Type conversions|
 |:speech_balloon: Other collection types: Dictionaries and Arrays|
+|:football::boomerang: Calculating TimeSpans and DateTimes|
+|Creating Custom Exceptions|
 
 
 |Projects|
