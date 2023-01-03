@@ -56,9 +56,9 @@ while (string.IsNullOrEmpty(response))
 
 Console.WriteLine($"You chose: {response}");
 ```
-There are two things to notice here. The first is that we can reassign `response`, similar to a variable declared with `let` in Javascript. For the second let's run the program a few more times. 
+There are two things to notice here. The first is that we can reassign `response`, similar to a variable declared with `let` in Javascript. For the second, let's run the program a few more times. 
 1. The first time, hit `Enter` without entering any text, and ensure that our program asks us for input again. Then, enter any text and hit `Enter`. 
-1. The second time, type three spaces and press `Enter` What happened?
+1. The second time, type three spaces and press `Enter`. What happened?
 
 It looks like we might not have handled the edge case of a user entering only spaces. There are a few ways we can handle this problem, and we will explore two now. 
 
@@ -68,7 +68,7 @@ while (string.IsNullOrWhitespace(response))
 ...
 ```
 
-This would work well, because all-whitespaces answers would fail the test. However, we might be better off using `Trim` to remove any whitespace from our response first, because we probably don't want those extra spaces in valid responses either. So we can do this:
+This would work well, because all-whitespace answers would fail the test. However, we might be better off using `Trim` to remove any whitespace from our response first, because we probably don't want those extra spaces in valid responses either. So we can do this:
 ``` csharp
 string response = Console.ReadLine().Trim();
 
