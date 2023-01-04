@@ -33,7 +33,7 @@ This works just like `parseInt` in JS: take a string, try to interpret the chara
 
 Unfortunately, we still have a few errors from the rest of our program that expect `response` to be a `string`. Our `while` loop doesn't need to worry about `response` being `null` or `empty` (integers can't be either), but it looks like we now want to make sure that the `response` is between 1 and 5. 
 
-Let's change the condition in our `while` loop, and also parse the user's response inside the loop as an `int` as well:
+Let's change the condition in our `while` loop, and parse the user's response inside the loop as an `int` as well:
 ``` csharp
 while (response > 5 || response < 1)
 {
@@ -48,13 +48,15 @@ Run the program and see what it does! Test the basic functionality and make sure
 
 >It's important to not be afraid to break your program, especially when you're working on something new. The errors you see will eventually be extremely informative to you, and you would rather see them while writing code than see them in the logs of your (broken) deployed application.  Seeing errors is usually great news, because it means you at least have a clue what's wrong. Bugs that don't present as errors are much harder to fix. 
 
-In Javascript, there is only one `number` type. In C# there are many different numerical types (which vary in how big they can be and how precise), and even more than one `int` type. We'll get to some of them later, but if it's possible, most of the time you should use the `int` type for integer values.
+In Javascript, there is only one `number` type. In C# there are many different numerical types (which vary in how big they can be and how precise), and even more than one integer type. We'll get to some of them later, but if it's possible, most of the time you should use the `int` type for integer values.
 
 Up Next: [Lists](./thrown-for-a-loop-lists.md)
 
 ## 🔍 Additional Materials
 1. [Microsoft docs for integral types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types)
-
+2. [Microsoft docs for comparison operators](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/comparison-operators)
+3. [Microsoft docs for equality operators](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/equality-operators)
+4. [Microsoft docs for arithmetic operators](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators)
 
 
 

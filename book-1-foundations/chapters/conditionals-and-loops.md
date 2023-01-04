@@ -1,7 +1,7 @@
 # Conditionals and While Loops
 Learning Objectives:
 1. `if`/`else`, `while`, (`for` and `foreach` will be covered later)
-1. `false` in C# vs. 'falsy` in JS
+1. `false` in C# vs. 'falsy' in JS
 1. string methods: `IsNullOrWhiteSpace`, `IsNullOrEmpty`, `Trim`
 
 ### Checking User Input
