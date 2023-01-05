@@ -115,4 +115,5 @@ Up Next: [User-Defined Types: Classes](./classes-intro.md)
 
 ## 🔍 Additional Materials
 1. [Default values for C# types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/default-values)
-2. [Type Safety](https://en.wikipedia.org/wiki/Type_safety)
+1. [Type Safety](https://en.wikipedia.org/wiki/Type_safety)
+1. [`List<T>` Microsoft docs](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0)
