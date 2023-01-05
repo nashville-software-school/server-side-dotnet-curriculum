@@ -36,7 +36,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |3|[Loops and Conditions](./chapters/conditionals-and-loops.md)|<sub style="font-size: 0.85rem;">#ternaries</sub>||
 |4|[Integers](./chapters/working-with-integers.md)|<sub style="font-size: 0.85rem;">#random</sub>||
 |7|[List](./chapters/thrown-for-a-loop-lists.md)||<sub style="font-size: 0.85rem;">#select #where #first</sub>|
-|8|User-Defined Types: Classes |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
+|8|[User-Defined Types: Classes](./chapters/classes-intro.md) |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
 |5|Doubles and Decimals|||
 |6|DateTime|||
 |9|Exceptions and Error Handling <br><sub style="font-size: 0.85rem;">#debugging</sub>|<sub style="font-size: 0.85rem;">#exception-types</sub>||
