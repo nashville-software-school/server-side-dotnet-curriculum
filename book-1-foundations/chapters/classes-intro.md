@@ -84,6 +84,8 @@ The first line in this new snippet looks up the chosen product by index as befor
 
 > You are probably used to being able to print out the entire object in JS to the console like this: `Console.WriteLine(chosenProduct)`. If you try this in your C# program (and I recommend you do!), you will see that you don't get the same behavior. We will cover how to modify this later.
 
+We should be able to run our program now. Try it and see what it does!
+
 ## ✍️ Reflections
 1. In this chapter we introduced the idea of a class, and a class _instance_. This can be a hard concept to grasp at first, so it can be helpful to think of metaphors for what it means. We have already mentioned a class as a _blueprint_ or a _template_ for making an object. Another important word we mentioned is _model_ (as in, data model).  This can also be instructive in thinking about what a class is. For example, if I own a particular model of car, like a Honda Accord, many other people also own the same model of car. Each individual car is an _instance_ of the Honda Accord model. We could express creating an Accord for Jim in code like this:
 ```csharp
@@ -97,7 +99,7 @@ The variable `jimsAccord` now holds an object of type `Accord`, and its `Year` a
 
 Are there other metaphors you can think of besides `blueprint`, `model` or `template` that you can come up with to help create a mental model of what a class is? Share them with your colleagues to see if they make sense to them as well, and discuss with an instructor when you meet with one.
 
-2. You may have noticed that this class `Product` looks a lot like an _entity_ in the ERDs that you are already familiar with. That is exactly what it is! Most of entities in your projects will get their own data model, like `Product`, to describe the type of that data for the C# type system. Practice with class properties by adding another property to our `Product` class. Get creative! You can choose what the property represents and what its data type is. Then, set the value of that property for each of the _instances_ of `Product` in your `products` list. Finally, at the end of the program where we print out the product details, add that new property to the string that describes the product. 
+2. You may have noticed that this class `Product` looks a lot like an _entity_ in the ERDs that you are already familiar with. That is exactly what it is! Most of the entities in your projects will get their own data model, like `Product`, to describe the type of that data for the C# type system. Practice with class properties by adding another property to our `Product` class. Get creative! You can choose what the property represents and what its data type is. Then, set the value of that property for each of the _instances_ of `Product` in your `products` list. Finally, at the end of the program where we print out the product details, add that new property to the string that describes the product. 
 
 Up Next: [Working with DateTime](./foundations-datetime.md)
 
