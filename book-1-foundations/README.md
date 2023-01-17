@@ -38,7 +38,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |5|[List](./chapters/thrown-for-a-loop-lists.md)||<sub style="font-size: 0.85rem;">#select #where #first</sub>|
 |6|[User-Defined Types: Classes](./chapters/classes-intro.md) |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
 |7|[DateTime](./chapters/foundations-datetime.md)|||
-|8|Doubles and Decimals|||
+|8|Doubles and Decimals<br><sub style="font-size: 0.85rem;">#foreach</sub>|||
 |9|Exceptions and Error Handling <br><sub style="font-size: 0.85rem;">#debugging</sub>|<sub style="font-size: 0.85rem;">#exception-types</sub>||
 |10|Methods|||
 |Assessments||[Concepts Self-Assessment]()|[Coding Assessment]()|
