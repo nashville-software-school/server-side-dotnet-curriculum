@@ -1,4 +1,6 @@
 # Defining our own Types with Classes
+In this chapter we're going to replace the simple strings that represent our products with more complex objects that can store more data about each product. 
+
 Learning Objectives:
 
 1. Creating abstractions of entities with classes
