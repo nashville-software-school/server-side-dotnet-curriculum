@@ -1,4 +1,5 @@
 # Working with the `DateTime` type
+In this chapter we're going to add some time-related data to our products to determine their age and how long they've been in stock in the Thrown For a Loop store. 
 
 Learning objectives:
 1. Creating an instance of `DateTime`
