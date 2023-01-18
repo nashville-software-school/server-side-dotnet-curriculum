@@ -63,6 +63,40 @@ new Product()
 ```
 
 Now our compiler errors should go away! Update all of the prices in the products list and run the program to make sure it still works. 
+> **When to use different numeric types?** <br> It can be confusing to know what numeric type is appropriate for a specific use case. In general for this course, the following guidelines may be helpful: <br> 1. If it's possible to use an `int`, prefer that option. <br> 2. If a floating point type is necessary, and you need to do calculations with those numbers that require very precise results (like calculating interest, anything dealing with money, etc.) use the `decimal` type. <br> 3. Otherwise, use a `double`
 
+## Displaying the Total Value of the current stock
+The manager of the store would like to see the current value of the entire stock when looking at the products list. For that, we need to add up the prices of all of the items that are currently in stock. After the initial greeting, add the following code:
+``` csharp
+decimal totalValue = 0.0M;
+foreach (Product product in products)
+{
+    if (!product.Sold)
+    {
+        totalValue += product.Price;
+    }
+}
+Console.WriteLine($"Total inventory value: ${totalValue}");
+```
+The above code does the following things:
+1. It declares a variable called `totalValue` of type `decimal` with an initial value of zero, to accumulate all of the product values. 
+1. the `foreach` loop checks each product to see if it is not sold. If it is still in stock, the price of that item is added to the total. 
+1. Finally, the last line prints the total to the console. 
 
+### The syntax for a `foreach` loop
+One striking thing about the code above is the seeming repetitiveness of `Product product in products`, so let's break that statement down:
 
+1. `Product product` - `product` (lower case `p`) is the local variable that will hold the value of item that the loop is on. Because we are _declaring_ a variable, we have to give it a type, just like we would to declare a variable outside of the loop. So `Product` (capital `P`) is the type of the variable `product`. In JS this would be `let product` 
+1. `products` is just a reference to the list of products we declared at the top of the file. We use `in` instead of `of` to indicate that this is the List we are looping through. 
+
+The JS for the above syntax would be:
+``` javascript
+for (let product of products)
+```
+
+Run the program again to ensure that you are getting the correct tally for your inventory (remember that sold items will be excluded!)
+
+Up Next: [Handling Exceptions](./handling-exceptions.md)
+
+## 🔍 Additional Materials
+1. [Numbers in C#](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/numbers-in-csharp-local)
