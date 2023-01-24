@@ -29,7 +29,7 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
 
 Start on the top left, and work you way down. When you get to the bottom, continue at the top of the column immediately to the right. 
 
-|#|Thrown for a Loop :football::boomerang:<br> <sub>(guided tour)</sub> |Off Quoted :speech_balloon:|Reductio & Absurdum :mage: :magic_wand:|
+|#|Thrown for a Loop :football::curly_loop:<br> <sub>(guided tour)</sub> |ExtraVert :potted_plant:|Reductio & Absurdum :mage: :magic_wand:|
 |:-:|:-:|:-:|:-:|
 |1|[Setting up a console app](./chapters/setting-up-console-app.md)|||
 |2|[Strings, Console](./chapters/interacting-with-console.md)|||

@@ -59,11 +59,11 @@ It is {now.Year - chosenProduct.ManufactureYear} years old.
 It {(chosenProduct.Sold ? "is not available." : $"has been in stock for {timeInStock.Days} days.")}");
 ```
 
-We are calculating the time that the item has been in stock by subtracting the `StockDate` of our product from `now`. When you do math on two `DateTime`s, the result is a `TimeSpan`. `TimeSpan`s also have a `Days` property, which represents the total number of days in that time span. We are accessing the `Year` property on `now` to get the current year, and subtracting the `Manufacture` year of the chosen product to give us the products current age. In the ternary, we are checking to see if the product is sold. If it is, we display "not available". Otherwise, we access the `timeInStock` variable's `Days` property to get the total number of days between the stock date and now. We also added `@` to the string to allow formatting the message on multiple lines. 
+We are calculating the time that the item has been in stock by subtracting the `StockDate` of our product from `now`. When you do math on two `DateTime`s, the result is a `TimeSpan`. `TimeSpan`s also have a `Days` property, which represents the total number of days in that time span. We are accessing the `Year` property on `now` to get the current year, and subtracting the `Manufacture` year of the chosen product to give us the product's current age. In the ternary, we are checking to see if the product is sold. If it is, we display "not available". Otherwise, we access the `timeInStock` variable's `Days` property to get the total number of days between the stock date and now. We also added `@` to the string to allow formatting the message on multiple lines. 
 
 Test your code with all of the products that you have in your list, and see how it works!
 
-We have just scratched the surface of what `DateTime` can do for us, but this chapter covers some of the most common uses of the type that you will see in the course. 
+We have just scratched the surface of what `DateTime` can do for us, but this chapter covers some of the most common uses of the type that you will see in the course. We will take a look at one more in the next chapter. 
 
 Up Next: [Working with other number types](./doubles-and-decimals.md)
 
