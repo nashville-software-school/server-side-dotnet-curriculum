@@ -40,14 +40,14 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |7|[DateTime](./chapters/foundations-datetime.md)|||
 |8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|||
 |9|[Exceptions and Error Handling](./chapters/handling-exceptions.md)|<sub style="font-size: 0.85rem;">#exception-types</sub>||
-|10|[Methods](./chapters/foundations-methods.md)|||
+|10|[Methods](./chapters/foundations-methods.md)|<sub style="font-size: 0.85rem;">#method-parameters</sub>|<sub style="font-size: 0.85rem;">#return-types</sub>|
 |Assessments||[Concepts Self-Assessment]()|[Coding Assessment]()|
 
 |:compass: Explorer Chapters (after you finish the table above)|
 |--|
 |Type conversions|
-|:speech_balloon: Other collection types: Dictionaries and Arrays|
-|:football::boomerang: Calculating TimeSpans and DateTimes|
+|:potted_plant: Other collection types: Dictionaries and Arrays|
+|:football::curly_loop: Calculating TimeSpans and DateTimes|
 |Creating Custom Exceptions|
 
 
