@@ -1,4 +1,6 @@
 # Lists
+In this chapter we will store our products inside a `List` instead of a string. 
+
 Learning Objectives:
 1. Declaring and initializing variables with the `List<T>` type
 1. Adding items to a List
@@ -15,7 +17,7 @@ This is what it looks like to declare `string`, `int` and `bool` type variables:
 We can reassign the values of these variables, but only values that are the same type that the variable was declared to hold. So...
 ``` csharp
 name = "Grace Hopper"; //totally fine
-name = null; //totally fine - null is the default value for strings
+name = null; //totally fine - strings can be null
 name = 586; //compiler error. 586 is an int, not a string. 
 
 age = 42; //totally fine
@@ -103,6 +105,11 @@ This loop's syntax is almost identical to the syntax in a JS `for` loop, but it 
 1. `i++` This is a operation that we run at the end of each iteration of the loop. Almost always, this operation increments `i`, which is what it does here!
 
 Run the program to see if it still works. Notice that we added `1` to `i` in the program because non-developer humans are not used to seeing UIs start lists with `0`. Also notice that we can access an item in a `List` by index with _bracket notation_ just like you would in a JS array. 
+
+We also need to change the `5` in our `while` loop to `products.Count` in case our `List` size changes:
+``` csharp
+while (response > products.Count || response < 1)
+```
 
 ### Converting our user input to query the List
 Now that we can more easily query the data, we can use the user input to get the chosen item from the data:
