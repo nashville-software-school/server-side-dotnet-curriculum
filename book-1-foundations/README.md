@@ -53,6 +53,6 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 
 |Projects|
 |--|
-|Guessing Game|
+|Guessing Game|[Guessing Game Exercise](./chapters/guessing-game-exercise.md)
 |Adventurer's Quest|
 |Plan Your Heist|
