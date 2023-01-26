@@ -53,6 +53,6 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 
 |Projects|
 |--|
-|Guessing Game|
+|[Guessing Game](https://github.com/nashville-software-school/bangazon-inc/blob/main/book-1-orientation/chapters/GUESSING_GAME_EXERCISE.md)|
 |Adventurer's Quest|
 |Plan Your Heist|
