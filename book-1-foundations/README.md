@@ -31,10 +31,10 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 
 |#|Thrown for a Loop :football::curly_loop:<br> <sub>(guided tour)</sub> |ExtraVert :potted_plant:|Reductio & Absurdum :mage: :magic_wand:|
 |:-:|:-:|:-:|:-:|
-|1|[Setting up a console app](./chapters/setting-up-console-app.md)|||
-|2|[Strings, Console](./chapters/interacting-with-console.md)|||
-|3|[Loops and Conditions](./chapters/conditionals-and-loops.md)|<sub style="font-size: 0.85rem;">#ternaries</sub>||
-|4|[Integers](./chapters/working-with-integers.md)|<sub style="font-size: 0.85rem;">#random</sub>||
+|1|[Setting up a console app](./chapters/setting-up-console-app.md)|[Project Setup](./chapters/extravert-intro.md)||
+|2|[Strings, Console](./chapters/interacting-with-console.md)|[Main Menu](./chapters/extravert-main-menu.md)||
+|3|[Loops and Conditions](./chapters/conditionals-and-loops.md)|[Menu Options](./chapters/extravert-implement-menu.md)<br><sub style="font-size: 0.85rem;">#ternaries</sub>||
+|4|[Integers](./chapters/working-with-integers.md)|[Plant of the Day](./chapters/extravert-plant-of-day.md) <br> <sub style="font-size: 0.85rem;">#random</sub>||
 |5|[List](./chapters/thrown-for-a-loop-lists.md)||<sub style="font-size: 0.85rem;">#select #where #first</sub>|
 |6|[User-Defined Types: Classes](./chapters/classes-intro.md) |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
 |7|[DateTime](./chapters/foundations-datetime.md)|||
