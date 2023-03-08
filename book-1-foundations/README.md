@@ -36,9 +36,9 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |3|[Loops and Conditions](./chapters/conditionals-and-loops.md)|[Menu Options](./chapters/extravert-implement-menu.md)<br><sub style="font-size: 0.85rem;">#ternaries</sub>||
 |4|[Integers](./chapters/working-with-integers.md)|[Plant of the Day](./chapters/extravert-plant-of-day.md) <br> <sub style="font-size: 0.85rem;">#random</sub>||
 |5|[List](./chapters/thrown-for-a-loop-lists.md)|[Search](./chapters/extravert-search.md)|<sub style="font-size: 0.85rem;">#select #where #first</sub>|
-|6|[User-Defined Types: Classes](./chapters/classes-intro.md) |<sub style="font-size: 0.85rem;">#properties</sub>|<sub style="font-size: 0.85rem;">#get #set</sub>|
+|6|[User-Defined Types: Classes](./chapters/classes-intro.md) ||<sub style="font-size: 0.85rem;">#get #set</sub>|
 |7|[DateTime](./chapters/foundations-datetime.md)|||
-|8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|||
+|8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|[Stats](./chapters/extravert-stats.md)||
 |9|[Exceptions and Error Handling](./chapters/handling-exceptions.md)|<sub style="font-size: 0.85rem;">#exception-types</sub>||
 |10|[Methods](./chapters/foundations-methods.md)|<sub style="font-size: 0.85rem;">#method-parameters</sub>|<sub style="font-size: 0.85rem;">#return-types</sub>|
 |Assessments||[Concepts Self-Assessment]()|[Coding Assessment]()|
