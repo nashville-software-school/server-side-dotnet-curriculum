@@ -44,7 +44,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|[Stats](./chapters/extravert-stats.md)<br><sub style="font-size: 0.85rem;">#casts</sub>||
 |9|[Exceptions and Error Handling](./chapters/handling-exceptions.md)|[Unexpected Data](./chapters/extravert-exceptions.md)<br> <sub style="font-size: 0.85rem;">#exception-types</sub>||
 |10|[Methods](./chapters/foundations-methods.md)|[Parameters](./chapters/extravert-methods.md)<br><sub style="font-size: 0.85rem;">#method-parameters</sub>|<sub style="font-size: 0.85rem;">#return-types</sub>|
-|Assessments||[Concepts Self-Assessment]()|[Coding Assessment]()|
+|Assessments||[Concepts Self-Assessment](./chapters/concepts-self-assessment.md)|[Coding Assessment]()|
 
 |:compass: Explorer Chapters (after you finish the table above)|
 |--|
