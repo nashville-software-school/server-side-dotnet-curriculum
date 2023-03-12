@@ -34,15 +34,26 @@ int result = AddingMachine("four", 5);
 // compiler error: cannot convert from 'string' to 'int'
 ```
 
-Notice that our `AddingMachine` method also _returns_ a value, which is also an `int`. Therefore, instead of `void` in front of the method name, the method has a _return type_ of `int`. Functions have inputs and outputs. Because C# is strongly typed, we can tell the compiler what types to expect for the inputs (the parameters), and what type we can expect the method to return (its return type). All of the information is conveniently available to you right in the method definition (you don't have to search the method for the return keyword to see what the function returns, like you would in Javascript).
+Notice that our `AddingMachine` method also _returns_ a value, which is also an `int`. Therefore, instead of `void` in front of the method name, the method has a _return type_ of `int`. Functions have inputs and outputs. Because C# is strongly typed, we can tell the compiler what types to expect for the inputs (the parameters), and what type we can expect the method to output (its return type). All of the information is conveniently available to you right in the method definition (you don't have to search the method for the return keyword to see what the function returns, like you would in Javascript).
 So:
 
 ```csharp
 string result = AddingMachine(4, 5);
 //compiler error!
 ```
+and: 
+```csharp
+```csharp
+int AddingMachine(int firstNumber, int secondNumber)
+{
+    int result = firstNumber + secondNumber;
+    return result.ToString();
+    //compiler error!
+}
+```
+```
 
-`AddingMachine` returns an `int`, and the compiler knows that because the method was defined with `int` as the return type, so we can't save the result in a variable of type `string`.
+`AddingMachine` returns an `int`, and the compiler knows that because the method was defined with `int` as the return type, so we can't save the result in a variable of type `string`. We also can't use `return` in the body of the method to return anything other than an `int`.
 
 Ok, let's put this into practice in ExtraVert!
 
