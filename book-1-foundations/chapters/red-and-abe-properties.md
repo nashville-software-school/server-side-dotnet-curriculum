@@ -74,7 +74,7 @@ public int DaysOnShelf
 
 > Why are we doing this? In Thrown for a Loop, we calculated a TimeSpan in our code without using a class property, and that worked fine. The disadvantage of what we did in Thrown For A Loop is that the code outside of the class needed to know _how_ to use the properties of the Product class to calculate the age of the product. The code needed to know all of the implementation details. Here, we are keeping all of those details in the `Product` class itself, so that all the code that uses the class needs to know is that there is a property on the class `DaysOnShelf` that can be accessed. This is an example of the first pillar of Object-Oriented Programming (OOP) - _abstraction_.
 
-Up Next: [Querying our Data with Linq]()
+Up Next: [Querying our Data with Linq](./red-and-abe-linq.md)
 
 ## 🔍 Additional Materials
 

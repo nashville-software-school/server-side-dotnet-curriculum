@@ -38,7 +38,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |2|[Strings, Console](./chapters/interacting-with-console.md)|[Main Menu](./chapters/extravert-main-menu.md)|[Calculated Properties](./chapters/red-and-abe-properties.md)<br><sub style="font-size: 0.85rem;">#get #set</sub>|
 |3|[Loops and Conditions](./chapters/conditionals-and-loops.md)|[Menu Options](./chapters/extravert-implement-menu.md)<br><sub style="font-size: 0.85rem;">#ternaries</sub>||
 |4|[Integers](./chapters/working-with-integers.md)|[Plant of the Day](./chapters/extravert-plant-of-day.md) <br> <sub style="font-size: 0.85rem;">#random</sub>||
-|5|[List](./chapters/thrown-for-a-loop-lists.md)|[Search](./chapters/extravert-search.md)|<sub style="font-size: 0.85rem;">#select #where #first</sub>|
+|5|[List](./chapters/thrown-for-a-loop-lists.md)|[Search](./chapters/extravert-search.md)|[Querying Data](./chapters/red-and-abe-linq.md)<br><sub style="font-size: 0.85rem;">#select #where #first</sub>|
 |6|[User-Defined Types: Classes](./chapters/classes-intro.md) |||
 |7|[DateTime](./chapters/foundations-datetime.md)|[Available Until](./chapters/extravert-date.md) ||
 |8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|[Stats](./chapters/extravert-stats.md)<br><sub style="font-size: 0.85rem;">#casts</sub>||

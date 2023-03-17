@@ -4,7 +4,7 @@ By the end of this chapter, your app should be able to:
 1. Display a menu of choices for the user to pick
 1. Once the user has picked a choice, the main menu should be redisplayed for another choice until the user exits. 
 
-> <small>You might be tempted to try to code this project all at once without testing it at any of the intermediate steps. Though some or most of you may succeed in producing a solution with this method, it is a bad habit. Eventually, the solutions you will need to provide (in the job, as well as at NSS) will be too complex to use that strategy and succeed. This column of exercises models what it is like to break a larger task down into pieces, testing the functionality each step of the way. That is the habit you want to get into! Don't skip steps.</small> 
+> <small>You might be tempted to try to code this project all at once without testing it at any of the intermediate steps. Though some or most of you may succeed in producing a solution with this method, it is a bad habit. Eventually, the solutions you will need to provide (on the job, as well as at NSS) will be too complex to use that strategy and succeed. This column of exercises models what it is like to break a larger task down into pieces, testing the functionality each step of the way. That is the habit you want to get into! Don't skip steps.</small> 
 
 ## Adding a Main Menu with Options
 1. You don't need to test that your `List` of `Plant` objects works anymore, so you can take away the code that writes them all to the console. 
