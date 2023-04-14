@@ -47,7 +47,7 @@ Add `StockDate`s and `ManufactureYear`s to the rest of the products in your data
 ## Displaying product age and time in stock
 It is common to capture the current date and time as part of the logic of the program. Accessing the `Now` property of the `DateTime` type will return a new instance of DateTime set to the moment it was called. Let's add that to our program right before the final line of the program:
 ``` csharp
-const now = DateTime.Now;
+DateTime now = DateTime.Now;
 ```
 
 It is possible to retrieve the various pieces of data in the datetime using properties of the `DateTime` type. Let's replace the string that prints the details of the product to include the product's age and time in stock: 
