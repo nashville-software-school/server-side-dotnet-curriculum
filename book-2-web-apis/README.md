@@ -21,7 +21,7 @@ The purpose of this book is to provide a conceptual introduction to building Web
 
 |#|🍯 💻<br>  Honey Rae's Repairs<br> <sub>(guided tour)</sub> |🚙🚗 <br>Car Builder | |
 |:-:|:-:|:-:|:-:|
-|1|[Setup for Web APIs]()|||
+|1|[Setup for Web APIs](./chapters/web-api-setup.md)|||
 |3|[Data Models]() <br><sub style="font-size: 0.85rem;">#composition #namespaces</sub>||| 
 |3|[Get All/Get One Service Ticket(s)]() <br><sub style="font-size: 0.85rem;">#urls #endpoints #Find</sub>|||
 |4|[Adding all Honey Rae's GET endpoints]()|||
