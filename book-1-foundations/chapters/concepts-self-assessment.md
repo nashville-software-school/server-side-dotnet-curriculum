@@ -7,9 +7,7 @@ In this self-assessment, you will be working on a console application named "Bra
 ## Instructions
 
 ### Create the Project
-
-a. Open your preferred Integrated Development Environment (IDE) for C# development.
-b. Create a new console application project named "BrassAndPoem."
+1. Create a new console application project named `BrassAndPoem` using the dotnet CLI.
 
 ## Define the ProductType Class
 a. Create a new file named ProductType.cs.
