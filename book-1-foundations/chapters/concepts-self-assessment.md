@@ -16,35 +16,36 @@ a. Create a new file named ProductType.cs.
 b. Inside the ProductType.cs file, create a class named ProductType.
 c. Add the following property to the ProductType class:
 
-title (string): Represents the title of the product type.
+* Title (string): Represents the title of the product type.
+* Id (int) : Represents a unique Id for the product type
 
 ### Define the Product Class
 a. Create a new file named Product.cs.
 b. Inside the Product.cs file, create a class named Product.
 c. Add the following properties to the Product class:
+* Name (string): Represents the name of the product.
+* Price (decimal): Represents the price of the product.
+* ProductTypeId (int): Represents the id for the product's product type
 
-* name (string): Represents the name of the product.
-* price (decimal): Represents the price of the product.
-* type (ProductType): Represents the composed, related product type for this product
+### Create the program loop
+1. Declare a list of product types and a list of products. When creating the lists, add at least two product types and five products.
+1. Display a welcome message for the application
+1. Create a loop that asks the user to choose an option, and will continue running until the use selects `5`, at which point the program will finish. 
 
-###Implement the Menu System in Program.cs
+### Implement the Menu System in Program.cs
+Inside the Program class, you will implement the following methods underneath the loop (detailed instructions for each below). To test whether these methods work, add logic to the program loop to call the appropriate method when a user chooses an option:
 
-a. Open the Program.cs file.
-b. Inside the Program class, implement the following methods:
+1. `DisplayMenu`
 
-DisplayMenu: Displays the main menu with options for interacting with the application.
+1. `DisplayAllProducts`
 
-DisplayAllProducts: Displays all the available products in the console.
+1. `DeleteProduct`
 
-DeleteProduct: Deletes a product from the list of available products
+1. `AddProduct`
 
-AddProduct: Adds a new product to the list of available products.
+1. `UpdateProduct`
 
-UpdateProduct: Updates the properties of an existing product.
-
-
-
-### Implement the DisplayMenu Method
+### Implement the `DisplayMenu` Method
 
 1. Inside the Program class, implement the DisplayMenu method.
 1. The DisplayMenu method should display the following options to the console:
@@ -57,44 +58,31 @@ UpdateProduct: Updates the properties of an existing product.
    5. Exit
    ```
 
-1. Prompt the user to enter the number corresponding to their desired option.
-1. Based on the user's input, call the corresponding method to perform the desired action.
-
 ### Implement the DisplayAllProducts Method
 
-1. Inside the Program class, implement the DisplayAllProducts method.
-1. Retrieve the **List** of **Product** objects from wherever you choose to store them.
-1. Iterate over the products and display each product's name and price on a new line in the console.
+1. Add a `DisplayAllProducts` method at the bottom of `Program.cs`.
+1. Reference the **List** of **Product** objects at the top.
+1. Iterate over the products and display each product's name and price on a new line in the console. Start the line with the index of that product in the `List`.
+1. Add the product type title to the product display. HINT: You will need to use a Linq method to get the product type for each product. 
 
 ### Implement the DeleteProduct Method
 
-1. Inside the Program class, implement the DeleteProduct method.
-1. Prompt the user to enter the name of the product they want to delete.
-1. Find the product with the provided name and remove it from the list of products.
+1. Add a `DeleteProduct` method at the bottom of `Program.cs`.
+1. Display the products and prompt the user to enter the index of the product they want to delete.
+1. Find the product with the provided index and remove it from the list of products.
 
 ### Implement the AddProduct Method
 
-1. Inside the Program class, implement the AddProduct method.
+1. Add an `AddProduct` method at the bottom of `Program.cs`.
 1. Prompt the user to enter the name and price of the new product.
+1. Display the `ProductType`s and prompt the user to choose a type for the new product. 
 1. Create a new instance of the Product class using the provided information.
 1. Add the newly created product to the list of products.
 
 ### Implement the UpdateProduct Method
 
-1. Inside the Program class, implement the UpdateProduct method.
-1. Prompt the user to enter the name of the product they want to update.
-1. Find the product with the provided name and retrieve its reference.
-1. Prompt the user to enter the updated name and price for the product.
+1. Add an `UpdateProduct` method at the bottom of `Program.cs`.
+1. Display the products and prompt the user to enter the index of the product they want to update.
+1. Find the product with the provided index and retrieve its reference.
+1. Prompt the user to enter the updated name and price for the product. If the user presses enter without typing anything, leave the property unchanged. 
 1. Update the product's name and price properties with the provided information.
-
-## Main Logic
-
-1. Create a list of products
-2. Display menu
-3. Use a loop to keep the application running until the user chooses the "Exit" option.
-
-## Test Your Application
-
-1. Compile and run your application.
-1. Test each menu option to ensure they perform the expected actions.
-1. Verify that the product list is updated correctly after adding, deleting, or updating products.
