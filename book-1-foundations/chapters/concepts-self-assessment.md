@@ -84,5 +84,5 @@ Inside the Program class, you will implement the following methods underneath th
 1. Add an `UpdateProduct` method at the bottom of `Program.cs`.
 1. Display the products and prompt the user to enter the index of the product they want to update.
 1. Find the product with the provided index and retrieve its reference.
-1. Prompt the user to enter the updated name and price for the product. If the user presses enter without typing anything, leave the property unchanged. 
+1. Prompt the user to enter the updated name, price and product type for the product. If the user presses enter without typing anything, leave the property unchanged. 
 1. Update the product's name and price properties with the provided information.
