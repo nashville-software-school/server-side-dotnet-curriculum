@@ -7,20 +7,20 @@ In this self-assessment, you will be working on a console application named "Bra
 ## Instructions
 
 ### Create the Project
-1. Create a new console application project named `BrassAndPoem` using the dotnet CLI.
+1. Create a new repo in GH from the [template repo](https://github.com/Nashville-Software-School-Assessments/BrassAndPoemBook1)
+1. Clone your new repo to your local machine 
+1. For the rest of these instructions, the files will be referring to files inside the `BrassAndPoem` folder. You can look at the `BrassAndPoem.Tests` folder if you wish, but you do not need to modify any code there. 
 
 ## Define the ProductType Class
-a. Create a new file named ProductType.cs.
-b. Inside the ProductType.cs file, create a class named ProductType.
-c. Add the following property to the ProductType class:
+a. Inside the ProductType.cs file, create a class named ProductType.
+b. Add the following property to the ProductType class:
 
 * Title (string): Represents the title of the product type.
 * Id (int) : Represents a unique Id for the product type
 
 ### Define the Product Class
-a. Create a new file named Product.cs.
-b. Inside the Product.cs file, create a class named Product.
-c. Add the following properties to the Product class:
+a. Inside the Product.cs file, create a class named Product.
+b. Add the following properties to the Product class:
 * Name (string): Represents the name of the product.
 * Price (decimal): Represents the price of the product.
 * ProductTypeId (int): Represents the id for the product's product type
@@ -31,7 +31,7 @@ c. Add the following properties to the Product class:
 1. Create a loop that asks the user to choose an option, and will continue running until the use selects `5`, at which point the program will finish. 
 
 ### Implement the Menu System in Program.cs
-Inside the Program class, you will implement the following methods underneath the loop (detailed instructions for each below). To test whether these methods work, add logic to the program loop to call the appropriate method when a user chooses an option:
+Inside the `Program.cs` file , you will implement the following methods underneath the loop (detailed instructions for each below). To test whether these methods work, add logic to the program loop to call the appropriate method when a user chooses an option:
 
 1. `DisplayMenu`
 
@@ -45,7 +45,6 @@ Inside the Program class, you will implement the following methods underneath th
 
 ### Implement the `DisplayMenu` Method
 
-1. Inside the Program class, implement the DisplayMenu method.
 1. The DisplayMenu method should display the following options to the console:
 
    ```sh
@@ -58,29 +57,24 @@ Inside the Program class, you will implement the following methods underneath th
 
 ### Implement the DisplayAllProducts Method
 
-1. Add a `DisplayAllProducts` method at the bottom of `Program.cs`.
-1. Reference the **List** of **Product** objects at the top.
 1. Iterate over the products and display each product's name and price on a new line in the console. Start the line with the index of that product in the `List`.
 1. Add the product type title to the product display. HINT: You will need to use a Linq method to get the product type for each product. 
 
 ### Implement the DeleteProduct Method
 
-1. Add a `DeleteProduct` method at the bottom of `Program.cs`.
 1. Display the products and prompt the user to enter the index of the product they want to delete.
 1. Find the product with the provided index and remove it from the list of products.
 
 ### Implement the AddProduct Method
 
-1. Add an `AddProduct` method at the bottom of `Program.cs`.
-1. Prompt the user to enter the name and price of the new product.
+1. Prompt the user to enter the name and price of the new product (in this order).
 1. Display the `ProductType`s and prompt the user to choose a type for the new product. 
 1. Create a new instance of the Product class using the provided information.
 1. Add the newly created product to the list of products.
 
 ### Implement the UpdateProduct Method
 
-1. Add an `UpdateProduct` method at the bottom of `Program.cs`.
 1. Display the products and prompt the user to enter the index of the product they want to update.
 1. Find the product with the provided index and retrieve its reference.
-1. Prompt the user to enter the updated name, price and product type for the product. If the user presses enter without typing anything, leave the property unchanged. 
+1. Prompt the user to enter the updated name, price and product type for the product (in that order). If the user presses enter without typing anything, leave the property unchanged. 
 1. Update the product's properties with the provided information.
