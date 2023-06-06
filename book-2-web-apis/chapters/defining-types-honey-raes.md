@@ -37,7 +37,9 @@ This intro is just getting you started with namespaces, there is a lot more to l
 Add the appropriate properties for the data models:
 1. `Customer` should have `Id`, `Name` and `Address` properties
 1. `Employee` should have `Id`, `Name`, and `Specialty` properties
-1. `ServiceTicket` should have `Id`, `CustomerId`, `EmployeeId`, `Description`, `Emergency` (this is a boolean), and `DateCompleted` properties. 
+1. `ServiceTicket` should have `CustomerId`, `EmployeeId`, `Description`, `Emergency` (this is a boolean), and `DateCompleted` properties. 
+
+Up Next: [Implementing Get All/Get One Service Ticket(s)](./honey-raes-get-tickets.md)
 
 ## 🔍 Additional Materials
 1. [namespace keyword](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace)
