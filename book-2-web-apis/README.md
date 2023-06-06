@@ -1,5 +1,5 @@
 # Book 2 - An Introduction to Web APIs
-The purpose of this book is to provide a conceptual introduction to building Web APIs and modeling data in C#/.NET. No additional installations are required for this book.
+The purpose of this book is to provide a conceptual introduction to building Web APIs and modeling data in C#/.NET. Any additional installations for this book are included in the chapter instructions.
 
 ## Learning Objectives
 
@@ -22,12 +22,13 @@ The purpose of this book is to provide a conceptual introduction to building Web
 |#|🍯 💻<br>  Honey Rae's Repairs<br> <sub>(guided tour)</sub> |🚙🚗 <br>Car Builder | |
 |:-:|:-:|:-:|:-:|
 |1|[Setup for Web APIs](./chapters/web-api-setup.md)|||
+|2|[Making Requests with Postman](./chapters/testing-web-api.md)  <br><sub style="font-size: 0.85rem;">#debugging #endpoints #handlers</sub>|||
 |3|[Data Models]() <br><sub style="font-size: 0.85rem;">#composition #namespaces</sub>||| 
-|3|[Get All/Get One Service Ticket(s)]() <br><sub style="font-size: 0.85rem;">#urls #endpoints #Find</sub>|||
-|4|[Adding all Honey Rae's GET endpoints]()|||
-|5| [Creating a Service Ticket]() |||
-|6| [Assigning a Ticket]() <br><sub style="font-size: 0.85rem;">#put</sub>||
-|7| [Deleting a Ticket]() <br><sub style="font-size: 0.85rem;">#delete</sub>||
+|4|[Get All/Get One Service Ticket(s)]() <br><sub style="font-size: 0.85rem;">#urls #endpoints #Find</sub>|||
+|5|[Adding all Honey Rae's GET endpoints]()|||
+|6| [Creating a Service Ticket]() |||
+|7| [Assigning a Ticket]() <br><sub style="font-size: 0.85rem;">#put</sub>||
+|8| [Deleting a Ticket]() <br><sub style="font-size: 0.85rem;">#delete</sub>||
 |||[Concept Self-Assessment]()|[Coding Self-Assessment]()|
 
 |:compass: Explorer Chapters|
