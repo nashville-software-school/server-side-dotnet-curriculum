@@ -1,5 +1,5 @@
 # Creating a new Web API project
-In this chapter we will go over the steps for creating a new .NET Web API using the Minimal APIs feature. You can use this setup guide for all of the projects in this book. 
+In this chapter we will go over the steps for creating a new ASP.NET Core Web API using the Minimal APIs feature. You can use this setup guide for all of the projects in this book. 
 
 ## Instructions
 

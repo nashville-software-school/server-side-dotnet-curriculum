@@ -25,7 +25,7 @@ The purpose of this book is to provide a conceptual introduction to building Web
 |2|[Making Requests with Postman](./chapters/testing-web-api.md)  <br><sub style="font-size: 0.85rem;">#debugging #endpoints #routes #handlers</sub>|||
 |3|[Data Models](./chapters/defining-types-honey-raes.md) <br><sub style="font-size: 0.85rem;">#namespaces</sub>||| 
 |4|[Get All/Get One Service Ticket(s)](./chapters/honey-raes-get-tickets.md) <br><sub style="font-size: 0.85rem;">#using</sub>|||
-|5|[Adding all Honey Rae's GET endpoints](./chapters/honey-raes-get-emps-cust.md)<br><sub style="font-size: 0.85rem;">#composition</sub>|||
+|5|[Adding all Honey Rae's GET endpoints](./chapters/honey-raes-get-emps-cust.md)<br><sub style="font-size: 0.85rem;">#composition #NotFound</sub>|||
 |6| [Creating a Service Ticket]() |||
 |7| [Assigning a Ticket]() <br><sub style="font-size: 0.85rem;">#put</sub>||
 |8| [Deleting a Ticket]() <br><sub style="font-size: 0.85rem;">#delete</sub>||
