@@ -1,5 +1,5 @@
 # Book 2 - An Introduction to Web APIs
-The purpose of this book is to provide a conceptual introduction to building Web APIs and modeling data in C#/.NET. Any additional installations for this book are included in the chapter instructions.
+The purpose of this book is to provide a conceptual introduction to building Web APIs with ASP.NET Core and modeling data in C#/.NET. Any additional installations for this book are included in the chapter instructions.
 
 ## Learning Objectives
 
@@ -22,10 +22,10 @@ The purpose of this book is to provide a conceptual introduction to building Web
 |#|🍯 💻<br>  Honey Rae's Repairs<br> <sub>(guided tour)</sub> |🚙🚗 <br>Car Builder | |
 |:-:|:-:|:-:|:-:|
 |1|[Setup for Web APIs](./chapters/web-api-setup.md)|||
-|2|[Making Requests with Postman](./chapters/testing-web-api.md)  <br><sub style="font-size: 0.85rem;">#debugging #endpoints #handlers</sub>|||
-|3|[Data Models](./chapters/defining-types-honey-raes.md) <br><sub style="font-size: 0.85rem;">#composition #namespaces</sub>||| 
-|4|[Get All/Get One Service Ticket(s)](./chapters/honey-raes-get-tickets.md) <br><sub style="font-size: 0.85rem;">#urls #endpoints #Find</sub>|||
-|5|[Adding all Honey Rae's GET endpoints]()|||
+|2|[Making Requests with Postman](./chapters/testing-web-api.md)  <br><sub style="font-size: 0.85rem;">#debugging #endpoints #routes #handlers</sub>|||
+|3|[Data Models](./chapters/defining-types-honey-raes.md) <br><sub style="font-size: 0.85rem;">#namespaces</sub>||| 
+|4|[Get All/Get One Service Ticket(s)](./chapters/honey-raes-get-tickets.md) <br><sub style="font-size: 0.85rem;">#using</sub>|||
+|5|[Adding all Honey Rae's GET endpoints](./chapters/honey-raes-get-emps-cust.md)<br><sub style="font-size: 0.85rem;">#composition</sub>|||
 |6| [Creating a Service Ticket]() |||
 |7| [Assigning a Ticket]() <br><sub style="font-size: 0.85rem;">#put</sub>||
 |8| [Deleting a Ticket]() <br><sub style="font-size: 0.85rem;">#delete</sub>||

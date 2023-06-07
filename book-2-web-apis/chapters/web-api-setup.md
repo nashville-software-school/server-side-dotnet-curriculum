@@ -38,13 +38,13 @@ There is also a `Program.cs` file, which is the entrypoint to the application, j
 
 ### What's different
 
-In the `csproj` file, you'll notice that there is a `PackageReference` node for something called `Swashbuckle`. Package references in .NET are a lot like dependencies in the `package.json` file in an npm project. They are references for outside libraries and project that your project needs to work correctly. This particular library will help you create a nice little UI in the browser to test your API. We'll see how it works soon.
+In the `csproj` file, you'll notice that there is a `PackageReference` node for something called `Swashbuckle`. Package references in .NET are a lot like dependencies in the `package.json` file in an npm project. They are references for outside libraries and project that your project needs to work correctly. This particular library will help you create a nice little UI in the browser to test your API. There is an explorer chapter with a tutorial in its use. 
 
 There are two more new files called `appsettings.json` and `appsettings.Development.json`. They hold configuration data for the application that gets used when starting the app. We will use these files later, but you can leave them alone for now.
 
 The `Properties` folder holds a file called `launch.json`. This is for another code editor (Visual Studio - NOT Visual Studio Code) that we are not using right now. It can also be ignored, but don't delete it. 
  
-`Program.cs` looks _very_ different than our console app template. Let's use the code that is there to introduce some important concepts in building web APIs. 
+`Program.cs` looks _very_ different from our console app template. Let's use the code that is there to introduce some important concepts in building web APIs. 
 
 ### A detailed tour of `Program.cs` 
 
