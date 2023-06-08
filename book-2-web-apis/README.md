@@ -34,5 +34,6 @@ The purpose of this book is to provide a conceptual introduction to building Web
 |--|
 |Query String parameters|
 |REST design principles|
-|Advanced data validation|
+|🍯 💻Adding More Endpoints to HoneyRae's|
+|🍯 💻 Add a front-end client for HoneyRae's API|
 |OpenAPI (Swagger)|
