@@ -2,14 +2,13 @@
 The purpose of this book is to provide a conceptual introduction to building Web APIs with ASP.NET Core and modeling data in C#/.NET. Any additional installations for this book are included in the chapter instructions.
 
 ## Learning Objectives
-
+1. Debugging C# in VS Code
 1. Web API Concepts
     <ul>
         <li>url routes, request handlers, endpoints</li>
         <li>the HTTP request/response cycle revisited</li>
         <li>URL parameters</li>
         <li>data serialization</li>
-        <li>basic server-side data validation with data annotations</li>
     </ul>
 1. More object-oriented programming
     <ul>

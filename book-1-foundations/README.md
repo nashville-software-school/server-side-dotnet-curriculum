@@ -15,12 +15,11 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
     <ul>
         <li>compiler errors (what is code compilation?) vs. runtime errors</li>
         <li>try/catch</li>
-        <li>debugging C# in VS Code</li>
     </ul>
 1. Object-Oriented Programming with classes
     <ul>
         <li>user-defined types with classes (Pillar of OOP I: Abstraction)</li>
-        <li>Properties, Methods, Constructors</li>
+        <li>Properties, Methods</li>
     </ul>
 
 ## Table of Contents
