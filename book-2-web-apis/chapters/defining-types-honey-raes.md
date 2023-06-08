@@ -7,11 +7,11 @@ For the rest of the course starting with this chapter, we are going to keep all 
 
 ### Namespaces
 
-Namespaces are another concept in C# that you didn't learn about in your introduction to programming in the front end part of the course. A `namespace`, most simply stated, is a space for names. Names are things like class definition names. Within a `namespace`, those names have to be unique (for example, you can't have two classes both named `AwesomeClass` within the same namespace). 
+Namespaces are another concept in C# that you didn't learn about in your introduction to programming in the front end part of the course. A `namespace`, most simply stated, is a space for names. Names are things like class definition names. Within a `namespace`, those names have to be unique (for example, you can't have two classes both named `AwesomeClass` within the same namespace). If you are familiar with the concept of _scope_ from Javascript, a namespace creates a scope for classes, even across multiple files if those files use the same namespace. 
 
-In Javascript, you got used to different files creating different _modules_ that you could import from one to another. But C# is different. Once the code is compiled, the different files you wrote are no longer relevant - there is just one file of compiled code per project that .NET runs. In Book 1, because we didn't use namespaces, all of the code in all of the files of our project were in one big global namespace. 
+In Javascript, you got used to different files creating different _modules_ that you could import from one to another. But a C# project is different. Once the code is compiled, the different files you wrote are no longer relevant - there is just one file of compiled code per project that .NET runs. In Book 1, because we didn't use namespaces, all of the code in all of the files of our project was in one global namespace. 
 
-Don't believe me? I can prove it to you! 
+You can see how class names are recognized across files in your program like this: 
 
 1. Open `ThrownForALoop` in VS Code
 1. At the bottom of `Program.cs`, add this line: `class Product {}`
