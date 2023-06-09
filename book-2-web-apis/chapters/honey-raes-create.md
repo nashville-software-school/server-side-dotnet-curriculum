@@ -8,7 +8,7 @@ Add the following endpoint to `Program.cs`:
 app.MapPost("/servicetickets", (ServiceTicket serviceTicket) =>
 {
     // creates a new id (When we get to it later, our SQL database will do this for us like JSON Server did!)
-    serviceTicket.Id = serviceTickets.Select(st => st.Id).Max() + 1;
+    serviceTicket.Id = serviceTickets.Max(st => st.Id) + 1;
     serviceTickets.Add(serviceTicket);
     return serviceTicket;
 });
@@ -39,6 +39,6 @@ We're leaving the `employeeId` out as well as the `dateCompleted`, because a new
 
 Hit send!
 
-If you didn't get any errors you can confirm that the endpoint is working by looking at the response. You should see the same object in the response body, but it will have an `id` on it created by the API. This is one of the reasons it can be helpful to send the new object back. You can also see that the object is in the database by changing the method in Postman to `GET`. Hit send again, and you should see the new service ticket that was posted in the list of service tickets in the response. We've now confirm two things: a new service ticket is created, and it is successfully saved to the database collection.
+If you didn't get any errors you can confirm that the endpoint is working by looking at the response. You should see the same object in the response body, but it will have an `id` on it created by the API. This is one of the reasons it can be helpful to send the new object back. You can also see that the object is in the database by changing the method in Postman to `GET`. Hit send again, and you should see the new service ticket that was posted in the list of service tickets in the response. We've now confirmed two things: a new service ticket is created, and it is successfully saved to the database collection.
 
 Up Next: [Delete a Service Ticket](./honey-raes-delete.md)

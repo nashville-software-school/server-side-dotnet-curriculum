@@ -10,7 +10,7 @@ Postman is a great tool for exploring APIs. If you want to use Postman to test t
 1. You will need to open the file your browser downloaded to set it up.
 1. Open the application
 1. After opening, you can work locally in what Postman calls the "Scratch Pad." Click on the plus sign to create a new HTTP request 
-1. In your terminal, in the top-level directory for the `HoneyRaeAPI` project (this will be wherever the `csproj` file is), run `dotnet watch run`.
+1. In your terminal, in the top-level directory for the `HoneyRaesAPI` project (this will be wherever the `csproj` file is), run `dotnet watch run`.
 1. In the console, you will once again see the host addresses for the api while it is running. It is serving `http` and `https` options. For Postman, use the `http` host and port (`http://localhost:5293`). We are going to test the weather forecast endpoint. In `Program.cs` you can see the `url` that goes with that endpoint (`/weatherforecast`). So, in order to make a request to that endpoint, the full address will be `http://localhost:5293/weatherforecast`. Paste this address into the URL bar in Postman.
 1. To the left of the URL bar, you have the option of choosing an HTTP method. GET is chosen by default, which is what we want, because the endpoint in `Program.cs` uses `MapGet`, not `MapPost` (there are others as well...)
 1. To the right, there is a Send button. Click it. 
@@ -87,7 +87,7 @@ By making a second call to `MapGet` in our program, we added another _endpoint_ 
     - _route_ - the URL for a specific endpoint
     - _handler_ - a function that is called when a request is made to a particular endpoint's URL. This function can accept data from the HTTP request as arguments, and returns data for the HTTP response
     
-    These are important concepts, and they will become clearer as build more APIs. 
+    These are important concepts, and they will become clearer as you build more APIs. 
 1. This is a big leap forward from the last book. We are starting to build applications that interact with network requests. It is worthwhile to take inventory of what you think you already know about HTTP requests, and what you don't know yet or may have forgotten (it happens to us all). Take a look at the introduction to the server side curriculum to review what role this API is playing both in the technology stack that we're building, and its role in the HTTP request/response cycle. If any of that is confusing, ask and instructor to chat about it!
 
 ## 🔍 Additional Materials

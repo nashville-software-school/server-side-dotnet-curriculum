@@ -27,7 +27,7 @@ app.MapPut("/servicetickets/{id}", (int id, ServiceTicket serviceTicket) =>
 1. If everything succeeds, switch the method to `GET` in Postman, and submit that request. Check the response body to make sure that the ticket was updated correctly. You should also see the details of the employee that was assigned!
 
 ### Algorithmic reasoning  ✍️ 
-The explanation of how this particular endpoint works has been omitted intentionally. Write an explanation of how it works, step by step, for yourself. You can look at the other explanations in for this project for inspiration.  Once you think you're done, ask an instructor to go over your explanation with you. 
+The explanation of how this particular endpoint works has been omitted intentionally. Write an explanation of how it works, step by step, for yourself. You can look at the other explanations in this project for inspiration.  Once you think you're done, ask an instructor to go over your explanation with you. 
 
 ## Creating a custom endpoint to complete a ticket
 
