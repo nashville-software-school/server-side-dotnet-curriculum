@@ -1,6 +1,12 @@
 # Creating a new Web API project
 In this chapter we will go over the steps for creating a new ASP.NET Core Web API using the Minimal APIs feature. You can use this setup guide for all of the projects in this book. 
 
+Web APIs respond to HTTP requests with HTTP responses. Here are two short videos as a refresher on how HTTP requests and responses are structured:
+
+[Parts of an HTTP request](https://youtu.be/pHFWGN-upGM)
+
+[Parts of an HTTP response](https://youtu.be/c9sMNc2PrMU)
+
 ## Instructions
 
 1. navigate to `~/workspace/csharp` in your terminal
