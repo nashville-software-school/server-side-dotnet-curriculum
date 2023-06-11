@@ -33,7 +33,7 @@ The purpose of this book is to provide a conceptual introduction to building Web
 |:compass: Explorer Chapters|
 |--|
 |Query String parameters|
-|REST design principles|
-|🍯 💻Adding More Endpoints to HoneyRae's|
+|[REST design principles -naming routes](./chapters/rest-concepts.md)|
+|🍯 💻[Adding More Endpoints to HoneyRae's](./chapters/honey-rae-more-endpoints.md)|
 |🍯 💻 Add a front-end client for HoneyRae's API|
 |OpenAPI (Swagger)|
