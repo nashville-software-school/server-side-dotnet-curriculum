@@ -5,23 +5,22 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
 ## Learning Objectives
 
 1. C# syntax
-<ul>
-    <li>statically typed variables</li>
-    <li>important types: strings, number types, and DateTimes</li>
-    <li>control flow: loops, conditions, boolean</li>
-    <li>collections: List, Array, Dictionary</li>
-</ul>
+    <ul>
+        <li>statically typed variables</li>
+        <li>important types: strings, number types, and DateTimes</li>
+        <li>control flow: loops, conditions, boolean</li>
+        <li>collections: List, Array, Dictionary</li>
+    </ul>
 1. Exceptions and Error Handling
-<ul>
-    <li>compiler errors (what is code compilation?) vs. runtime errors</li>
-    <li>try/catch</li>
-    <li>debugging C# in VS Code</li>
-</ul>
+    <ul>
+        <li>compiler errors (what is code compilation?) vs. runtime errors</li>
+        <li>try/catch</li>
+    </ul>
 1. Object-Oriented Programming with classes
-<ul>
-    <li>user-defined types with classes (Pillar of OOP I: Abstraction)</li>
-    <li>Properties, Methods, Constructors</li>
-</ul>
+    <ul>
+        <li>user-defined types with classes (Pillar of OOP I: Abstraction)</li>
+        <li>Properties, Methods</li>
+    </ul>
 
 ## Table of Contents
 
