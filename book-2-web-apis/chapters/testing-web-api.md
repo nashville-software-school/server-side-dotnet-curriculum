@@ -88,7 +88,7 @@ By making a second call to `MapGet` in our program, we added another _endpoint_ 
     - _handler_ - a function that is called when a request is made to a particular endpoint's URL. This function can accept data from the HTTP request as arguments, and returns data for the HTTP response
     
     These are important concepts, and they will become clearer as you build more APIs. 
-1. This is a big leap forward from the last book. We are starting to build applications that interact with network requests. It is worthwhile to take inventory of what you think you already know about HTTP requests, and what you don't know yet or may have forgotten (it happens to us all). Take a look at the introduction to the server side curriculum to review what role this API is playing both in the technology stack that we're building, and its role in the HTTP request/response cycle. If any of that is confusing, ask and instructor to chat about it!
+1. This is a big leap forward from the last book. We are starting to build applications that interact with network requests. It is worthwhile to take inventory of what you think you already know about HTTP requests, and what you don't know yet or may have forgotten (it happens to us all). Take a look at the introduction to the server side curriculum to review what role this API is playing both in the technology stack that we're building, and its role in the HTTP request/response cycle. If any of that is confusing, ask an instructor to chat about it!
 
 ## 🔍 Additional Materials
 
