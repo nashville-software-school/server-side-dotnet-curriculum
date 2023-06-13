@@ -37,7 +37,7 @@ Implement all of the following:
 1. Assign a driver to an order (`PUT` to `/tuberorders/{id}`)
 1. Complete an order (`POST` to `/tuberorders/{id}/complete`)
 
-### `/topping`
+### `/toppings`
 1. Get all toppings
 1. Get topping by id
 
