@@ -9,7 +9,7 @@ Famously, it can take a while to bake a potato. But you want one _now_! Fortunat
 ## Entities
 The database should have the following entities:
 1. `TuberOrder` - represents an order for a single spud
-    - Has these properties: `Id`, `OrderPlacedOnDate`, `CustomerId`, `TuberDriverId` (a nullable integer), `DeliveredOnDate`, and `Toppings` (a `List` of `Topping` objects for this order).
+    - Should start with these properties: `Id`, `OrderPlacedOnDate`, `CustomerId`, `TuberDriverId` (a nullable integer), `DeliveredOnDate`, and `Toppings` (a `List` of `Topping` objects for this order).
 1. `Topping` - represents possible toppings to add to an order
     - Has these properties: `Id`, `Name`
 1. `TuberTopping` -  represents toppings added to specific orders
@@ -42,10 +42,12 @@ Implement all of the following:
 1. Get topping by id
 
 ### `/tubertoppings`
+1. Get all TuberToppings
 1. Add a topping to a `TuberOrder`
 1. Remove a topping from a `TuberOrder`
 
 ### `/customers`
+1. Get all Customers
 1. Get a customer by id, with their orders
 1. Add a Customer
 1. Delete a Customer
