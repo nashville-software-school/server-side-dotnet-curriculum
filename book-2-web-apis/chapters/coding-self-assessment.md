@@ -33,7 +33,7 @@ Implement all of the following:
 ### `/tuberorders`
 1. Get all orders
 1. Get an order by id (must include customer data as well as driver and toppings data, if applicable). 
-1. Submit a new order
+1. Submit a new order (the API should add an `OrderPlacedOnDate`). Return the new order so the client can see the new `Id`. 
 1. Assign a driver to an order (`PUT` to `/tuberorders/{id}`)
 1. Complete an order (`POST` to `/tuberorders/{id}/complete`)
 
@@ -43,13 +43,13 @@ Implement all of the following:
 
 ### `/tubertoppings`
 1. Get all TuberToppings
-1. Add a topping to a `TuberOrder`
+1. Add a topping to a `TuberOrder` (return the new TuberTopping object to the client)
 1. Remove a topping from a `TuberOrder`
 
 ### `/customers`
 1. Get all Customers
 1. Get a customer by id, with their orders
-1. Add a Customer
+1. Add a Customer (return the new customer)
 1. Delete a Customer
 
 ### `/tuberdrivers`
