@@ -23,7 +23,7 @@ Some things to notice:
 
 ## Test the new endpoint
 1. Start the debugger in VS Code or restart if it is already running.
-1. In Postman, open a new request with the `+` button. Choose the `POST` method in the dropdown to the left of the URL, and put `http://localhost:5293/servicetickets` in the URL bar.
+1. In Postman, open a new request with the `+` button. Choose the `POST` method in the dropdown to the left of the URL, and put `http://localhost:<port>/servicetickets` in the URL bar.
 1. Before we send this request, we need to add the data that we're going to post to the body of the request. Click on the Body tab,choose the `raw`  radio button, and then `JSON` from the dropdown. 
 
 Add this as the body:

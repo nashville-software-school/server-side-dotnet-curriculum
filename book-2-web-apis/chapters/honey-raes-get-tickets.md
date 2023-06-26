@@ -42,7 +42,7 @@ app.MapGet("/servicetickets", () =>
 });
 ```
 3. Start the debugger for your project using VS Code (refer to the earlier chapter where we cover this if you've forgotten how)
-4. In Postman, make a `GET` request to `http://localhost:5293/servicetickets`. Check to make sure you got the right data back in the response. 
+4. In Postman, make a `GET` request to `http://localhost:<port>/servicetickets`. Check to make sure you got the right data back in the response. 
 
 ### What did we just do?
 This endpoint is fairly simple. When a GET request to "/servicetickets" is made, the handler function just returns all of the service tickets in our database. Then ASP.NET code (the framework we are using to create our web API) turns that C# List of objects into JSON text (this is just like `JSON.stringify` in JS), and sends an HTTP response with that data in the body. 
@@ -56,7 +56,7 @@ app.MapGet("/servicetickets/{id}", (int id) =>
 });
 ```
 2. Use the restart button on the debugger controls to reload the API.
-3. When it is running again, make a GET request in Postman to `http://localhost:5293/servicetickets/1`. 
+3. When it is running again, make a GET request in Postman to `http://localhost:<port>/servicetickets/1`. 
 4. Check the output to confirm that the service ticket with an id of one is in the response body. 
 
 ### What did we just do?

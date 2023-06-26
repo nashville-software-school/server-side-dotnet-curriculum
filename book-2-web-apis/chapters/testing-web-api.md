@@ -11,7 +11,7 @@ Postman is a great tool for exploring APIs. If you want to use Postman to test t
 1. Open the application
 1. After opening, you can work locally in what Postman calls the "Scratch Pad." Click on the plus sign to create a new HTTP request 
 1. In your terminal, in the top-level directory for the `HoneyRaesAPI` project (this will be wherever the `csproj` file is), run `dotnet watch run`.
-1. In the console, you will once again see the host addresses for the api while it is running. It is serving `http` and `https` options. For Postman, use the `http` host and port (`http://localhost:5293`). We are going to test the weather forecast endpoint. In `Program.cs` you can see the `url` that goes with that endpoint (`/weatherforecast`). So, in order to make a request to that endpoint, the full address will be `http://localhost:5293/weatherforecast`. Paste this address into the URL bar in Postman.
+1. In the console, you will once again see the host addresses for the api while it is running. It is serving `http` and `https` options. For Postman, use the `http` host and port. We are going to test the weather forecast endpoint. In `Program.cs` you can see the `url` that goes with that endpoint (`/weatherforecast`). So, in order to make a request to that endpoint, the full address will be `http://localhost:<port>/weatherforecast`. Paste this address into the URL bar in Postman.
 1. To the left of the URL bar, you have the option of choosing an HTTP method. GET is chosen by default, which is what we want, because the endpoint in `Program.cs` uses `MapGet`, not `MapPost` (there are others as well...)
 1. To the right, there is a Send button. Click it. 
 1.  Below you should see the HTTP response. The body should have data similar to this:
@@ -79,7 +79,7 @@ app.MapGet("/hello", () =>
 1. You should see the string `hello` in the response body at the bottom. 
 
 ### What did we just do?
-By making a second call to `MapGet` in our program, we added another _endpoint_ to our API that is waiting for a `GET` request to `http://localhost:5293/hello`, because we specified that url in the first argument. When the API receives that request, it will call the function that is the second argument. Whatever that function returns will be the data for the HTTP response back to the client (in this case, Postman). The data that this function returns is just `"hello"`, so that is what is in the response body in Postman. 
+By making a second call to `MapGet` in our program, we added another _endpoint_ to our API that is waiting for a `GET` request to `http://localhost:<port>/hello`, because we specified that url in the first argument. When the API receives that request, it will call the function that is the second argument. Whatever that function returns will be the data for the HTTP response back to the client (in this case, Postman). The data that this function returns is just `"hello"`, so that is what is in the response body in Postman. 
 
 ## ✍️ Reflections
 1. We introduced a number of important terms in this and the last chapters:
