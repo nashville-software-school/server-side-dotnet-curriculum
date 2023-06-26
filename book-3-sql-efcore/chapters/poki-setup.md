@@ -9,7 +9,7 @@ SQL scripts can help with this. A SQL script is just a code file with all of the
 ## Using `psql` to create the PoemsByKids database
 
 ### `PATH` variable 
-`psql` is a command line utility that was installed with PostgreSQL. Unfortunately, your `PATH` environment variable may not include the directory that contains `psql`. `PATH` is just a variable accessible in your terminal that is a list of directories where executable program files can be found. If you want to run a command, like `ls` or `mv`, your terminal needs to be able to find a program called `ls` or `mv` in one of the directories included in the `PATH` variable. 
+`psql` is a command line utility that was installed with PostgreSQL. Unfortunately, your `PATH` environment variable may not include the directory that contains `psql`. `PATH` is a variable accessible in your terminal that is a list of directories where executable program files can be found. If you want to run a command, like `ls` or `mv`, your terminal needs to be able to find a program called `ls` or `mv` in one of the directories included in the `PATH` variable. 
 
 You can find out what directory a command's executable file is in with the `which` command. For example:
 ``` bash
@@ -29,7 +29,7 @@ If you see a directory listed, you are already able to run the `psql` command in
 
 If not, you will see an output that begins with `which: no psql in ...`. What follows is actually your entire `PATH` variable listed.
 
-What can we do? Add to our `PATH` variable! Depending on your OS and the version of PostgreSQL you installed, the path to `psql` may be diffferent. 
+What can we do? Add to our `PATH` variable! Depending on your OS and the version of PostgreSQL you installed, the path to `psql` will be different. 
 
 On Windows (using Git Bash) it is usually `/c/Program Files/PostgreSQL/15/bin`.
 On macOS it is usually `/Library/PostgreSQL/15/bin`. 
@@ -54,6 +54,20 @@ which psql
 If you see a directory listed (it should be the same one we just added to the `PATH` variable), then you're all set! Otherwise, ask an instructor for help. 
 
 ### Download and run the Poems By Kids create script
+1. Download the script by: 
+    - making a folder called `PoemsByKids` in `~/workspace/sql`
+    - clicking on [this](../../assets/pokipostgres.sql) link
+    - clicking the "Raw" button in the Github interface
+    - right-clicking and choosing "Save As".
+    - saving the file in `~/workspace/sql/PoemsByKids` as `poki.sql`
+1. open a terminal and navigate to `~/workspace/sql/PoemsByKids`
+1. run this this command:
+``` bash
+psql -U postgres -f poki.sql
+```
+4. Enter the password for the superuser postgres (this is the password you created when installing PostgreSQL)
 
-
-
+5. You should see output logs as PostgreSQL starts running the commands in the script. This database is large, and it will take several minutes for the script to run. 
+6. When the script finishes, you will see a command prompt again. Open pgAdmin, and look for the PoemsByKids database in your Object Explorer. If you see the database there, open a query window for it. 
+7. Execute the query `SELECT * FROM author`
+8. If you see results, your database is set up correctly!
