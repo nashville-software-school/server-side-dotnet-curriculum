@@ -18,7 +18,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |:elephant: [Creating a PostgreSQL database using pgAdmin](./chapters/music-history-setup.md)|
 |:headphones: [Music History](./chapters/music-history-practice.md) |
 |:page_with_curl: [Using SQL scripts to create databases](./chapters/poki-setup.md)|
-|:black_nib: Poems By Kids|
+|:black_nib: [Poems By Kids](./chapters/poki-practice.md)|
 
 ## II. Querying a SQL database from a Web API
 | # |🍯💻 Honey Rae's API|

@@ -71,3 +71,5 @@ psql -U postgres -f poki.sql
 6. When the script finishes, you will see a command prompt again. Open pgAdmin, and look for the PoemsByKids database in your Object Explorer. If you see the database there, open a query window for it. 
 7. Execute the query `SELECT * FROM author`
 8. If you see results, your database is set up correctly!
+
+Up Next: [PoemsByKids Exercises](./poki-practice.md)
