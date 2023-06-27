@@ -25,8 +25,8 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |-|-|
 |1| [Creating a database for Honey Rae's API]() |
 |2| [Using Npgsql to make our first query](./chapters/honey-res-npgsql.md) |
-|3| Getting related data |
-|4| Inserting and Updating rows |
+|3| [Getting related data](./chapters/honey-raes-related-data.md) |
+|4| [Inserting and Updating rows](./chapters/honey-raes-create.md) |
 |5| Deleting a row |
 ## III. Entity Framework Core
 |#|:tent: <br> Creek River Campground <br> (guided tour) | :book: <br> Loncotes County Library | :haircut: <br> Hillary's Hair Care |
