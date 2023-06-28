@@ -27,7 +27,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |2| [Using Npgsql to make our first query](./chapters/honey-res-npgsql.md) |
 |3| [Getting related data](./chapters/honey-raes-related-data.md) |
 |4| [Inserting and Updating rows](./chapters/honey-raes-create.md) |
-|5| Deleting a row |
+|5| [Deleting a row](./chapters/honey-raes-delete.md) |
 ## III. Entity Framework Core
 |#|:tent: <br> Creek River Campground <br> (guided tour) | :book: <br> Loncotes County Library | :haircut: <br> Hillary's Hair Care |
 |:-:|:-:|:-:|:-:|
@@ -40,3 +40,10 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |7| Delete a reservation |||
 |8| Delete a campsite |||
 |9| Update a campsite |||
+
+## 🔍 Additional Materials
+|:compass: Explorer Chapters|
+|-|
+|🍯 💻 Finishing Honey Rae's with Npgsql |
+|🍯 💻 Following the SRP with the Repository Pattern |
+|🍯 💻 Handling Related Data On Delete |
