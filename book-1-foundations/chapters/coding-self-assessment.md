@@ -1,4 +1,4 @@
-# Brass & Poem Console Application
+# :trumpet: :page_with_curl: Brass & Poem Console Application
 
 ## Introduction
 
