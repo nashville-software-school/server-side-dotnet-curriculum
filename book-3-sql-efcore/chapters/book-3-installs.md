@@ -1,5 +1,5 @@
 # Installing PostgreSQL and pgAdmin
-In this chapter you will install two important applications, the PostgreSQL server, as we as pgAdmin, an app that you can use to interact with the PostgreSQL server. 
+In this chapter you will install two important applications, the PostgreSQL server, as well as pgAdmin, an app that you can use to interact with the PostgreSQL server. 
 
 1. Go to [this link](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and choose the most recent version for your OS (If by chance you are a Linux user, ask an instructor about your options).  
 1. Once the file is downloaded, open it to run it. 

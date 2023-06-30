@@ -1,5 +1,5 @@
 # Creating a PostgreSQL database for Honey Rae's API
-In this part of Book 3 we will use a .NET package called ADO.NET which allows our .NET applications to send SQL queries to a database and read the data that comes back when the queries are executed. But first, we need to create the database that the API will send requests to. 
+In this part of Book 3 we will use a .NET package called Npgsql (based on a better-known set of libraries called ADO.NET) which allows our .NET applications to send SQL queries to a database and read the data that comes back when the queries are executed. But first, we need to create the database that the API will send requests to. 
 
 ## Write the script to create the database
 1. Navigate to the HoneyRaesAPI directory in your terminal. Add a folder to it called `SQL` using the `mkdir` command. 
@@ -15,7 +15,7 @@ CREATE DATABASE "HoneyRaes";
 ```
 
 ### Explaining the beginning of this script
-The first line of this script drops (database terminology for "deletes") the database if it already exists. Even though the first time you create the database, it obviously doesn't already exist, in the future if you want to run the script again, it will have to exist. This line makes the script _idempotent_, which means that whether we run the script once or seven times in a row, we will end with the same result - one database with all the data in it that we want.   
+The first line of this script drops (database terminology for "deletes") the database if it already exists. Even though the first time you create the database, it obviously doesn't already exist, in the future if you want to run the script again, it will exist. This line makes the script _idempotent_, which means that whether we run the script once or seven times in a row, we will end with the same result - one database with all the data in it that we want.   
 
 The second line, unsurprisingly, creates our new database. The third line, however, probably looks new to you. This is actually not a SQL command at all, but a command for the `psql` utility to _connect_ (this is what the `c` stands for) to the newly created `HoneyRaes` database. If we didn't have this line, the tables we are about to create would get added to the default `postgres` database, which we don't want. 
 
