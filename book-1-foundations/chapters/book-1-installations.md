@@ -1,7 +1,7 @@
 # Foundations Installations
 
 ## Setting up a second computer
-If you are using a different computer for server side than you did for front end (or setting up Windows with Bootcamp on your Mac), you will need to do all of the front end installations first. They can be found [here](https://github.com/nashville-software-school/client-side-mastery/blob/master/book-0-installations/chapters/GETTING_STARTED_WINDOWS_C_SHARP.md).
+If you are using a different computer for server side than you did for front end (or setting up Windows with Bootcamp on your Mac), you will need to do all of the front end installations first. They can be found [here](https://classroom.google.com/c/NTcxMzcyMjE5Mzk2?cjc=kxtsj3b).
 ## .NET 6 SDK
 The .NET SDK includes all of the command line tools you will need to build and run your .NET programs for the first part of the course. <br>
 [Download it for Windows here](https://download.visualstudio.microsoft.com/download/pr/ec67cb2b-a9b5-4bad-9287-75fb70dfacff/6aa398065a382766978155b1d48ceb28/dotnet-sdk-6.0.111-win-x64.exe
