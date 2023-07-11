@@ -7,3 +7,10 @@ In this chapter you will install two important applications, the PostgreSQL serv
 1. Once you have clicked through the installer and the installation process begins, it is normal for it to take several minutes to finish. 
 1. When the installation finished, it will ask you if you want to start Stack Builder on exit. You can uncheck the box and simply exit without starting that application. 
 1.  You will be prompted during the installation process to choose a password for the server's default postgres user. Make sure that you save that password, as you will need it later. 
+
+# Installing the Entity Framework Core dotnet cli tool
+
+Run this command in your terminal:
+``` bash
+dotnet tool install --global dotnet-ef
+```

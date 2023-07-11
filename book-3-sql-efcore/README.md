@@ -31,15 +31,16 @@ Because of the large scope of this book, it is split into three parts, roughly c
 ## III. Entity Framework Core
 |#|:tent: <br> Creek River Campground <br> (guided tour) | :book: <br> Loncotes County Library | :haircut: <br> Hillary's Hair Care |
 |:-:|:-:|:-:|:-:|
-|1| Project Setup |||
-|2| Adding Models |||
-|3| Creating the database |||
-|4| Get reservations and sites |||
-|5| Get reservation details |||
-|6| Book reservations |||
-|7| Delete a reservation |||
-|8| Delete a campsite |||
-|9| Update a campsite |||
+|1| [Project Setup](./chapters/creek-river-setup.md) |||
+|2| [Creating the database](./chapters/creek-river-db-context.md) |||
+|3| Get campsites |||
+|4| Create a campsite |||
+|5| Delete a campsite |||
+|6| Update a campsite |||
+|7| Get reservation details |||
+|8| Book reservations |||
+|9| Delete a reservation |||
+|10| Calculating fees |||
 
 ## 🔍 Additional Materials
 |:compass: Explorer Chapters|
