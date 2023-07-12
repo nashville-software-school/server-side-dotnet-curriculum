@@ -36,9 +36,9 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |3| [Get campsites](./chapters/creek-river-get-campsites.md) |||
 |4| [Create a campsite](./chapters/creek-river-create-campsite.md) |||
 |5| [Delete a campsite](./chapters/creek-river-delete-campsite.md) |||
-|6| Update a campsite |||
-|7| Get reservation details |||
-|8| Book reservations |||
+|6| [Update a campsite](./chapters/creek-river-campsite-update.md) |||
+|7| [Get reservations](./chapters/creek-river-get-reservations.md) |||
+|8| [Book reservations](./chapters/creek-river-book-reservation.md) |||
 |9| Delete a reservation |||
 |10| Calculating fees |||
 
