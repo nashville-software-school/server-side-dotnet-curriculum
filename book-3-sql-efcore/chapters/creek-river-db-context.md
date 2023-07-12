@@ -59,6 +59,13 @@ This method introduces a number of new topics:
 1. use the `HasData` method to add one `UserProfile` and at least one `Reservation` to the database as well. In all cases, make sure that the foreign keys you choose match a primary key in the corresponding table. 
 
 ## Configure the web API to use EF Core
+Add the following using directives at the top of `Program.cs`:
+``` csharp
+using CreekRiver.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+```
+
 Add the following code right above `var app = builder.Build();` in `Program.cs`:
 ``` csharp
 // allows passing datetimes without time zone data 

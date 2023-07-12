@@ -34,8 +34,8 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |1| [Project Setup](./chapters/creek-river-setup.md) |||
 |2| [Creating the database](./chapters/creek-river-db-context.md) |||
 |3| [Get campsites](./chapters/creek-river-get-campsites.md) |||
-|4| Create a campsite |||
-|5| Delete a campsite |||
+|4| [Create a campsite](./chapters/creek-river-create-campsite.md) |||
+|5| [Delete a campsite](./chapters/creek-river-delete-campsite.md) |||
 |6| Update a campsite |||
 |7| Get reservation details |||
 |8| Book reservations |||
