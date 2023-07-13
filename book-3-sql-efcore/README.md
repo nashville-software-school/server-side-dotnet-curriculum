@@ -39,8 +39,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |6| [Update a campsite](./chapters/creek-river-campsite-update.md) |||
 |7| [Get reservations](./chapters/creek-river-get-reservations.md) |||
 |8| [Book reservations](./chapters/creek-river-book-reservation.md) |||
-|9| Delete a reservation |||
-|10| Calculating fees |||
+|9| Calculating fees |||
 
 ## 🔍 Additional Materials
 |:compass: Explorer Chapters|
@@ -48,3 +47,4 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |🍯 💻 Finishing Honey Rae's with Npgsql |
 |🍯 💻 Following the SRP with the Repository Pattern |
 |🍯 💻 Handling Related Data On Delete |
+|:tent: Data Validation and Algorithmic Reasoning |
