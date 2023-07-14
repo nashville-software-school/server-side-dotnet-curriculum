@@ -1,5 +1,5 @@
 # Calculating Total Nights and Total Cost
-In this chapter we will see how to use calculated properties to add useful data to the Reservation model. 
+In this chapter we will explore how to use calculated properties to add useful data to the Reservation model. 
 
 ## Calculated Properties
 You have seen these in previous books, but calculated properties can also be used on our data models to provide calculated values so that they don't have to be calculated client-side. 
@@ -29,7 +29,7 @@ Test this out by hitting the `/api/reservations` endpoint. Now you will see a ca
 > :bulb: You might ask - why not store `TotalNights` as a column in the database? The answer is that we would then have two sources of truth for how many nights a reservation has. Every time an update changes the `CheckinDate` or `CheckoutDate` value for a reservation, you would have to remember to update the `TotalNights` column accordingly. This is easy to forget. _However_ - our SQL database could generate this value for us in a query like this: <br>
     `SELECT *, "CheckoutDate" - "CheckinDate" As "TotalNights" FROM "Reservations";` <br> Working with this in EF Core is somewhat more complex, though, so stick with what we have in the code example above for now. 
 
-> :bulb: You might also ask - What's wrong with calculating this on the front end? In the first part of the course, most of the _business logic_ of your application - the code that contained logic specific to the domain for which your app provided a service (dog walking, shoe organization, calorie tracking, etc...) because you did not have an API to handle more of this logic for you. Now, however, things are different. You can allow the code in your UI to focus on logic around how things should look, and let the API worry about the specific business rules of the application. Like everything with software development, there are _lots_ of reasonable exceptions to this rule, and sometimes it is unavoidable to have business logic on the front end.  
+> :bulb: You might also ask - What's wrong with calculating this on the front end? In the first part of the course, most of the _business logic_ of your application - the code that contained logic specific to the domain for which your app provided a service (dog walking, shoe organization, calorie tracking, etc...) was in the front end because you did not have an API to handle more of this logic for you. Now, however, things are different. You can allow the code in your UI to focus on logic around how things should look, and let the API worry about the specific business rules of the application. Like everything with software development, there are _lots_ of reasonable exceptions to this rule, and sometimes it is unavoidable to have business logic on the front end.  
 
 ## `TotalCost`
 Add this line to the `Reservation` class:
