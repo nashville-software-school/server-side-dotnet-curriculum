@@ -23,7 +23,7 @@ app.MapGet("/api/campsites/{id}", (CreekRiverDbContext db, int id) =>
 });
 ```
 A few more things to note:
-1. `Include` is a method that will add related data to an entity. Because our campsite has a `CampsiteType` property where we can store that data, `Include` will add a `JOIN` to the underlying SQL query to the `CampsiteTypes` table. This is the same functionality that JSON Server provided with the `_expand` query string param.  
+1. `Include` is a method that will add related data to an entity. Because our campsite has a `CampsiteType` property where we can store that data, `Include` will add a `JOIN` in the underlying SQL query to the `CampsiteTypes` table. This is the same functionality that JSON Server provided with the `_expand` query string param.  
 1. `Single` is like `First` in that it looks for one matching item based on the expression, but unlike `First` will throw an Exception if it finds _more_ than one that matches. For something like a primary key, where there is definitely only one row that should match the query, `Single` is a good way to express that. 
 1. Test the endpoints with the following scenarios:
     - with an id for campsite that exists
