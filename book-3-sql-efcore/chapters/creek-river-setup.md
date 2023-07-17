@@ -25,7 +25,7 @@ In this project we will build an API for the reservations website of Creek River
 Creating the data models for this application will be almost identical to the process for Honey Rae's. The biggest difference is that our model, in addition to defining the types that we'll use in the .NET application, will also be used by Entity Framework to determine what tables to create in the database. This requires a few small additions to the code. 
 
 1. Create a `Models` folder in the project folder
-1. Add a `CampsiteType.cs` file to the `Models` folder. Past the following code in it:
+1. Add a `CampsiteType.cs` file to the `Models` folder. Paste the following code in it:
     ``` csharp
     using System.ComponentModel.DataAnnotations;
 
@@ -41,8 +41,8 @@ Creating the data models for this application will be almost identical to the pr
     }
     ```
     - EF Core will automatically make a property called `Id` in C# into the `PRIMARY KEY` column for the corresponding SQL database table. 
-    - The `[Required]` code above the `CampsiteTypeName` is called an _attribute_ in C#. Attributes allow you to add metadata about entities in C# that your program can use. In this case, Entity Framework can tell from this attribute that the `CampsiteTypeName` column in the SQL database should have `NOT NULL` when it is created. Entity Framework will assume that any reference type in C# (types that can be null, see the extra materials) will correspond to a nullable column in SQL as well. The other properties in this class should also have `NOT NULL` in the database creation, but because they are all numbers and are not nullable in C#, we don't need to add the `Required` attribute to them. We need to add `using System.ComponentModel.DataAnnotations` to use the `Required` attribute
-1.  Add a `Campsite.cs` file to the `Models folder and paste this code in it:
+    - The `[Required]` code above the `CampsiteTypeName` is called an _attribute_ in C#. Attributes allow you to add metadata about entities in C# that your program can use. In this case, Entity Framework can tell from this attribute that the `CampsiteTypeName` column in the SQL database should have `NOT NULL` when it is created. Entity Framework will assume that any reference type in C# (types that can be null, see the [extra materials(https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)]) will correspond to a nullable column in SQL as well. The other properties in this class should also have `NOT NULL` in the database creation, but because they are all numbers and are not nullable in C#, we don't need to add the `Required` attribute to them. We need to add `using System.ComponentModel.DataAnnotations` to use the `Required` attribute
+1.  Add a `Campsite.cs` file to the `Models` folder and paste this code in it:
     ``` csharp
     using System.ComponentModel.DataAnnotations;
 
@@ -77,7 +77,7 @@ Creating the data models for this application will be almost identical to the pr
     }
     ```
     - Here, too, `UserProfileId` and `CampsiteId` will be set up as foreign keys in the database
-    - Notice that we can have both `UserProfileId` and `UserProfile` in the model. `UserProfile` will be ignored by EF Core because it knows that this type cannot correspond to a separate column. 
+    - Notice that we can have both `UserProfileId` and `UserProfile` in the model. `UserProfile` will be ignored by EF Core when creating the UserProfile table, because it knows that this type cannot correspond to a separate column on the table, but we can use it to store the `UserProfile` data from the UserProfile table that corresponds to `UserProfileId`. 
 1. Finally, and a `UserProfile.cs` file to the `Models` folder and paste the following code:
     ```csharp
     using System.ComponentModel.DataAnnotations;
