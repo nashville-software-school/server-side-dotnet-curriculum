@@ -64,6 +64,7 @@ Add the following using directives at the top of `Program.cs`:
 using CreekRiver.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Http.Json;
 ```
 
 Add the following code right above `var app = builder.Build();` in `Program.cs`:
