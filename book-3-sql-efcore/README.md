@@ -48,6 +48,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |🍯 💻 Following the SRP with the Repository Pattern |
 |🍯 💻 Handling Related Data On Delete |
 |:tent: [Data Validation and Algorithmic Reasoning](./chapters/creek-river-reservation-validation.md) |
+|:tv: [Advanced Linq: Nineties TV](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/LINQ_INTRO.md) |
 
 |:gear: Object-Oriented Programming |
 |-|
