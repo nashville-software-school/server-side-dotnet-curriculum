@@ -39,7 +39,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |6| [Update a campsite](./chapters/creek-river-campsite-update.md) |||
 |7| [Get reservations](./chapters/creek-river-get-reservations.md) <br><sub style="font-size: 0.85rem;">#ThenInclude #OrderBy </sub>|||
 |8| [Book reservations](./chapters/creek-river-book-reservation.md) |||
-|9| [Calculating fees](./chapters/creek-river-calculated.md) <br><sub style="font-size: 0.85rem;">#field #static #private</sub>|||
+|9| [Calculating fees](./chapters/creek-river-calculated.md) <br><sub style="font-size: 0.85rem;">#field #static #private</sub>||:convenience_store:[Coding Self-Assessment](./chapters/book-3-coding-assessment.md)|
 
 ## 🔍 Additional Materials
 |:compass: Explorer Chapters|
