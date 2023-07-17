@@ -6,6 +6,7 @@ Ernie Fairchild has hired us to build a new point-of-sale system for his conveni
 1. Clone your new repo that Github classroom created to your local computer and open it in VS Code.
 1. For the rest of these instructions, the files will be referring to files inside the `CornerStore` folder. You can look at the `CornerStore.Tests` folder if you wish, but you do not need to modify any code there.
 1. The project code is already configured to use EF Core and Npgsql. Running `dotnet restore` in the project directory will resolve all missing dependencies.
+1. Initialize user secrets for this project, and add a secret called `CornerStoreDbConnectionString` with the connection string for a local database called `CornerStore`. Be sure to include you username and password for your local Postgresql `postgres` user. 
 1. There is a `client` folder with a React project ready to use. run `npm install` before running `npm start` to run the project server. 
 
 ## Entities
