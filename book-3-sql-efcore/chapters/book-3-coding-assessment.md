@@ -9,6 +9,8 @@ Ernie Fairchild has hired us to build a new point-of-sale system for his conveni
 1. Initialize user secrets for this project, and add a secret called `CornerStoreDbConnectionString` with the connection string for a local database called `CornerStore`. Be sure to include you username and password for your local Postgresql `postgres` user. 
 1. There is a `client` folder with a React project ready to use. run `npm install` before running `npm start` to run the project server. 
 
+> IMPORTANT: There will be many compiler errors in the Tests project at the outset, because many of the entities that the tests rely on in the API will not exist yet (and need to be completed by you!). You will know that you can try `dotnet test` when those compiler errors are gone. This of course does not mean that all the tests will pass, but you have at least properly created all of the entities and the DbContext so that you can start writing and testing the endpoints. 
+
 ## Entities
 Add the following classes with their properties to the `Models` folder. Use Data Annotations to ensure that properties that should not be nullable or ignored in the database are configured correctly.
 
@@ -32,6 +34,10 @@ Add the following classes with their properties to the `Models` folder. Use Data
     - CashierId (not nullable, foreign key)
     - Total (computed - add the logic to sum the product prices for the order)
     - PaidOnDate (nullable DateTime to record when the transaction was completed)
+1. OrderProduct
+    - Id (primary key)
+    - ProductId (not nullable, foreign key)
+    - OrderId (not nullable, foreign key)
 
 In addition to the properties above that correspond to database columns, add other properties that reflect these relationships that will allow related data to be nested:
 1. A cashier can have many orders, an order is only handled by one cashier
@@ -48,11 +54,11 @@ Implement the following endpoints in the API:
 
 ### `/cashiers`
 1. Add a cashier
-1. Get a cashier (include their orders).
+1. Get a cashier (include their orders, and the orders' products).
 
 ### `/products`
-1. Get all products. If the `search` query string param is present, return only products whose names include the `search` value (ignore case).
-1. `/products/popular` - Get the most popular products (check for a query string param called `amount` that says how many products to return. Return ten by default).
+1. Get all products with categories. If the `search` query string param is present, return only products whose names or category names include the `search` value (ignore case).
+1. `/products/popular` - Get the most popular products, determined by which products have been ordered the most times (count all instances of a product, even if it appears more than once per order) (check for a query string param called `amount` that says how many products to return. Return five by default).
 1. Add a product
 1. Update a product
 ### `/orders`
