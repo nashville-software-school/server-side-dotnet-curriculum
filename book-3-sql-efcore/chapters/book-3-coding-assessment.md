@@ -25,32 +25,31 @@ Add the following classes with their properties to the `Models` folder. Use Data
     - Price (not nullable)
     - Brand (not nullable)
     - CategoryId (not nullable, foreign key)
-    - Quantity (not used in database, will be calculated)
 1. Category
     - Id (primary key)
     - CategoryName (not nullable)
 1. Order 
     - Id (primary key)
     - CashierId (not nullable, foreign key)
-    - Total (computed - add the logic to sum the product prices for the order)
+    - Total (computed - add the logic to sum the product prices times the quantity in the `OrderProduct`s)
     - PaidOnDate (nullable DateTime to record when the transaction was completed)
 1. OrderProduct
-    - Id (primary key)
     - ProductId (not nullable, foreign key)
     - OrderId (not nullable, foreign key)
+    - Quantity (not nullable)
 
 In addition to the properties above that correspond to database columns, add other properties that reflect these relationships that will allow related data to be nested:
 1. A cashier can have many orders, an order is only handled by one cashier
 1. A product belongs in one category. A category can be associated with many products
-1. An order may have many associated products, and a product may be purchased in many orders. If the same product is ordered twice in the same order, they will be represented as two or more _separate_ products on the order (in other words, we do _not_ need to track the quantity for a given product being ordered).
+1. An order may have many associated  order products, but an order product will be associated with one product.
 1. Make an ERD for this database
 
 ## Seeding the database
-1. Use the `OnModelCreating` method in the `CornerStoreDbContext` class to add cashiers, products, categories, and orders. Also ensure that orders have products associated with them. 
+1. Use the `OnModelCreating` method in the `CornerStoreDbContext` class to add cashiers, products, categories, and orders. Also ensure that orders have order products associated with them. 
 1. Use the migration tool to create your database
 
 ## Endpoints
-Implement the following endpoints in the API:
+Implement the following endpoints in the API (return the correct HTTP status codes and response bodies for each endpoint!):
 
 ### `/cashiers`
 1. Add a cashier
@@ -58,11 +57,11 @@ Implement the following endpoints in the API:
 
 ### `/products`
 1. Get all products with categories. If the `search` query string param is present, return only products whose names or category names include the `search` value (ignore case).
-1. `/products/popular` - Get the most popular products, determined by which products have been ordered the most times (count all instances of a product, even if it appears more than once per order) (check for a query string param called `amount` that says how many products to return. Return five by default).
+1. `/products/popular` - Get the most popular products, determined by which products have been ordered the most times (HINT: this requires using `GroupBy` to group the OrderProducts by ProductId, then using `Sum` to add up all the Quantities of the OrderProducts in each group). Check for a query string param called `amount` that says how many products to return. Return five by default.
 1. Add a product
 1. Update a product
 ### `/orders`
-1. Get an order details, including the cashier and products on the order with their category. Group the products together so that any given product is only listed once, and the `Quantity` property reflects how many times the product appears on the order. 
+1. Get an order details, including the cashier, order products, and products on the order with their category.
 1. Get all orders. Check for a query string param `orderDate` that only returns orders from a particular day. If it is not present, return all orders. 
 1. Delete an order
 1. Create an Order (with products!)
