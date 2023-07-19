@@ -43,13 +43,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|[Stats](./chapters/extravert-stats.md)<br><sub style="font-size: 0.85rem;">#casts</sub>||
 |9|[Exceptions and Error Handling](./chapters/handling-exceptions.md)|[Unexpected Data](./chapters/extravert-exceptions.md)<br> <sub style="font-size: 0.85rem;">#exception-types</sub>||
 |10|[Methods](./chapters/foundations-methods.md)|[Parameters](./chapters/extravert-methods.md)<br><sub style="font-size: 0.85rem;">#method-parameters</sub>|<sub style="font-size: 0.85rem;">#return-types</sub>|
-|Assessments||[Concepts Self-Assessment]()|[Coding Assessment](./chapters/coding-self-assessment.md)|
-
-Once you have completed all of the Core Projects, your job is to do a self-assessment. Click on the link below to see what this book's assessment instructions are. Once complete, reach out to an instructor to review your vocabulary.
-
-| # | 🎓  Self-Assessment |
-| --- | --- |
-| 1 | [Self-Assess C# Basics](./chapters/FOUNDATION_ASSESSMENT.md) |
+|11||[Concepts Self-Assessment]()|:trumpet: :page_with_curl:[Coding Assessment](./chapters/coding-self-assessment.md)|
 
 
 

@@ -27,8 +27,7 @@ The purpose of this book is to provide a conceptual introduction to building Web
 |5|[Adding all Honey Rae's GET endpoints](./chapters/honey-raes-get-emps-cust.md)<br><sub style="font-size: 0.85rem;">#composition #NotFound</sub>|||
 |6| [Creating a Service Ticket](./chapters/honey-raes-create.md) |||
 |8| [Deleting a Ticket](./chapters/honey-raes-delete.md) <br><sub style="font-size: 0.85rem;">#delete</sub>||
-|7| [Assigning a Ticket](./chapters/honey-rae-put.md) <br><sub style="font-size: 0.85rem;">#put</sub>||
-|||[Concept Self-Assessment]()|[Coding Self-Assessment](./chapters/coding-self-assessment.md)|
+|7| [Assigning a Ticket](./chapters/honey-rae-put.md) <br><sub style="font-size: 0.85rem;">#put</sub>|[Concept Self-Assessment]()|:potato:[Coding Self-Assessment](./chapters/coding-self-assessment.md)|
 
 |:compass: Explorer Chapters|
 |--|
