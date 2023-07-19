@@ -66,8 +66,6 @@ Implement the following endpoints in the API (return the correct HTTP status cod
 1. Delete an order
 1. Create an Order (with products!)
 
-### Integrate API with client 
-1. Use the API to provide all the necessary data to the included client 
 
 When you have completed all of the tasks, push the result to the main branch (you can push more often, just make sure that the final working result is pushed as well). 
 
