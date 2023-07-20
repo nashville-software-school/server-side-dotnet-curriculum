@@ -13,7 +13,7 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
     </ul>
 1. Exceptions and Error Handling
     <ul>
-        <li>compiler errors (what is code compilation?) vs. runtime errors</li>
+        <li>compiler errors (what is code compilation?) vs. runtime Exceptions</li>
         <li>try/catch</li>
     </ul>
 1. Object-Oriented Programming with classes
@@ -42,22 +42,20 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |7|[DateTime](./chapters/foundations-datetime.md)|[Available Until](./chapters/extravert-date.md) ||
 |8|[Doubles and Decimals](./chapters/doubles-and-decimals.md)<br><sub style="font-size: 0.85rem;">#foreach</sub>|[Stats](./chapters/extravert-stats.md)<br><sub style="font-size: 0.85rem;">#casts</sub>||
 |9|[Exceptions and Error Handling](./chapters/handling-exceptions.md)|[Unexpected Data](./chapters/extravert-exceptions.md)<br> <sub style="font-size: 0.85rem;">#exception-types</sub>||
-|10|[Methods](./chapters/foundations-methods.md)|[Parameters](./chapters/extravert-methods.md)<br><sub style="font-size: 0.85rem;">#method-parameters</sub>|<sub style="font-size: 0.85rem;">#return-types</sub>|
-|11||[Concepts Self-Assessment]()|:trumpet: :page_with_curl:[Coding Assessment](./chapters/coding-self-assessment.md)|
+|10|[Methods](./chapters/foundations-methods.md)|[Parameters](./chapters/extravert-methods.md)<br><sub style="font-size: 0.85rem;">#method-parameters #return-types</sub>||
+|11|||:trumpet: :page_with_curl:[Coding Assessment](./chapters/coding-self-assessment.md)|
 
 
 
 |:compass: Explorer Chapters (after you finish the table above)|
 |--|
-|Type conversions|
-|:potted_plant: Other collection types: Dictionaries and Arrays|
-|:football::curly_loop: Calculating TimeSpans and DateTimes|
-|Creating Custom Exceptions|
+|:potted_plant: [Dictionaries and Arrays](./chapters/book-1-extravert-collections-explorer.md)|
+|:football::curly_loop: [DateTimes in Depth](./chapters/book-1-datetimes-explorer.md)|
+|:potted_plant:[Creating Custom Exceptions](./chapters/book-1-custom-exceptions-explorer.md)|
 
 
-|Projects|
+|:test_tube: Projects|
 |--|
 |[Guessing Game](https://github.com/nashville-software-school/bangazon-inc/blob/main/book-1-orientation/chapters/GUESSING_GAME_EXERCISE.md)|
-|Adventurer's Quest|
-|Plan Your Heist|
+|[Plan Your Heist](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/PLAN_YOUR_HEIST.md)|
 <!-- prettier-ignore-end -->

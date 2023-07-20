@@ -37,7 +37,7 @@ new Product()
     Name = "Football", 
     Price = 15, 
     Sold = false,
-    StockDate = new Date(2022, 10, 20),
+    StockDate = new DateTime(2022, 10, 20),
     ManufactureYear = 2010
 }
 ```
