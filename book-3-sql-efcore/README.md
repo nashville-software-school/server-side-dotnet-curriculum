@@ -55,3 +55,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |-|
 | [Classes](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/classes) |
 |[OOP in C#](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop) |
+
+|:test_tube: Projects|
+|-|
+|[Adventurer's Quest](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/QUEST.md) (practice with fields and constructors)|

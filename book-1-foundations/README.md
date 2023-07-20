@@ -57,6 +57,5 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |:test_tube: Projects|
 |--|
 |[Guessing Game](https://github.com/nashville-software-school/bangazon-inc/blob/main/book-1-orientation/chapters/GUESSING_GAME_EXERCISE.md)|
-|Adventurer's Quest|
-|Plan Your Heist|
+|[Plan Your Heist](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/PLAN_YOUR_HEIST.md)|
 <!-- prettier-ignore-end -->
