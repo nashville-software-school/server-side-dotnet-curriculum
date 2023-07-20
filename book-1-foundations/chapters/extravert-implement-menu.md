@@ -7,7 +7,7 @@ When the user chooses this option, all of the plants in the database should be l
 <Number>. <Name of Plant> in <City> <is available/was sold> for <Price> dollars
 Examples: 
 1. A Ficus in Pasadena was sold for 15 dollars
-2. A Hydrangea in Walla Walla is available for 25 dollars"
+2. A Hydrangea in Walla Walla is available for 25 dollars
 ```
 > 💡 Algorithmic reasoning: <br> When you have conditional logic which has _only two options_, sometimes the ternary conditional operator can be a cleaner way to choose one path or another than using `if`/`else`. <br> <br> For example, in this feature, you need to either display "is available" or "was sold" based on whether the plant is sold or not. <br> <br> We can do this with a ternary like this: <br> `plant.Sold ? "was sold" : "is available"` <br><br> This expression will return what's on the left side of the `:` if `plant.Sold` is `true`, and what's on the right side of the `:` if it is false. You can use a ternary inside the `{}` with string interpolation to implement this feature.
 

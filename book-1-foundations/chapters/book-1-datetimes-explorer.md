@@ -41,7 +41,7 @@ In this explorer chapter, we will add more features to Thrown For a Loop relatin
         }
     }
     ```
-    - We have to convert `SoldOnDate` to a `DateTime` because `DateTime` and `DateTime?` are not the same type! `lastDay` has to be a `DateTime`. (See the other explorer chapter on type conversion).  
+    - We have to convert `SoldOnDate` to a `DateTime` because `DateTime` and `DateTime?` are not the same type! `lastDay` has to be a `DateTime`.  
 1. Finally, we subtract the last day from the `StockDate` to get the `TimeInStock` and return it:
    ```csharp
     public TimeSpan TimeInStock 
