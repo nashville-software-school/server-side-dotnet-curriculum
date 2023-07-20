@@ -13,7 +13,7 @@ The purpose of this book is to provide a basic introduction to the syntax of C# 
     </ul>
 1. Exceptions and Error Handling
     <ul>
-        <li>compiler errors (what is code compilation?) vs. runtime errors</li>
+        <li>compiler errors (what is code compilation?) vs. runtime Exceptions</li>
         <li>try/catch</li>
     </ul>
 1. Object-Oriented Programming with classes
@@ -51,7 +51,7 @@ Start on the top left, and work you way down. When you get to the bottom, contin
 |--|
 |:potted_plant: [Dictionaries and Arrays](./chapters/book-1-extravert-collections-explorer.md)|
 |:football::curly_loop: [DateTimes in Depth](./chapters/book-1-datetimes-explorer.md)|
-|Creating Custom Exceptions|
+|:potted_plant:[Creating Custom Exceptions](./chapters/book-1-custom-exceptions-explorer.md)|
 
 
 |:test_tube: Projects|
