@@ -11,7 +11,7 @@ Add an event listener to the module that will call the database function:
 document.addEventListener("click", (event) => {
   const { name, id } = event.target;
   if (name === "complete") {
-    completeOrder(parseInt(id));
+    completeOrder(id);
   }
 });
 ```
