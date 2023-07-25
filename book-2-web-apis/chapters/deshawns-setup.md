@@ -24,6 +24,7 @@ This line tells the server that is serving the javascript app to send any unknow
     The URL begins with `/`, omitting the domain. This will result in an HTTP request to `http://localhost:3000/api/hello`. When the dev server that is serving the javascript application doesn't find an asset to return at `/api/hello`, it will pass the request on to `https://localhost:5001/api/hello`. 
 1. When deploying the application, the `apiManager.js` module does not need to change if the API and the front-end app are at the same domain. If the React app is at `myawesomeapp.com` and the API is at `myawesomeapp.com/api`, `apiManager` will continue to work, even though the applications are deployed on a completely different architecture than your local machine!
 1. Because, as far as the browser is concerned, the API and the React app are at the same domain, we do not need to account for CORS issues at all, because the requests are not cross-origin!
+1. This means, that to avoid name clashes, prepend every API route with `/api` for this and the rest of the projects in the course. 
 
 ### `launchSettings.json`
 This is a good time to point out that in the `Properties` folder of the API project, there is a file called `launchSettings.json`. This file contains the configurations for running the web API. 

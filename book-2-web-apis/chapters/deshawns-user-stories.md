@@ -1,5 +1,6 @@
 # Requirements for Deshawn's
 In this chapter you will use _user stories_ to create an ERD and wireframes for DeShawn's Dog Walking before you start building the project. This is an essential step in this project, _do not_ skip it. In the next book you will also be required to write the user stories. Working with user stories, building ERDs, and creating wireframes (or at least implementing wireframes that you are given) are important skills on the job, and will be required to receive approval for your capstone project. 
+> NOTE: This project is complex, and it is asking you to combine every skill you've learned so far in this course with a few new ones. _Ask for help_ if you think you don't know what to do next. 
 
 ## User Stories
 1. As a user, I want to view all dogs, so that I can see which dogs are in the system.
@@ -44,7 +45,7 @@ In this chapter you will use _user stories_ to create an ERD and wireframes for 
     - THEN they are presented with a form with editable inputs for the walkers' details, including checkboxes with the cities that the walker walks in
     - GIVEN the user has made changes to the form
     - WHEN they click the "Update" button
-    - THEN the changes are saved to the database, and the user is redirected to the list of walkers 
+    - THEN the changes are saved to the database, and the user is redirected to the list of walkers. See [here](./deshawns-many-to-many.md) for help on completing this story
 1. As a user, I want to delete a dog, so that dogs that are no longer in the system do not clutter the application. 
     - GIVEN a user is viewing the dog list 
     - WHEN they click on the "Remove" button next to the dog's name
