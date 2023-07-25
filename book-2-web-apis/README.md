@@ -18,10 +18,10 @@ The purpose of this book is to provide a conceptual introduction to building Web
 
 ## Table of Contents
 
-|#|🍯 💻<br>  Honey Rae's Repairs<br> <sub>(guided tour)</sub> |🚙🚗 <br>Car Builder |🍭🍬<br> Kandy Korner |
+|#|🍯 💻<br>  Honey Rae's Repairs<br> <sub>(guided tour)</sub> |🚙🚗 <br>Car Builder |🐕‍🦺 🐩<br> DeShawn's Dog Walking |
 |:-:|:-:|:-:|:-:|
-|1|[Setup for Web APIs](./chapters/web-api-setup.md)|[Project Setup](./chapters/car-builder-setup.md)|[Project Requirements](./chapters/kandy-corner-setup.md)|
-|2|[Making Requests with Postman](./chapters/testing-web-api.md)  <br><sub style="font-size: 0.85rem;">#debugging #endpoints #routes #handlers</sub>|[Basic Requirements](./chapters/car-builder-basic-endpoints.md)||
+|1|[Setup for Web APIs](./chapters/web-api-setup.md)|[Project Setup](./chapters/car-builder-setup.md)|[Project Setup](./chapters/deshawns-setup.md)<br><sub style="font-size: 0.85rem;">#proxy</sub>|
+|2|[Making Requests with Postman](./chapters/testing-web-api.md)  <br><sub style="font-size: 0.85rem;">#debugging #endpoints #routes #handlers</sub>|[Basic Requirements](./chapters/car-builder-basic-endpoints.md)|[User Stories](./chapters/deshawns-user-stories.md)|
 |3|[Data Models](./chapters/defining-types-honey-raes.md) <br><sub style="font-size: 0.85rem;">#namespaces</sub>|[Get Technologies](./chapters/car-builder-client-requests-cors.md)<br><sub style="font-size: 0.85rem;">#cors #await #async</sub>|| 
 |4|[Get All/Get One Service Ticket(s)](./chapters/honey-raes-get-tickets.md) <br><sub style="font-size: 0.85rem;">#using</sub>|[Submit an Order](./chapters/car-builder-submit-order.md)||
 |5|[Adding all Honey Rae's GET endpoints](./chapters/honey-raes-get-emps-cust.md)<br><sub style="font-size: 0.85rem;">#composition #NotFound</sub>|[Calculating Total Price](./chapters/car-builder-related-data.md)||
