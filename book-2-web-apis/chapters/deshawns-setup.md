@@ -7,6 +7,7 @@ In this project you will have the opportunity to build a full stack application 
 1. the React app is in a folder called `client`. Navigate to that directory and run `npm install`
 1. Start the API with the VS Code debugger. 
 1. in the `client` directory, run `npm start` to start the React App. 
+1. Explore the codebase to see what is there. Pay particular attention to `index.js`, `apiManager.js`, and `App.js`. Write down any questions you have so that you can ask a colleague or your instructors. 
 
 ## Proxy Settings
 This project uses a different method for handling CORS. In `package.json` (for the client app), this property has been added:
