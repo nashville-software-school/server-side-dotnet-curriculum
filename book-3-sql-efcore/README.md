@@ -31,16 +31,16 @@ Because of the large scope of this book, it is split into three parts, roughly c
 ## III. Entity Framework Core
 |#|:tent: <br> Creek River Campground <br> (guided tour) | :book: <br> Loncotes County Library | :haircut: <br> Hillary's Hair Care |
 |:-:|:-:|:-:|:-:|
-|1| [Project Setup](./chapters/creek-river-setup.md) |||
-|2| [Creating the database](./chapters/creek-river-db-context.md) <br><sub style="font-size: 0.85rem;">#encapsulation #inheritance #protected #override #constructor #base</sub>|||
-|3| [Get campsites](./chapters/creek-river-get-campsites.md) <br><sub style="font-size: 0.85rem;">#Include #Single</sub>|||
-|4| [Create a campsite](./chapters/creek-river-create-campsite.md) |||
+|1| [Project Setup](./chapters/creek-river-setup.md) |[Project Requirements](./chapters/loncotes-setup.md)||
+|2| [Creating the database](./chapters/creek-river-db-context.md) <br><sub style="font-size: 0.85rem;">#encapsulation #inheritance #protected #override #constructor #base</sub>|[Basic Features](./chapters/loncotes-basic-features.md)<br><sub style="font-size: 0.85rem;">#soft-delete</sub>||
+|3| [Get campsites](./chapters/creek-river-get-campsites.md) <br><sub style="font-size: 0.85rem;">#Include #Single</sub>|[Get Available Materials](./chapters/loncotes-get-available-materials.md)<br><sub style="font-size: 0.85rem;">#All</sub>||
+|4| [Create a campsite](./chapters/creek-river-create-campsite.md) |[Get Overdue Checkouts](./chapters/loncontes-overdue-checkouts.md)||
 |5| [Delete a campsite](./chapters/creek-river-delete-campsite.md) |||
 |6| [Update a campsite](./chapters/creek-river-campsite-update.md) |||
 |7| [Get reservations](./chapters/creek-river-get-reservations.md) <br><sub style="font-size: 0.85rem;">#ThenInclude #OrderBy </sub>|||
 |8| [Book reservations](./chapters/creek-river-book-reservation.md) |||
 |9| [Calculating fees](./chapters/creek-river-calculated.md) <br><sub style="font-size: 0.85rem;">#field #static #private</sub>|||
-|10|:car: [Inheritance](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INHERITANCE_INTRO.md)|:tv: [Advanced Linq: Nineties TV](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/LINQ_INTRO.md)|:convenience_store:[Coding Self-Assessment](./chapters/book-3-coding-assessment.md)|
+|10|:car:[Inheritance](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INHERITANCE_INTRO.md)|:tv:[Advanced Linq: Nineties TV](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/LINQ_INTRO.md)|:convenience_store:[Coding Self-Assessment](./chapters/book-3-coding-assessment.md)|
 
 ## 🔍 Additional Materials
 |:compass: Explorer Chapters|

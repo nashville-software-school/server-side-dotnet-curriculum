@@ -1,0 +1,5 @@
+# Get all overdue checkouts
+The librarians want to see all overdue checkouts so that they can send emails to the patrons that need to return the books. Create an endpoint that does this.
+- Create a calculated property on the `Checkout` class that is a boolean called `Overdue`. Use the `MaterialType`'s `CheckoutDays` property and the `Checkout`'s `CheckoutDate` and `DateTime.Now` to determine whether `Overdue` should be `true` or `false`. Assume that materials that have been returned are not overdue, regardless of their return date. 
+- Get checkouts and include the material, then include the material type (the `Overdue` property needs all that data to return the right value). Include the `Patron` data as well, so that the librarian knows who to email.
+- use `Where` to filter out the non-overdue checkouts.
