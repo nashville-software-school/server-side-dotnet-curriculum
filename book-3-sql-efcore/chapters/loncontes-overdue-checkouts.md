@@ -10,11 +10,12 @@ app.MapGet("/checkouts/overdue", (LoncotesLibraryDbContext db) =>
     return db.Checkouts
     .Include(p => p.Patron)
     .Include(co => co.Material)
+    .ThenInclude(m => m.MaterialType)
     .ToList();
 });
 ```
 
-This endpoint gets all checkouts and includes the Patron and Material data that belong to each Checkout. So far so good, but we don't want to return all checkouts, just those which are overdue. 
+This endpoint gets all checkouts and includes the Patron, Material, and MaterialType data that belong to each Checkout. So far so good, but we don't want to return all checkouts, just those which are overdue. 
 
 ### Filter with `Where`
 We need to use `Where` again, but logic for which materials are overdue is somewhat more complicated. Before we try to write the code, let's consider the algorithm for this logic:
@@ -47,6 +48,7 @@ app.MapGet("/checkouts/overdue", (LoncotesLibraryDbContext db) =>
     return db.Checkouts
     .Include(p => p.Patron)
     .Include(co => co.Material)
+    .ThenInclude(m => m.MaterialType)
     .Where(co =>
         (DateTime.Today - co.CheckoutDate).Days > 
         co.Material.MaterialType.CheckoutDays &&
