@@ -35,7 +35,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |2| [Creating the database](./chapters/creek-river-db-context.md) <br><sub style="font-size: 0.85rem;">#encapsulation #inheritance #protected #override #constructor #base</sub>|[Basic Features](./chapters/loncotes-basic-features.md)<br><sub style="font-size: 0.85rem;">#soft-delete</sub>||
 |3| [Get campsites](./chapters/creek-river-get-campsites.md) <br><sub style="font-size: 0.85rem;">#Include #Single</sub>|[Get Available Materials](./chapters/loncotes-get-available-materials.md)<br><sub style="font-size: 0.85rem;">#All</sub>||
 |4| [Create a campsite](./chapters/creek-river-create-campsite.md) |[Get Overdue Checkouts](./chapters/loncontes-overdue-checkouts.md)||
-|5| [Delete a campsite](./chapters/creek-river-delete-campsite.md) |||
+|5| [Delete a campsite](./chapters/creek-river-delete-campsite.md) |[Late Fees](./chapters/loncontes-calculate-fees.md)||
 |6| [Update a campsite](./chapters/creek-river-campsite-update.md) |||
 |7| [Get reservations](./chapters/creek-river-get-reservations.md) <br><sub style="font-size: 0.85rem;">#ThenInclude #OrderBy </sub>|||
 |8| [Book reservations](./chapters/creek-river-book-reservation.md) |||
