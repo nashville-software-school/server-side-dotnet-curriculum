@@ -8,7 +8,7 @@ In this chapter you will use calculated properties to calculate the late fee for
 ## Algorithm
 1. If there is a `ReturnDate`, and the due date was before the `ReturnDate`, there will be a fee. Otherwise, the value should be null:
     ``` 
-    if (ReturnDate == null &&  dueDate < ReturnDate)
+    if (ReturnDate != null &&  dueDate < ReturnDate)
     {
         //do logic to return fee...
     }
@@ -18,9 +18,9 @@ In this chapter you will use calculated properties to calculate the late fee for
     ```
     DateTime dueDate = CheckoutDate.AddDays(Material.MaterialType.CheckoutDays);
     ```
-1. To calculate the fee, you need to find out the number of days between today and the dueDate
+1. To calculate the fee, you need to find out the number of days between the ReturnDate and the dueDate
     ```
-    int daysLate = (DateTime.Today - dueDate);
+    int daysLate = (ReturnDate - dueDate).Days;
     ```
 1. The actual late fee will be the product of `daysLate` and the `_lateFeePerDay`:
     ``` 
@@ -28,14 +28,15 @@ In this chapter you will use calculated properties to calculate the late fee for
 1.  Now all that's left is to put it all together:
     ```
     DateTime dueDate = CheckoutDate.AddDays(Material.MaterialType.CheckoutDays);
-    if (ReturnDate == null && dueDate < ReturnDate)
+    if (ReturnDate != null && dueDate < ReturnDate)
     {
-       int daysLate = (DateTime.Today - dueDate);
+       int daysLate = ((DateTime)ReturnDate - dueDate).Days;
        decimal fee = daysLate * _lateFeePerDay;
        return fee;
     }
     return null;
     ``` 
+    We have to _cast_ `ReturnDate` as a `DateTime`, because it could possibly be `null`. By casting `ReturnDate` as a `DateTime` (instead of `DateTime?`), we are telling the compiler to trust us that `ReturnDate` does indeed have a `DateTime` value. This is quite safe in this case, because this code is inside an `if` whose condition begins with `ReturnDate != null`.  
 1. Add this logic to the calculated property. 
 
 ## Try it for yourself!
