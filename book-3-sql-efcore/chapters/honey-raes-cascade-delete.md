@@ -85,7 +85,7 @@ ALTER TABLE ServiceTicket ADD CONSTRAINT serviceticket_employeeid_fkey
 FOREIGN KEY (EmployeeId) REFERENCES Employee(Id)
 ON DELETE SET NULL;
 ```
-This script is dropping the constraint, then dropping the `NOT NULL` requirement from `EmployeeId` (because now we want to make that nullable on the ServiceTicket table), and finall readding the constraint, but setting `EmployeeId` to `NULL` when an employee is deleted whose id matches the `ServiceTicket`'s `EmployeeId`.
+This script is dropping the constraint, then dropping the `NOT NULL` requirement from `EmployeeId` (because now we want to make that nullable on the ServiceTicket table), and finally readding the constraint, but setting `EmployeeId` to `NULL` when an employee is deleted whose id matches the `ServiceTicket`'s `EmployeeId`.
 
 This option will set the `EmployeeId` of all service tickets associated with an employee being deleted to `NULL`.  
 
