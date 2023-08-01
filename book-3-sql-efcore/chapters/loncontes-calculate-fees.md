@@ -41,3 +41,5 @@ In this chapter you will use calculated properties to calculate the late fee for
 
 ## Try it for yourself!
 Add another calculated property to the `Patron` class called `Balance` that totals up the unpaid fines that a patron owes. Add a `Paid` property of type `bool` to the `Checkout` class that indicates whether a fee has been paid or not. Try to use the method in this and the previous chapters to break the problem down. Start with a description of the problem, and then pseudo-code. Slowly turn parts of the pseudo-code into actual code as you figure out how to solve each piece. 
+
+Up Next: [Adding a React Client](./loncotes-client.md)

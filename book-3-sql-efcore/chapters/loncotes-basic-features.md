@@ -36,9 +36,9 @@ Sometimes patrons move or change their email address. Add an endpoint that updat
 Sometimes patrons move out of the county. Allow the librarians to deactivate a patron (another soft delete example!).
 
 ### Checkout a Material
-The librarians need to be able to checkout items for patrons. Add an endpoint to create a new Checkout for a material and patron. Automatically set the checkout date to `DateTime.Now`. 
+The librarians need to be able to checkout items for patrons. Add an endpoint to create a new Checkout for a material and patron. Automatically set the checkout date to `DateTime.Today`. 
 
 ### Return a Material
-The librarians need an endpoint to mark a checked out item as returned by item id. Add an endpoint expecting a checkout id, and update the checkout with a return date of `DateTime.Now`. 
+The librarians need an endpoint to mark a checked out item as returned by item id. Add an endpoint expecting a checkout id, and update the checkout with a return date of `DateTime.Today`. 
 
 Up Next: [Get Available Materials](./loncotes-get-available-materials.md)

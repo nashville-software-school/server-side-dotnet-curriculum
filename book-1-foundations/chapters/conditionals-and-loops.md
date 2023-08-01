@@ -18,7 +18,7 @@ Console.WriteLine("Please enter a product name: ");
 
 string response = Console.ReadLine();
 
-if (string.IsNullOrWhiteSpace(response))
+if (string.IsNullOrEmpty(response))
 {
     Console.WriteLine("You didn't choose anything!");
 }
