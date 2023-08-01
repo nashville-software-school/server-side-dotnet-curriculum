@@ -44,4 +44,6 @@ Hillary needs the ability to add new customers and stylists to her system. Occas
 ## Starting to Code
 Once you have finished planning, and set up the code base, it's time to start implementing features! Order the tickets on your project board so that they are in the order you want to complete them. Move the top ticket into the "In Progress" column, and checkout a new branch from main. Use pull requests to merge features into the main branch, and make sure that the ticket moves to the "Done" column. Then start the process again with a new ticket until you have completed the project. 
 
+> Note: You should not build the entire API, and then build the entire client. Add endpoints to the API as you need them for the feature you are currently working on. 
+
 Up Next: [Many-To-Many with EF Core](./hillarys-inferred-many-to-many.md)
