@@ -15,13 +15,13 @@ The librarians would like to see details for a material. Include the Genre, Mate
 Materials are often added to the library's collection. Add an endpoint to create a new material
 
 ### Remove a Material From Circulation
-Add an endpoint that expects a MaterialId in the Url, which sets the `OutOfCirculationSince` property to `DateTime.Now`. (This is called a _soft delete_, where a row is not deleted from the database, but instead has a flag that says the row is no longer active.)  The endpoint to get all materials should already be filtering these items out. 
+Add an endpoint that expects an id in the url, which sets the `OutOfCirculationSince` property of the material that matches the material id to `DateTime.Now`. (This is called a _soft delete_, where a row is not deleted from the database, but instead has a flag that says the row is no longer active.)  The endpoint to get all materials should already be filtering these items out. 
 
 ### Get MaterialTypes
-The librarians will need a form in their app that let's them choose material types.
+The librarians will need a form in their app that let's them choose material types. Create an endpoint that retrieves all of the material types to eventually populate that form field
 
 ### Get Genres
-The librarians will also need form fields that have all of the genres to choose from. 
+The librarians will also need form fields that have all of the genres to choose from. Create an endpoint that gets all of the genres. 
 
 ### Get Patrons
 The librarians want to see a list of library patrons. 

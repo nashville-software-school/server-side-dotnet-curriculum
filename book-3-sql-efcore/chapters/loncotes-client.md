@@ -24,7 +24,7 @@ The first developer was able complete the following features:
 1. Add a menu item to view checkouts, that links to a component to list all of the checkouts. 
 1. Add a button to each of the currently checked out items to return the item. Use the click handler for that item to make a request to the correct API endpoint, and update the list to reflect that the item has been returned.
 1. Add a menu item to the nav bar called "Browse" that links the user to a list of all of the available (not checked out, and in circulation) materials.
-1. Add a button to the material items in the Browse component labeled "Check out". This button should navigate to a form component that allows the user to input a patron's id. Add a submit button to this component which send a request to the API to create a new checkout for that material. 
+1. Add a button to the material items in the Browse component labeled "Check out". This button should navigate to a form component that allows the user to input a patron's id. Add a submit button to this component which send a request to the API to create a new checkout for that material (HINT: you will need to use a URL param and `useParams` in the form component to know which material the checkout is for). 
 1. Add a menu item to the navbar called "Overdue Checkouts" that links to a component that shows all of the overdue checkouts with the patron that has the item. 
  
 
