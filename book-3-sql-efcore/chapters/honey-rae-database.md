@@ -37,7 +37,7 @@ This code creates the Customer table with all of the properties from the `Custom
 CREATE TABLE ServiceTicket (
     Id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     CustomerId INTEGER NOT NULL REFERENCES Customer (Id),
-    EmployeeId INTEGER NOT NULL REFERENCES Employee (Id),
+    EmployeeId INTEGER REFERENCES Employee (Id),
     Description TEXT NOT NULL, 
     Emergency BOOLEAN NOT NULL DEFAULT FALSE,
     DateCompleted TIMESTAMP  
