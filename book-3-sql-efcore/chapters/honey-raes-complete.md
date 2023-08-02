@@ -39,7 +39,7 @@ This endpoint requires using `JOIN`s to get the `Employee` and `Customer` data a
 No other table depends on service tickets for data, so you can safely delete a service ticket without worrying about cascades. This endpoint will look similar to the delete endpoint for an employee.
 
 ## Complete a Service Ticket
-Even though this endpoint uses the `POST` HTTP method, in the database it is an update of a service ticket. Unlike a normal update, you are not getting any data from the request, only a service ticket id in the URL. Use the id as a param in the SQL query to update the `DateCompleted` column to be today. You can use `DateTime.Today` to do this, or you can do it directly in the update SQL query with `DateCompleted = LOCALTIMESTAMP(0)`. 
+Even though this endpoint uses the `POST` HTTP method, in the database it is an update of a service ticket. Unlike a normal update, you are not getting any data from the request, only a service ticket id in the URL. Use the id as a param in the SQL query to update the `DateCompleted` column to be today. You can use `DateTime.Today` in C# to do this, or you can do it directly in the update SQL query with `DateCompleted = LOCALTIMESTAMP(0)`. 
 
 ## More endpoints
 The following endpoints will look similar to their counterparts for the `Employee` table:
