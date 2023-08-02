@@ -47,7 +47,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |-|
 |🍯 💻 [Handling Related Data On Delete](./chapters/honey-raes-cascade-delete.md) |
 |🍯 💻 [Finishing Honey Rae's with Npgsql](./chapters/honey-raes-complete.md) |
-|🍯 💻 Following the SRP with the Repository Pattern |
+|🍯 💻 [Organize Data Access with Repositories](./chapters/honey-raes-repositories.md) |
 |:tent: [Data Validation and Algorithmic Reasoning](./chapters/creek-river-reservation-validation.md) |
 
 
