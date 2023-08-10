@@ -97,7 +97,7 @@ HondaAccord jimsAccord = new HondaAccord()
     Owner = "Jim"
 };
 ```
-The variable `jimsAccord` now holds an object of type `Accord`, and its `Year` and `Owner` properties are set to the specific values for Jim's Accord. 
+The variable `jimsAccord` now holds an object of type `HondaAccord`, and its `Year` and `Owner` properties are set to the specific values for Jim's Accord. 
 
 Are there other metaphors you can think of besides `blueprint`, `model` or `template` that you can come up with to help create a mental model of what a class is? Share them with your colleagues to see if they make sense to them as well, and discuss with an instructor when you meet with one.
 

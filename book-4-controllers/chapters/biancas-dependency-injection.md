@@ -90,7 +90,7 @@ public class BikeController : ControllerBase
     }
 }
 ```
-The `BikeController` constructor requires one param of type `BiancasBikesDbContext` to be passed in when the class instance is created. That `BiancasBikesDbContext` instance is then saved as the value of the _private field_ `_dbContext` so that the `Get` method can use it to get bikes from the database. This field is private because this `_dbContex` should only be accessed from inside the class.  
+The `BikeController` constructor requires one param of type `BiancasBikesDbContext` to be passed in when the class instance is created. That `BiancasBikesDbContext` instance is then saved as the value of the _private field_ `_dbContext` so that the `Get` method can use it to get bikes from the database. This field is private because this `_dbContext` variable should only be accessed from inside the class.  
 
 Why not just do the following instead?
 ``` csharp
@@ -116,3 +116,4 @@ public AuthController(BiancasBikesDbContext context, UserManager<IdentityUser> u
 
 Follow this dependency injection pattern when creating new controllers for your APIs. 
 
+Up Next: [Getting Bikes](./biancas-get-bikes.md)

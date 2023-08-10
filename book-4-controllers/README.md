@@ -20,3 +20,4 @@ This book focuses on creating web APIs using a broader range of tools and techno
 |2|[Controllers](./chapters/biancas-tour.md)|||
 |3|[Auth](./chapters/biancas-auth.md)|||
 |4|[Dependency Injection](./chapters/biancas-dependency-injection.md) <br><sub style="font-size: 0.85rem;">#constructor #field #private</sub>|||
+|5|[Display Bikes](./chapters/biancas-get-bikes.md)|||
