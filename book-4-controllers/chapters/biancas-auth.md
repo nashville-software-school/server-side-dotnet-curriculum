@@ -73,6 +73,25 @@ Whenever the client makes a request to the app, the API uses the cookie to deter
 1. What Email is associated with the login, to see _who_ the user is (authentication)
 1. What _roles_ the user is in, which say what they are allowed _to do_.  (authorization)
 
+## BiancasBikesDbContext
+There are a few major changes to the DbContext class that you will interact with:
+1. `BiancasBikesDbContext` inherits from the `IdentityDbContext<IdentityUser>` class, rather than from `DbContext`. `IdentityDbContext` comes with a number of extra models and tables that will be added to the database. They include:
+    - `IdentityUser` - this will hold login credentials for users
+    - `IdentityRole` - this will hold the various roles that a use can have
+    - `IdentityUserRole` - a many-to-many table between roles and users. These define which users have which roles. 
+1. In `OnModelCreating`, we are seeding the database with rows in the above tables. For example:
+    ``` csharp
+    modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
+        {
+            Id = "dbc40bc6-0829-4ac5-a3ed-180f5e916a5f",
+            UserName = "Administrator",
+            Email = "admina@strator.comx",
+            PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, _configuration["AdminPassword"])
+        });
+    ```
+    - The `Id`s for the Identity Framework tables are _Guids_, not `ints`. A `Guid` (Global Unique Identifier) can be generated with `Guid.NewGuid()`. You will need to do this when you create your own data to seed. 
+    - The password is being _hashed_ before storage in the database, and we are retrieving it from the _user-secrets_ so that it is not stored in the GH repository. The details of password hashing are beyond the scope of the course. The only thing you should know is that hashing the password obscures the actual password in the database for security reasons. 
+
 ## Examples from the codebase
 > AuthController.cs
 ``` csharp
@@ -113,7 +132,7 @@ The following files and modules contain the code related to auth:
 1. `authManager.js`
 1. `AuthorizedRoute.js`
 
-You are _not responsible_ for the auth-related code in those modules, but you are expected to be able to _use_ them properly. In this book you will see multiple examples of how to do so, but you do not need to know _how the code works_, as it is outside of the scope of the course.
+You are _not responsible_ for the auth-related code in those modules, but you are expected to be able to _use_ them properly. In this book you will see multiple examples of how to do so, but you do not need to know _how the code works_, as it is outside the scope of the course.
 
 Up Next: [Bianca's Tour Part III: Dependency Injection](./biancas-dependency-injection.md)
 
