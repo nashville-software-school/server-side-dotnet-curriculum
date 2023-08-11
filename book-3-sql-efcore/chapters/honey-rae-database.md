@@ -52,6 +52,7 @@ psql -U postgres -f 01_HoneyRaes_Create.sql
 
 ## Adding data to the database
 1. Add another file to the `SQL` folder of the project called `02_HoneyRaes_Seed.sql`
+1. The first line of the file should be `\c HoneyRaes` to connect the script to that database. 
 1. In that file, use `INSERT` statements to add all of the data that you are currently storing in the collections at the top of `Program.cs` to your SQL database. Make sure to insert the `Customer` and `Employee` rows before you insert the `ServiceTicket` rows. Refer back to the MusicHistory chapter if you can't remember the syntax. 
 1. Save that file, and run it with `psql` like you ran the create script. 
 1. Open pgAdmin, and look to see that the database and all of the tables have been created (you can see the tables for a database under `Schemas` -> `public` -> `Tables`)
