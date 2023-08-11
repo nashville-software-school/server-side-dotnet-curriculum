@@ -7,7 +7,6 @@ Ernie Fairchild has hired us to build a new point-of-sale system for his conveni
 1. For the rest of these instructions, the files will be referring to files inside the `CornerStore` folder. You can look at the `CornerStore.Tests` folder if you wish, but you do not need to modify any code there.
 1. The project code is already configured to use EF Core and Npgsql. Running `dotnet restore` in the project directory will resolve all missing dependencies.
 1. Initialize user secrets for this project, and add a secret called `CornerStoreDbConnectionString` with the connection string for a local database called `CornerStore`. Be sure to include you username and password for your local Postgresql `postgres` user. 
-1. There is a `client` folder with a React project ready to use. run `npm install` before running `npm start` to run the project server. 
 
 > IMPORTANT: There will be many compiler errors in the Tests project at the outset, because many of the entities that the tests rely on in the API will not exist yet (and need to be completed by you!). You will know that you can try `dotnet test` when those compiler errors are gone. This of course does not mean that all the tests will pass, but you have at least properly created all of the entities and the DbContext so that you can start writing and testing the endpoints. 
 

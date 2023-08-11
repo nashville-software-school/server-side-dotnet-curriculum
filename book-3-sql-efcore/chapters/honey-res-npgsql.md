@@ -55,7 +55,7 @@ Yes, that is a lot of new code. It has been commented extensively to explain eac
 
 First, to get this out of the way, you don't need to understand how your application gets and maintains a connection to the SQL database server. It just does. Think of an `NpgsqlConnection` object as a tunnel to send messages back and forth between the database server and your web API. The _connection string_ is very similar to a URL: it is an address where the SQL connection can find the database, just like a URL lets us find a website. The connection string also provides credentials to restrict access to users. 
 
-> IMPORTANT: As you can see, connections strings can contain sensitive data like passwords. This is the last time in this course you will see a connection string in a file that you would push to Github. You will learn how to keep these secrets in gitignored configuration files in the future! 
+> IMPORTANT: As you can see, connections strings can contain sensitive data like passwords. This is the last time in this course you will see a connection string in a file that you would push to Github. You will learn how to keep these secrets out of your code later in this book! 
 
 One of the things you can do with connections is create SQL commands. The text of those commands will look just like a SQL query. One of the things you can do with commands is _execute_ them with the `ExecuteReader` method. that method returns a `DataReader` object, which gives you access to all the data that the query produced. 
 
@@ -63,7 +63,7 @@ The hardest part to understand here is `reader.Read()`. The data that comes back
 
 Inside the braces of the `while` loop, we use other methods to access the data in that row, and then create a new C# `Employee` object with it. `GetOrdinal` finds the position in the table of a column with the name that's passed in. The columns are in a particular order in the table. So if `Id` is the first column in the table, `reader.GetOrdinal("Id")` would return 0. `GetString` or `GetInt32` gets that data type value out of whatever number column in that row is passed in. `reader.GetInt32(0)` will return whatever integer value is stored in the first column of the current row. We use these values to set the properties of our new `Employee` objects.
 
-Finally, this code block uses `using` statements for creating the connection, command, and reader objects. `using` here is different from a `using` _directive_, which is how we import classes from another namespace. Here, `using` indicates that some special logic needs to happen before discarding this object in memory. If you think about a connection to a sql database as a phone call, `using` tells your application to properly "hang up" the call before putting the phone down.  
+Finally, this code block uses `using` statements for creating the connection, command, and reader objects. `using` here is different from a `using` _directive_, which is how we import classes from another namespace. Here, `using` indicates that some special logic needs to happen before discarding this object in memory. If you think about a connection to a sql database as a phone call, `using` tells your application to properly disconnect the call before putting the phone down.  
 
 Ok, that still might not make sense yet. Read through the code and the explanation a few times. After working through the rest of this book, this syntax will feel less bewildering. If it's still confusing then, ask an instructor for help!
 

@@ -59,7 +59,7 @@ We've asked the user to provide input, but we haven't collected any yet. To do t
 ```csharp
 string response = Console.ReadLine();
 ```
-When `ReadLine` is called, the program will wait for the user to type text and press `Enter`. When the user presses enter, the `ReadLine` method (which is a kind of function) will _return_ whatever text the user typed (the data type of this content will be, unsurprisingly, a `string`). This means that the program will be "paused" on this line until the use presses `Enter`, and when they do, `response` will hold the text response that the user typed. 
+When `ReadLine` is called, the program will wait for the user to type text and press `Enter`. When the user presses enter, the `ReadLine` method (which is a kind of function) will _return_ whatever text the user typed (the data type of this content will be, unsurprisingly, a `string`). This means that the program will be "paused" on this line until the user presses `Enter`, and when they do, `response` will hold the text response that the user typed. 
 
 Let's let the user know what they just gave as input. We can do _string interpolation_ in C#, but the syntax is slightly different than JS. Add another line:
 
