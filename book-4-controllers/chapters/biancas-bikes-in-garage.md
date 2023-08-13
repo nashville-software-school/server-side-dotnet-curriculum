@@ -64,4 +64,4 @@ export const getBikesInShopCount = () => {
 ```
 - We only want to call `getInventory` when there is a logged in user.
 
-Test out the endpoint to make sure it works! If you haven't added any data to the database, there should be only one bike in the garage. 
+Test out the endpoint to make sure it works! If you haven't added any data to the database, there should be only one bike in the garage.
