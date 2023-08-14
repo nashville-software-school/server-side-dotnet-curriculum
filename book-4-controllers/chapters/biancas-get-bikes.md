@@ -135,8 +135,8 @@ public IActionResult GetById(int id)
 }
 ```
 Some things to notice:
-1. `"{id}"` has been passed into `HttpGet` to add more to the route that this handler should map to. Because the controller's route is already `/api/bike`, add `{id}` will make the whole route for this endpoint be `/api/bike/{id}`. Just like when we were using Minimal APIs the name inside the `{}` _must_ match the `int id` param in the method in order for the framework to pass the value in from the URL when calling it. 
-1. The name of the method is somewhat arbitrary. It could have been `Get(int id)`, even though 
+1. `"{id}"` has been passed into `HttpGet` to add more to the route that this handler should map to. Because the controller's route is already `/api/bike`, adding `{id}` will make the whole route for this endpoint be `/api/bike/{id}`. Just like when we were using Minimal APIs, the name inside the `{}` _must_ match the `int id` param in the method in order for the framework to pass the value in from the URL when calling it. 
+1. The name of the method is somewhat arbitrary. The way that the framework figures out which method to call is through the route mapping that is provided in the `Route` and `HttpGet` attributes.    
 
 
 Comment out the `Authorize` attribute to test the endpoint in Postman before moving on (remember to uncomment it after testing). 
