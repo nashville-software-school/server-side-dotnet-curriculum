@@ -10,7 +10,7 @@ In this chapter we will allow the user to view some statistics about the plants 
 | Stats                                  |
 | -------------------------------------- |
 | Lowest price plant name                |
-| Number of Plants Available             |
+| Number of Plants Available (not sold)         |
 | Name of plant with highest light needs |
 | Average light needs                    |
 | Percentage of plants adopted           |

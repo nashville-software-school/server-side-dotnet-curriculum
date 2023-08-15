@@ -20,7 +20,7 @@ if (choice == "1")
     throw new NotImplementedException("Display all plants");
 }
 ```
-4. The user should also be presented with an option to exit the program. If they choose it, program should end. Provide a suitable salutation to let them know the program is ending. 
+4. The user should also be presented with an option to exit the program. If they choose it, the program should end. Provide a suitable salutation to let them know the program is ending. 
 5. If the user doesn't choose to exit, the main menu should be presented again to allow the user to choose another option. 
 
 > Stop here and test your code. What behavior are you testing for? Look at the requirements and instructions above to come up with a list of things to test. How can you test each of those things? Given that all of the options raise an `Exception` (which exits the program), how can you test the last requirement (Step 5) above?
