@@ -185,6 +185,7 @@ export const demoteUser = (userId) => {
 };
 ```
 Finally, update the functions in `UserProfileList` to use the data access functions from `userProfileManager`:
+>UserProfileList.js
 ``` javascript
  const promote = (id) => {
     promoteUser(id).then(() => {
