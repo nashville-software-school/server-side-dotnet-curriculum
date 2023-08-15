@@ -22,19 +22,21 @@ This book focuses on creating web APIs using a broader range of tools and techno
 |4|[Dependency Injection](./chapters/biancas-dependency-injection.md) <br><sub style="font-size: 0.85rem;">#constructor #field #private</sub>|||
 |5|[Display Bikes](./chapters/biancas-get-bikes.md)|||
 |6|[Bikes in Garage](./chapters/biancas-bikes-in-garage.md)|||
-|7|[Work Orders]()|||
-|8|[Update Orders]()|||
-|9|[Employees]()|||
-|10|[Manage Users]()|||
-|11|[Owner Profile]()|🚗[Interfaces]()||
+|7|[Work Orders](./chapters/biancas-work-orders.md)|||
+|8|[Create A Work Order](./chapters/biancas-create-work-order.md)|||
+|9|[Update Orders](./chapters/biancas-update-work-orders.md)|||
+|10|[Employees]()|||
+|11|[Manage Users]()|||
+|12|[Owner Profile]()|🚗[Interfaces](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INTERFACES_INTRO.md)||
 
 |:compass: Explorer Chapters|
 |-|
-|[Unit Testing]()|
-|[Generics]()|
+|Unit Testing|
+|Generics|
+|HttpClient|
 
 |:test_tube: Projects|
 |-|
-|[Heist II: Classy Heist]()|
-|[Trestlesbridge Farms]()|
-|[Tabloid]()|
+|[Heist II: Classy Heist](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/CLASSIC_HEIST.md)|
+|[Trestlesbridge Farms](https://github.com/nashville-software-school/Trestlebridge-Farms)|
+|Tabloid|
