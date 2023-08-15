@@ -57,7 +57,7 @@ export default function UserProfileList({ loggedInUser }) {
               <th scope="row">{`${up.firstName} ${up.lastName}`}</th>
               <td>{up.address}</td>
               <td>{up.email}</td>
-              <td>{up.username}</td>
+              <td>{up.userName}</td>
               <td>
                 {up.roles.includes("Admin") ? (
                   <Button
@@ -110,28 +110,30 @@ export const getUserProfilesWithRoles = () => {
 Add this endpoint to the `UserProfileController`:
 ``` csharp
 [HttpGet("withroles")]
-[Authorize(Roles = "Admin")]
-public IActionResult GetWithRoles()
-{
-     return Ok(_dbContext.UserProfiles
+    [Authorize(Roles = "Admin")]
+    public IActionResult GetWithRoles()
+    {
+        return Ok(_dbContext.UserProfiles
+        .Include(up => up.IdentityUser)
         .Select(up => new UserProfile
         {
             Id = up.Id,
             FirstName = up.FirstName,
             LastName = up.LastName,
             Address = up.Address,
-            Email = up.Email,
+            Email = up.IdentityUser.Email,
+            UserName = up.IdentityUser.UserName,
             IdentityUserId = up.IdentityUserId,
             Roles = _dbContext.UserRoles
             .Where(ur => ur.UserId == up.IdentityUserId)
             .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name)
             .ToList()
         }));
-}
+    }
 ```
-- This is a very inefficient way to do this query, but better solutions require a level of complexity that is not necessary right now. The query gets user profiles, then searchs for user roles associated with the profile, and maps each of those to role names.
+- This is a very inefficient way to do this query, but better solutions require a level of complexity that is not necessary right now. The query gets user profiles, then searches for user roles associated with the profile, and maps each of those to role names.
 
-The `promote` and `demote` functions currently only log to the console. The component should be viewable now. Test it to see at admins have a demote button, and non-admins have a promote button (you might have to register a few more users). Use the console to check that the buttons work.
+The `promote` and `demote` functions currently only log to the console, but the component should be viewable now. Test it to see if admins have a demote button, and non-admins have a promote button (you might have to register a few more users). Use the console to check that the buttons work.
 
 ## Adding Promote and Demote Endpoints
 
@@ -142,6 +144,7 @@ Add the following endpoints to `UserProfileController`:
 public IActionResult Promote(string id)
 {
     IdentityRole role = _dbContext.Roles.SingleOrDefault(r => r.Name == "Admin");
+    // This will create a new row in the many-to-many UserRoles table.
     _dbContext.UserRoles.Add(new IdentityUserRole<string>
     {
         RoleId = role.Id,
@@ -156,11 +159,10 @@ public IActionResult Promote(string id)
 public IActionResult Demote(string id)
 {
     IdentityRole role = _dbContext.Roles
-        .SingleOrDefault(r => r.Name == "Admin");
-
+        .SingleOrDefault(r => r.Name == "Admin"); 
     IdentityUserRole<string> userRole = _dbContext
         .UserRoles
-        .Single(ur =>
+        .SingleOrDefault(ur =>
             ur.RoleId == role.Id &&
             ur.UserId == id);
 
