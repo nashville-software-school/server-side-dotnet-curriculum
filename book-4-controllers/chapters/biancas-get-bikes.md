@@ -124,7 +124,7 @@ public IActionResult GetById(int id)
         .Include(b => b.Owner)
         .Include(b => b.BikeType)
         .Include(b => b.WorkOrders)
-        .SingleOrDefault();
+        .SingleOrDefault(b => b.Id == id);
 
     if (bike == null)
     {
