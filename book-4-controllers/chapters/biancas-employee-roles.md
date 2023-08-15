@@ -110,26 +110,26 @@ export const getUserProfilesWithRoles = () => {
 Add this endpoint to the `UserProfileController`:
 ``` csharp
 [HttpGet("withroles")]
-    [Authorize(Roles = "Admin")]
-    public IActionResult GetWithRoles()
+[Authorize(Roles = "Admin")]
+public IActionResult GetWithRoles()
+{
+    return Ok(_dbContext.UserProfiles
+    .Include(up => up.IdentityUser)
+    .Select(up => new UserProfile
     {
-        return Ok(_dbContext.UserProfiles
-        .Include(up => up.IdentityUser)
-        .Select(up => new UserProfile
-        {
-            Id = up.Id,
-            FirstName = up.FirstName,
-            LastName = up.LastName,
-            Address = up.Address,
-            Email = up.IdentityUser.Email,
-            UserName = up.IdentityUser.UserName,
-            IdentityUserId = up.IdentityUserId,
-            Roles = _dbContext.UserRoles
-            .Where(ur => ur.UserId == up.IdentityUserId)
-            .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name)
-            .ToList()
-        }));
-    }
+        Id = up.Id,
+        FirstName = up.FirstName,
+        LastName = up.LastName,
+        Address = up.Address,
+        Email = up.IdentityUser.Email,
+        UserName = up.IdentityUser.UserName,
+        IdentityUserId = up.IdentityUserId,
+        Roles = _dbContext.UserRoles
+        .Where(ur => ur.UserId == up.IdentityUserId)
+        .Select(ur => _dbContext.Roles.SingleOrDefault(r => r.Id == ur.RoleId).Name)
+        .ToList()
+    }));
+}
 ```
 - This is a very inefficient way to do this query, but better solutions require a level of complexity that is not necessary right now. The query gets user profiles, then searches for user roles associated with the profile, and maps each of those to role names.
 
