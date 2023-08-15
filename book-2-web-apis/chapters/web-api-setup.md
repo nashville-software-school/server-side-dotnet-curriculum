@@ -9,7 +9,7 @@ Web APIs respond to HTTP requests with HTTP responses. Here are two short videos
 
 ## Instructions
 
-1. navigate to `~/workspace/csharp` in your terminal
+1. Navigate to `~/workspace/csharp` in your terminal
 1. Run this command: `dotnet new webapi -o HoneyRaesAPI -minimal`
 1. Run `cd HoneyRaesAPI`
 1. Run `dotnet new gitignore`
@@ -44,7 +44,7 @@ There is also a `Program.cs` file, which is the entrypoint to the application, j
 
 ### What's different
 
-In the `csproj` file, you'll notice that there is a `PackageReference` node for something called `Swashbuckle`. Package references in .NET are a lot like dependencies in the `package.json` file in an npm project. They are references for outside libraries and project that your project needs to work correctly. This particular library will help you create a nice little UI in the browser to test your API. There is an explorer chapter with a tutorial in its use. 
+In the `csproj` file, you'll notice that there is a `PackageReference` node for something called `Swashbuckle`. Package references in .NET are a lot like dependencies in the `package.json` file in an npm project. They are references for outside libraries and projects that your project needs to work correctly. This particular library will help you create a nice little UI in the browser to test your API. There is an explorer chapter with a tutorial in its use. 
 
 There are two more new files called `appsettings.json` and `appsettings.Development.json`. They hold configuration data for the application that gets used when starting the app. We will use these files later, but you can leave them alone for now.
 
@@ -116,7 +116,7 @@ app.MapGet("/weatherforecast", () =>
 This code creates an _endpoint_ in the application. This is an important concept that is a basic building block of a web API. An endpoint is essentially a _route_ (a URL to make a request), and a _handler_, which is a function that determines the logic for what to do when a request is made to that route. Because `MapGet` is getting called here, we also know that this endpoint is for a `GET` request only. So in this case: 
 
 1. `/weatherforecast` is the _route_ for this endpoint.
-1. the lambda function starting with `() =>` is the function that will run when the app receives a request to `/weatherforecast`. In this case, it makes up a fake weather forecast for the next five days and returns that data. This data will be turned from C# data into JSON, and it will be the body of the HTTP _response_.  
+1. The lambda function starting with `() =>` is the function that will run when the app receives a request to `/weatherforecast`. In this case, it makes up a fake weather forecast for the next five days and returns that data. This data will be turned from C# data into JSON, and it will be the body of the HTTP _response_.  
 1. This endpoint is triggered only when an HTTP request to `/weatherforecast` with the `GET` method is made from a client (like a front-end application).  
 
 `.WithName("GetWeatherForecast")` at the end is optional, and is for documentation purposes. We won't be using it in the course. 

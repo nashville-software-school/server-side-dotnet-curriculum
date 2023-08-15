@@ -3,7 +3,7 @@
 ## Creating a database
 Before we can add endpoints for `HoneyRaesAPI` we need to create a database to pull data from. In the next book, we will replace this with a SQL database, but until then we will use C# collections to hold our data. 
 
-Add the following lines to the top of `Program.cs`:
+Add the following lines to the very top of `Program.cs`:
 
 ``` csharp
 List<HoneyRaesAPI.Models.Customer> customers = new List<HoneyRaesAPI.Models.Customer> {};
@@ -29,11 +29,11 @@ In practice, you will always add these `using` directives to the top of files wh
 
 ### Adding data to the collections
 
-Add three customers, two employees, and five service tickets to the collections using the _collection initializers_. Make sure that the customer and employee ids in the service tickets match actual ids in the customer and employee collections. Leave some of the service tickets incomplete by not providing a `DateCompleted`. lLeave some unassigned by not providing an `EmployeeId`. 
+Add three customers, two employees, and five service tickets to the collections using the _collection initializers_. Make sure that the customer and employee ids in the service tickets match actual ids in the customer and employee collections. Leave some of the service tickets incomplete by not providing a `DateCompleted`. Leave some unassigned by not providing an `EmployeeId`. 
 
 ## Get all `ServiceTicket`s
 
-1. remove the two endpoints that are in `Program.cs` already, as they are not relevant to HoneyRaesAPI. Also remove the `WeatherForecast` `record` definition at the bottom of the file. 
+1. Remove the two endpoints that are in `Program.cs` already, as they are not relevant to HoneyRaesAPI. Also remove the `WeatherForecast` `record` definition at the bottom of the file and the ` var summaries...` declaration.
 1. Add this endpoint above `app.Run();`: 
 ``` csharp
 app.MapGet("/servicetickets", () =>

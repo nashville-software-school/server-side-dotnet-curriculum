@@ -5,7 +5,7 @@ Learning Objectives:
 1. Declaring and initializing `double` and `decimal`
 1. Understanding the difference between these two types and integers
 1. Performing calculations with number types. 
-1. interating through a `List` with `foreach`.
+1. Iterating through a `List` with `foreach`.
 
 ## Adding a `Condition` property to `Product`
 The manger of Thrown For a Loop would like to record the condition of the used equipment items that are in stock. The condition is graded on a scale of 1-5, and the manager wants to be able to use non-integer values (3.4, 4.8, etc...)
@@ -66,7 +66,7 @@ Now our compiler errors should go away! Update all of the prices in the products
 > **When to use different numeric types?** <br> It can be confusing to know what numeric type is appropriate for a specific use case. In general for this course, the following guidelines may be helpful: <br> 1. If it's possible to use an `int`, prefer that option. <br> 2. If a floating point type is necessary, and you need to do calculations with those numbers that require very precise results (like calculating interest, anything dealing with money, etc.) use the `decimal` type. <br> 3. Otherwise, use a `double`
 
 ## Displaying the Total Value of the current stock
-The manager of the store would like to see the current value of the entire stock when looking at the products list. For that, we need to add up the prices of all of the items that are currently in stock. After the initial greeting, add the following code:
+The manager of the store would like to see the current value of the entire stock when looking at the products list. For that, we need to add up the prices of all of the items that are currently in stock. After displaying the initial greeting, add the following code:
 ``` csharp
 decimal totalValue = 0.0M;
 foreach (Product product in products)
@@ -80,7 +80,7 @@ Console.WriteLine($"Total inventory value: ${totalValue}");
 ```
 The above code does the following things:
 1. It declares a variable called `totalValue` of type `decimal` with an initial value of zero, to accumulate all of the product values. 
-1. the `foreach` loop checks each product to see if it is not sold. If it is still in stock, the price of that item is added to the total. 
+1. The `foreach` loop checks each product to see if it is not sold. If it is still in stock, the price of that item is added to the total. 
 1. Finally, the last line prints the total to the console. 
 
 ### The syntax for a `foreach` loop

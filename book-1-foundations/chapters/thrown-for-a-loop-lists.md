@@ -102,7 +102,7 @@ for (int i = 0; i < products.Count; i++)
 This loop's syntax is almost identical to the syntax in a JS `for` loop, but it may have been a while since you've seen one, so let's review what each of the pieces does:
 1. `int i = 0;` This creates a variable that we can use in the logic of our loop. Notice that because we are declaring a new variable, we provide its type before the name (`int`);
 1. `i < products.Count;` This is the condition that, if false, will make the loop stop. This is a good time to point out that `Count` is the property of a list you want to check to see what the length of the list is.
-1. `i++` This is a operation that we run at the end of each iteration of the loop. Almost always, this operation increments `i`, which is what it does here!
+1. `i++` This is an operation that we run at the end of each iteration of the loop. Almost always, this operation increments `i`, which is what it does here!
 
 Run the program to see if it still works. Notice that we added `1` to `i` in the program because non-developer humans are not used to seeing UIs start lists with `0`. Also notice that we can access an item in a `List` by index with _bracket notation_ just like you would in a JS array. 
 

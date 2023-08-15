@@ -51,7 +51,6 @@ int AddingMachine(int firstNumber, int secondNumber)
     //compiler error!
 }
 ```
-```
 
 `AddingMachine` returns an `int`, and the compiler knows that because the method was defined with `int` as the return type, so we can't save the result in a variable of type `string`. We also can't use `return` in the body of the method to return anything other than an `int`.
 
