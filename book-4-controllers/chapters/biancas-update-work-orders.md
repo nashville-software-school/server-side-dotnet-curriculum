@@ -132,3 +132,4 @@ See if you can update the app to make the `Mark As Complete` button work without
 ## Delete Work Order
 Add another (red) button to the `Actions` column that deletes an incomplete work order. See if you can get this feature working without instructions! You will need to use the `HttpDelete` attribute on a new endpoint that is meant to handle requests with HTTP `DELETE` methods. 
 
+Up Next: [Managing Employees](./biancas-employee-roles.md)
