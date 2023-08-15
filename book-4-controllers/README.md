@@ -25,14 +25,15 @@ This book focuses on creating web APIs using a broader range of tools and techno
 |7|[Work Orders](./chapters/biancas-work-orders.md)|||
 |8|[Create A Work Order](./chapters/biancas-create-work-order.md)|||
 |9|[Update Orders](./chapters/biancas-update-work-orders.md)|||
-|10|[Employees](./chapters/biancas-employee-roles.md)<br><sub style="font-size: 0.85rem;">#IdentityRole #RoleService</sub>|||
-|11|[Owner Profile]()|🚗[Interfaces](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INTERFACES_INTRO.md)||
+|10|[Employees](./chapters/biancas-employee-roles.md)<br><sub style="font-size: 0.85rem;">#IdentityRole</sub>|🚗[Interfaces](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INTERFACES_INTRO.md)||
+
 
 |:compass: Explorer Chapters|
 |-|
 |Unit Testing|
 |Generics|
 |HttpClient|
+|:bike: Owner Profile|
 
 |:test_tube: Projects|
 |-|
