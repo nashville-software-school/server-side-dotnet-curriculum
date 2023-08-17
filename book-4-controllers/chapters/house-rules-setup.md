@@ -34,7 +34,7 @@ This project does not include template code, so there is some additional setup r
 1. In the `managers` folder, create an `authManager` and copy all of the contents into it from the `authManager` in Bianca's Bikes. 
 1. Copy the entire `auth` folder from Bianca's bikes into the `components` folder. 
 1. Replace the code in `App.js` with the code from Bianca's Bikes
-1. Copy `ApplicationViews.js` from Bianca's Bikes to the House Rules `components` direcroy. Remove the `bikes`, `workorders`, and `employees` routes. 
+1. Copy `ApplicationViews.js` from Bianca's Bikes to the House Rules `components` directory. Remove the `bikes`, `workorders`, and `employees` routes. 
 1. Create a `NavBar.js` component in the `components` directory with the following code:
     ``` javascript
     import { useState } from "react";
@@ -106,7 +106,7 @@ This project does not include template code, so there is some additional setup r
     ```
 1. Copy the contents of `Program.cs` from Bianca's Bikes into the House Rules `Program.cs`. Replace `BiancasBikes` with `HouseRules` everywhere it appears in the app (HINT: there are ways to use your code editor to do this to make sure you don't miss any).
 1. Create a `Data` folder. Add a file called `HouseRulesDbContext.cs`. Copy the content from `BiancasBikesDbContext.cs`. Change all references to `BiancasBikes` to `HouseRules`. Remove all of the `DbSet` properties _except for UserProfiles_. In the `OnModelCreating` method, remove all of data seeding for owners, bikes, bike types, and work orders. 
-1. Create a `Models` folder, and put a `UserProfile.cs` file in it. Copy the content from Bianca's Bikes' `UserProfile` class. Update the `namespace` to be `HouseRules.Models`. Remove the `WorkOrders` property (this was specifically for Bianca's Bikes).
+1. Create a `Models` folder, and put a `UserProfile.cs` file in it. Copy the content from Bianca's Bikes' `UserProfile` class. Update the `namespace` to be `HouseRules.Models`. Remove the `WorkOrders` property (this was specifically for Bianca's Bikes). Copy `Registration.cs` over from Bianca's Bikes as well.
 1. Add a controller to the Controllers folder called `AuthController.cs`. Copy the corresponding code from Bianca's Bikes into this file. Change all references to `BiancasBikes` to `HouseRules`. 
 1. Initialize user secrets for this project
 1. Save the connection string for a database called `HouseRules` to the user secret `HouseRulesDbConnectionString`.
