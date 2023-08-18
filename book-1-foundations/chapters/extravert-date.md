@@ -10,8 +10,6 @@ This chapter will add the ability to provide an expiration date for a plant post
 1. Set the `AvailableUntil` property on the new `Plant` with the date created in the previous step.
 
 ## Refactoring the app to use `AvailableUntil`
-
-1. Update the view that shows the plants available for adoption to only include plants that are not sold _and_ are still available. You will have to compare the plant's `AvailableUntil` property to `DateTime.Now` to check this.
-1. Update the "Number of Available Plants" statistic to take this property into account as well.
+Update the view that shows the plants available for adoption to only include plants that are not sold _and_ are still available. You will have to compare the plant's `AvailableUntil` property to `DateTime.Now` to check this.
 
 Up Next: [App Statistics](./extravert-stats.md)
