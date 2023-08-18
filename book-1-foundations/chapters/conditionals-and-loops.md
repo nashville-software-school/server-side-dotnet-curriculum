@@ -64,7 +64,7 @@ It looks like we might not have handled the edge case of a user entering only sp
 
 The first is to use `IsNullOrWhiteSpace` instead of `IsNullOrEmpty` like this: 
 ```
-while (string.IsNullOrWhitespace(response))
+while (string.IsNullOrWhiteSpace(response))
 ...
 ```
 

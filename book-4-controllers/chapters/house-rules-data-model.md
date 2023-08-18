@@ -15,3 +15,5 @@ Use the `OnModelCreating` method in the `HouseRulesDbContext` class to add data 
 
 ## Migrate the Database
 Create an initial migration, and then update the database!
+
+Up Next: [Basic Endpoints](./house-rules-basic-endpoints.md)
