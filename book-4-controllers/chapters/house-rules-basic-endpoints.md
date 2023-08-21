@@ -38,7 +38,10 @@ The following endpoints should be accessible to admin users only:
     - This endpoint will delete a chore with the matching id
 1. `POST` `/api/chore/{id}/assign`
     - This endpoint will assign a chore to a user. 
-    - Pass the `userId` in as a query string param, as in the completion endpoint above.  
+    - Pass the `userId` in as a query string param, as in the completion endpoint above.
+1. `POST` `/api/chore/{id}/unassign`
+    - This endpoint will unassign a chore to a user. 
+    - Pass the `userId` in as a query string param, as in the other endpoints above.  
 
 Up Next: [Client Views](./house-rules-client-views.md)
 
