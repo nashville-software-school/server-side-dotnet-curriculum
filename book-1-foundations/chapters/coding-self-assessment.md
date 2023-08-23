@@ -11,6 +11,9 @@ In this self-assessment, you will be working on a console application named "Bra
 1. Clone your new repo that Github classroom created to your local computer and open it in VS Code.
 1. For the rest of these instructions, the files will be referring to files inside the `BrassAndPoem` folder. You can look at the `BrassAndPoem.Tests` folder if you wish, but you do not need to modify any code there. 
 
+## `Console.Clear` and `Console.ReadKey`
+ _Do not_ use `Console.Clear` or `Console.ReadKey` in this assessment. You also do not need to include `try`/`catch` or other error handling.
+
 ## Define the ProductType Class
 a. Inside the ProductType.cs file, create a class named ProductType.
 b. Add the following property to the ProductType class:
