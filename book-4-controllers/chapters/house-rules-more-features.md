@@ -5,7 +5,7 @@ Convert the `ChoreDetails` component into a form to update the `Chore`. After su
 
 ## Highlighting Overdue Chores
 Once a chore has not been completed for as many days as its `ChoreFrequencyDays` it is time to do the chore again! Update the application so that overdue chores' names are red in the `ChoresList` so that users will be aware that they need attending to. To complete this feature, you may find it useful to:
-1. Create a calculated property that determines whether the most recent completion of a chore was completed more than the `ChoreFrequencyDays` ago. To do this you may find the `Max` Linq method useful, as well as using `Include` to get `ChoreCompletions` when retrieving chores. The `AddDays` methods will also come in handy, along with `DateTime.Today`
+1. Create a calculated property that determines whether the most recent completion of a chore was completed more than the `ChoreFrequencyDays` ago. To do this you may find the `Max` Linq method useful, as well as using `Include` to get `ChoreCompletions` when retrieving chores. The `AddDays` method will also come in handy, along with `DateTime.Today`
 1. Use the calculated property in the ChoresList to conditionally render each chore name in the default color or in red. 
 
 ## My Chores
