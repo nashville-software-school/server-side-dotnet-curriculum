@@ -87,7 +87,7 @@ Now that the error message is more helpful, you can update the handler to check 
 1. Update the `Chore` class and the `CreateChore` component to enforce a minimum `ChoreFrequencyDays` of 1, and a maximum of 14
     - bonus challenge: use the [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number#offering_suggested_values) element to suggest 1,3,7,10, and 14 as options (note that this will have no effect on the allowed values on the server side)
 1. Use the `EmailAddress` data annotation to validate that a registering user has input a valid email for their registration, and use the `MaxLength` attribute to ensure that the username submitted is less than 50 characters.
-1. You have already seen the `Required` data annotation used in data models to make nullable types `NOT NULL` in the database. You can also use to to make data properties required when submitted to the API. Try adding it to properties on the Chore and Registration models to further improve model validation for these types. 
+1. You have already seen the `Required` data annotation used in data models to make nullable types `NOT NULL` in the database. You can also use `Required` to make data properties required when submitted to the API. Try adding it to properties on the Chore and Registration models to further improve model validation for these types. 
 
 Up Next: [More features for House Rules](./house-rules-more-features.md)
 
