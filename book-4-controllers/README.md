@@ -16,13 +16,13 @@ This book focuses on creating web APIs using a broader range of tools and techno
 ## Table of Contents
 |#|:bike:<br>Bianca's Bike Shop<br> <sub>(guided tour)</sub> |:broom::soap:<br>House Rules|:pizza:<br> Shepherd's Pies|
 |:-:|:-:|:-:|:-:|
-|1|[Project Setup](./chapters/biancas-setup.md)|[Project Setup]()|[Project Requirements]()|
-|2|[Controllers](./chapters/biancas-tour.md)|||
-|3|[Auth](./chapters/biancas-auth.md)|||
-|4|[Dependency Injection](./chapters/biancas-dependency-injection.md) <br><sub style="font-size: 0.85rem;">#constructor #field #private</sub>|||
-|5|[Display Bikes](./chapters/biancas-get-bikes.md)|||
-|6|[Bikes in Garage](./chapters/biancas-bikes-in-garage.md)|||
-|7|[Work Orders](./chapters/biancas-work-orders.md)|||
+|1|[Project Setup](./chapters/biancas-setup.md)|[Project Setup](./chapters/house-rules-setup.md)|[Project Requirements]()|
+|2|[Controllers](./chapters/biancas-tour.md)|[Data Model](./chapters/house-rules-data-model.md)||
+|3|[Auth](./chapters/biancas-auth.md)|[Basic Endpoints](./chapters/house-rules-basic-endpoints.md)||
+|4|[Dependency Injection](./chapters/biancas-dependency-injection.md) <br><sub style="font-size: 0.85rem;">#constructor #field #private</sub>|[Basic Views](./chapters/house-rules-client-views.md)||
+|5|[Display Bikes](./chapters/biancas-get-bikes.md)|[Complete and Assign Chores](./chapters/house-rules-complete-assign.md)||
+|6|[Bikes in Garage](./chapters/biancas-bikes-in-garage.md)|[Data Validation](./chapters/house-rules-data-annotations.md)<br><sub style="font-size: 0.85rem;">#data annotations</sub>||
+|7|[Work Orders](./chapters/biancas-work-orders.md)|[More Features](./chapters/house-rules-more-features.md)||
 |8|[Create A Work Order](./chapters/biancas-create-work-order.md)|||
 |9|[Update Orders](./chapters/biancas-update-work-orders.md)|||
 |10|[Employees](./chapters/biancas-employee-roles.md)<br><sub style="font-size: 0.85rem;">#IdentityRole</sub>|🚗[Interfaces](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INTERFACES_INTRO.md)||

@@ -53,7 +53,7 @@ The main goal of this project is to help you think about how the APIs you are go
 
     1. Basic Package _(basic sound system)_
     1. Navigation Package _(includes integrated navigation controls)_
-    1. Visibility Package _(includes side and reat cameras)_
+    1. Visibility Package _(includes side and rear cameras)_
     1. Ultra Package _(includes navigation and visibility packages)_
 
     ### Wheels

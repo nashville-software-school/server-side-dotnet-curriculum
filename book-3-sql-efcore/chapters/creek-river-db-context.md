@@ -53,7 +53,7 @@ This method introduces a number of new topics:
     modelBuilder.Entity<Campsite>().HasData(new Campsite[]
     {
         new Campsite {Id = 1, CampsiteTypeId = 1, Nickname = "Barred Owl", ImageUrl="https://tnstateparks.com/assets/images/content-images/campgrounds/249/colsp-area2-site73.jpg"},
-    }
+    });
     ```
 1. This adds one campsite to the database. Add at least five more to the `Campsite[]` so that you will have a number of campsites with which to test your code.
 1. use the `HasData` method to add one `UserProfile` and at least one `Reservation` to the database as well. In all cases, make sure that the foreign keys you choose match a primary key in the corresponding table. 

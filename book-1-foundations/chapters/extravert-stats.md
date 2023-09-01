@@ -39,7 +39,7 @@ The good news is that you can _cast_ a value as another type. This is what that 
 ```csharp
 int firstNumber = 1;
 double firstNumberAsDouble = (double)firstNumber;
-double half = firstNumber / 2;
+double half = firstNumberAsDouble / 2;
 Console.WriteLine(half);
 //result: 0.5
 ```

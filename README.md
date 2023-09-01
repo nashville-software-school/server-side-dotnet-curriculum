@@ -29,7 +29,7 @@ Fair question. For web development, server has two meanings which are relevant t
 Wait a minute, if `json-server` worked on the front end, can't we just use that forever? Sigh. I wish we could. But no, even its documentation says that it is only for mocking server-side apps. Once our applications are deployed and have a lot of data, or a lot of users, we will need more robust applications for our APIs. 
 
 ### C#
-C#/.NET (along with a SQL Server database) is a very popular language and platform with a rich toolchain and development environment for building those robust web applications. Building our own APIs (instead of using `json-server`'s automatically generated one) also lets us create custom resources tailor-made for our application's needs. There are a number of things about C# that are very different from JS, including:
+C#/.NET (along with a SQL database) is a very popular language and platform with a rich toolchain and development environment for building those robust web applications. Building our own APIs (instead of using `json-server`'s automatically generated one) also lets us create custom resources tailor-made for our application's needs. There are a number of things about C# that are very different from JS, including:
 1. a strong type system (variables are declared as being strings or integers and many other types, and their type stays the same for their lifetime, among other things.)
 1. the code is compiled first before it is run. Compilation is the process of turning code into another type of code before running it, which has a number of benefits that we don't need to enumerate here.  
 
