@@ -11,6 +11,9 @@ In this self-assessment, you will be working on a console application named "Bra
 1. Clone your new repo that Github classroom created to your local computer and open it in VS Code.
 1. For the rest of these instructions, the files will be referring to files inside the `BrassAndPoem` folder. You can look at the `BrassAndPoem.Tests` folder if you wish, but you do not need to modify any code there. 
 
+## `Console.Clear` and `Console.ReadKey`
+ _Do not_ use `Console.Clear` or `Console.ReadKey` in this assessment. You also do not need to include `try`/`catch` or other error handling.
+
 ## Define the ProductType Class
 a. Inside the ProductType.cs file, create a class named ProductType.
 b. Add the following property to the ProductType class:
@@ -31,7 +34,13 @@ b. Add the following properties to the Product class:
 1. Create a loop that asks the user to choose an option, and will continue running until the use selects `5`, at which point the program will finish. 
 
 ### Implement the Menu System in Program.cs
-Inside the `Program.cs` file , you will implement the following methods underneath the loop (detailed instructions for each below). To test whether these methods work, add logic to the program loop to call the appropriate method when a user chooses an option:
+Inside the `Program.cs` file , you will implement the following methods underneath the loop (detailed instructions for each below). 
+
+All of the methods should accept two parameters, in this order:
+1. The list of products
+1. The list of product types
+
+To test whether these methods work, add logic to the program loop to call the appropriate method when a user chooses an option:
 
 1. `DisplayMenu`
 
@@ -57,13 +66,14 @@ Inside the `Program.cs` file , you will implement the following methods undernea
 
 ### Implement the DisplayAllProducts Method
 
-1. Iterate over the products and display each product's name and price on a new line in the console. Start the line with the index of that product in the `List`.
+1. Iterate over the products and display each product's name and price on a new line in the console. Start the line with the number of that product in the `List` (have the list start with `1`, not `0`).
 1. Add the product type title to the product display. HINT: You will need to use a Linq method to get the product type for each product. 
 
 ### Implement the DeleteProduct Method
 
-1. Display the products and prompt the user to enter the index of the product they want to delete.
-1. Find the product with the provided index and remove it from the list of products.
+1. Display the products and prompt the user to enter the number of the product they want to delete.
+1. Remember that the list should start from `1`.
+1. Find the product with the provided number and remove it from the list of products.
 
 ### Implement the AddProduct Method
 
@@ -74,7 +84,8 @@ Inside the `Program.cs` file , you will implement the following methods undernea
 
 ### Implement the UpdateProduct Method
 
-1. Display the products and prompt the user to enter the index of the product they want to update.
-1. Find the product with the provided index and retrieve its reference.
+1. Display the products and prompt the user to enter the number of the product they want to update.
+1. Find the product with the provided number and retrieve its reference.
+1. Remember that the list should start from `1`.
 1. Prompt the user to enter the updated name, price and product type for the product (in that order). If the user presses enter without typing anything, leave the property unchanged. 
 1. Update the product's properties with the provided information.
