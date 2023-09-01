@@ -16,13 +16,13 @@ If we want to get the walker's cities, we need to do that in two steps:
 int id = 1;
 List<WalkerCity> walkerCitiesForWalker1 = walkerCities.Where(wc => wc.WalkerId == 1).ToList();
 
-List<City> citiesFor1 = walkerCitiesForWalker1.Select(wc => cities.First(c => c.Id = wc.CityId));
+List<City> citiesFor1 = walkerCitiesForWalker1.Select(wc => cities.First(c => c.Id = wc.CityId)).ToList();
 ```
 The second step returns a city that matches the `CityId` of each `WalkerCity` in the `List` stored in `walkerCitiesForWalker1` collection. 
 
 Putting it all together, we can finally add the cities to the `Walker` object stored in the `walker` variable:
 ``` csharp
-walker.Cities = citiesFor1
+walker.Cities = citiesFor1; 
 ```
 
 ## Updating cities for a walker
@@ -30,7 +30,7 @@ Updating cities associated with a walker are a bit more complicated. Let's say t
 
 Our first task is to remove the current `WalkerCity` items associated with the walker:
 ``` csharp
-walkersCities =  walkerCities.Where(wc => wc.WalkerId != walker.Id);
+walkersCities =  walkerCities.Where(wc => wc.WalkerId != walker.Id).ToList();
 ```
 Then, we add new `WalkerCity` items for each of the cities in the `Walker` object sent to the server from the client:
 ``` csharp

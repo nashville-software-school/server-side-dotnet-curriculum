@@ -47,7 +47,7 @@ app.MapPut("/employees/{id}", (int id, Employee employee) =>
     using NpgsqlCommand command = connection.CreateCommand();
     command.CommandText = @"
         UPDATE Employee 
-        SET Name = @name
+        SET Name = @name,
             Specialty = @specialty
         WHERE Id = @id
     ";

@@ -48,7 +48,7 @@ let names = [];
 > <sub>Yes, yes, I know that seems a lot cleaner and easier to read, but our verbose C# will come in handy soon enough. For one, there's nothing stopping you from adding whatever data types you like to the JS array `names`, even mismatching ones. That's almost never what you want to do (if you have ever seen a bug that was caused by a data value of `"1"` when you were expecting `1`, or an object missing a critical key in an array of those objects, you know what I mean).  Our long syntax for creating this List of integers gives us _type safety_. That can be very helpful in preventing bugs in our programs.</sub> 
 
 ### Initialize a List with values
-We can also create a new List, and immediately add items to it with the _collection initializer_. This is a pair of curly braces that comes after the parenthenses, like this:
+We can also create a new List, and immediately add items to it with the _collection initializer_. This is a pair of curly braces that comes after the parentheses, like this:
 ``` csharp
 List<int> years = new List<int>()
 {

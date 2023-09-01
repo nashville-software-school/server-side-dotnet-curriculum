@@ -1,5 +1,5 @@
 # Creating the Data Model
-In this chapter we will create the Models classes for House Rules, add code to `OnModelCreating` so that the database will be seeded with starting data, finally build the database. 
+In this chapter we will create the Models classes for House Rules, add code to `OnModelCreating` so that the database will be seeded with starting data, and finally build the database. 
 
 ## ERD for House Rules
 You haven't been given user stories or wireframes for this project, but here is the ERD representing the data model for the system: 

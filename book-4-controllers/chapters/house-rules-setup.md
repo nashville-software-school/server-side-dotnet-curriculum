@@ -17,6 +17,7 @@ This project does not include template code, so there is some additional setup r
     ``` bash
     git init
     ```
+1. In the `Properties` folder, change the `HouseRules` profile application urls to this: `"applicationUrl": "https://localhost:5001;http://localhost:5000",`. 
 1. Create the client:
     ``` bash
     mkdir client && cd $_
@@ -30,9 +31,11 @@ This project does not include template code, so there is some additional setup r
     ``` bash
     npm install --save bootstrap reactstrap
     ```
+1. In `package.json`, add the proxy property like this: `"proxy": "https://localhost:5001",`
 1. Create `components` and `managers` folders in `src`
 1. In the `managers` folder, create an `authManager` and copy all of the contents into it from the `authManager` in Bianca's Bikes. 
 1. Copy the entire `auth` folder from Bianca's bikes into the `components` folder. 
+1. In `index.js`, replace the `React.StrictMode` tags with `BrowserRouter` tags.
 1. Replace the code in `App.js` with the code from Bianca's Bikes
 1. Copy `ApplicationViews.js` from Bianca's Bikes to the House Rules `components` directory. Remove the `bikes`, `workorders`, and `employees` routes. 
 1. Create a `NavBar.js` component in the `components` directory with the following code:

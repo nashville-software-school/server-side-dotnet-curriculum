@@ -11,7 +11,7 @@ export const getTechnologies = () => {
     return [...database.technologies]
 }
 ```
-This function gets data from the database variable, copies it, and returns it. Let's refactor it to use the fetch API to make a request to the .NET API (you will have to add the port that your API is using) We will need to use `await` to wait for the data. `await` is similar to `.then` in that it allows the code to wait for an asynchronous operation to finish. It looks like this:
+This function gets data from the database variable, copies it, and returns it. Let's refactor it to use the fetch API to make a request to the .NET API. You will have to add the port that your API is using for HTTPS. Make sure you use the port that is for the https url, _not_ for http (the https port will be in the 7000's, the http port will be in the 5000s if you're confused). We will need to use `await` to wait for the data. `await` is similar to `.then` in that it allows the code to wait for an asynchronous operation to finish. It looks like this:
 ``` javascript
 export const getTechnologies = async () => {
   const res = await fetch("https://localhost:<port>/technologies");
@@ -110,7 +110,7 @@ Restart the API, and refresh the browser. You should now see Car Builder loading
 
 ## Refactoring the Other Components
 1. Refactor the database functions for getting paints, interiors, and wheels to fetch from the API, and make them `async` so you can `await` the results of the fetch
-1. Update the `Paints`, `Interiors`, `Wheels` and `Orders` components to `await all of those functions that fetch from the API. 
+1. Update the `Paints`, `Interiors`, `Wheels` and `Orders` components to `await` all of those functions that fetch from the API. 
 1. Test the app to make sure all of the `select` elements are getting populated with the right data. 
 
 
