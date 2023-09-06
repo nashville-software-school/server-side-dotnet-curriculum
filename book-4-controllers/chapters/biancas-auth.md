@@ -46,8 +46,8 @@ sequenceDiagram
 ```
 
 The diagram above shows the basic workflow:
-1. The client send an HTTP request with the email and password
-1. The API receives that request, and requests the hashed password that matches the email in the database. 
+1. The client sends an HTTP request with the email and password
+1. The API receives that request, and requests the hashed password that matches the email from the database. 
 1. The API compares the hashed password to the provided password
     - If they match, the API returns 200 with the cookie on the `set-cookie` header of the HTTP response:
         ```
