@@ -50,7 +50,7 @@ Joe provided us with a draft menu to help build our data model:
 
 ## Application Requirements
 Only employees will use this system as logged on users. They need to be able to:
-1. Create an order (there are lots of design questions here - should the user be able to add pizzas on this view, or only after the order has been created? )
+1. Create an order (there are lots of design questions here - should the user be able to add pizzas on this view, or only after the order has been created?)
 1. View all orders (should be filtered by day, with today being the default), ordered by order datetime (newest first).
 1. View an order's details (including a list of pizzas)
 1. Update an order
@@ -61,3 +61,11 @@ Only employees will use this system as logged on users. They need to be able to:
     - change cheese or sauce type, or size
     - add and remove toppings
 1. Cancel an order (delete from the system)
+
+## Project Planning
+You will not be able to complete this project efficiently without proper planning ahead of time. 
+
+1. Create an ERD for the system. The description above and the requirements should be enough information to create a good data model for this application
+1. Create wireframes of the different views that the UI will need in order to fulfill requirements. These can be very simple, but make sure you have an idea of how the user is going to access each view, and how any forms will need to look to allow the user to input data. 
+1. Use the project requirements to create user stories. Make issues on Github once you have a repo, and add those issues to a Github project. 
+1. Once you have started coding, create a new branch for each feature you work on. Merge that branch into main before you start working on the next feature. 
