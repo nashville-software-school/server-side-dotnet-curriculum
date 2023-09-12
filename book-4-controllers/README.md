@@ -31,8 +31,8 @@ This book focuses on creating web APIs using a broader range of tools and techno
 |:compass: Explorer Chapters|
 |-|
 |Unit Testing|
-|Generics|
-|HttpClient|
+|:car:[Generics](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/GENERICS_INTRO.md)|
+|:cat:[HttpClient](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-3-web-api/chapters/HTTPCLIENT.md)|
 |:bike: Owner Profile|
 
 |:test_tube: Projects|
