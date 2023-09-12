@@ -69,3 +69,5 @@ You will not be able to complete this project efficiently without proper plannin
 1. Create wireframes of the different views that the UI will need in order to fulfill requirements. These can be very simple, but make sure you have an idea of how the user is going to access each view, and how any forms will need to look to allow the user to input data. 
 1. Use the project requirements to create user stories. Make issues on Github once you have a repo, and add those issues to a Github project. 
 1. Once you have started coding, create a new branch for each feature you work on. Merge that branch into main before you start working on the next feature. 
+
+[Multiple Foreign Key Properties](./shepherds-pies-foreign-keys.md)

@@ -18,7 +18,7 @@ In this project we will build an API for the reservations website of Creek River
     ```
 1. Add the connection string to the secrets for this app with this (make sure you change `<your_postgresql_password>` to your db password!):
     ``` bash
-    dotnet user-secrets set "CreekRiverDbConnectionString" "Host=localhost;Port=5432;Username=postgres;Password=<your_postgresql_password>;Database=CreekRiver"
+    dotnet user-secrets set 'CreekRiverDbConnectionString' 'Host=localhost;Port=5432;Username=postgres;Password=<your_postgresql_password>;Database=CreekRiver'
     ```
 
 ## Models
@@ -41,7 +41,7 @@ Creating the data models for this application will be almost identical to the pr
     }
     ```
     - EF Core will automatically make a property called `Id` in C# into the `PRIMARY KEY` column for the corresponding SQL database table. 
-    - The `[Required]` code above the `CampsiteTypeName` is called an _attribute_ in C#. Attributes allow you to add metadata about entities in C# that your program can use. In this case, Entity Framework can tell from this attribute that the `CampsiteTypeName` column in the SQL database should have `NOT NULL` when it is created. Entity Framework will assume that any reference type in C# (types that can be null, see the [extra materials(https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)]) will correspond to a nullable column in SQL as well. The other properties in this class should also have `NOT NULL` in the database creation, but because they are all numbers and are not nullable in C#, we don't need to add the `Required` attribute to them. We need to add `using System.ComponentModel.DataAnnotations` to use the `Required` attribute
+    - The `[Required]` code above the `CampsiteTypeName` is called an _attribute_ in C#. Attributes allow you to add metadata about entities in C# that your program can use. In this case, Entity Framework can tell from this attribute that the `CampsiteTypeName` column in the SQL database should have `NOT NULL` when it is created. Entity Framework will assume that any reference type in C# (types that can be null, see the [extra materials](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)) will correspond to a nullable column in SQL as well. The other properties in this class should also have `NOT NULL` in the database creation, but because they are all numbers and are not nullable in C#, we don't need to add the `Required` attribute to them. We need to add `using System.ComponentModel.DataAnnotations` to use the `Required` attribute
 1.  Add a `Campsite.cs` file to the `Models` folder and paste this code in it:
     ``` csharp
     using System.ComponentModel.DataAnnotations;
