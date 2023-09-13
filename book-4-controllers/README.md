@@ -16,8 +16,8 @@ This book focuses on creating web APIs using a broader range of tools and techno
 ## Table of Contents
 |#|:bike:<br>Bianca's Bike Shop<br> <sub>(guided tour)</sub> |:broom::soap:<br>House Rules|:pizza:<br> Shepherd's Pies|
 |:-:|:-:|:-:|:-:|
-|1|[Project Setup](./chapters/biancas-setup.md)|[Project Setup](./chapters/house-rules-setup.md)|[Project Requirements]()|
-|2|[Controllers](./chapters/biancas-tour.md)|[Data Model](./chapters/house-rules-data-model.md)||
+|1|[Project Setup](./chapters/biancas-setup.md)|[Project Setup](./chapters/house-rules-setup.md)|[Project Requirements](./chapters/shepherds-pies.md)|
+|2|[Controllers](./chapters/biancas-tour.md)|[Data Model](./chapters/house-rules-data-model.md)|[Multiple Employee Properties](./chapters/shepherds-pies-foreign-keys.md)|
 |3|[Auth](./chapters/biancas-auth.md)|[Basic Endpoints](./chapters/house-rules-basic-endpoints.md)||
 |4|[Dependency Injection](./chapters/biancas-dependency-injection.md) <br><sub style="font-size: 0.85rem;">#constructor #field #private</sub>|[Basic Views](./chapters/house-rules-client-views.md)||
 |5|[Display Bikes](./chapters/biancas-get-bikes.md)|[Complete and Assign Chores](./chapters/house-rules-complete-assign.md)||
@@ -31,8 +31,8 @@ This book focuses on creating web APIs using a broader range of tools and techno
 |:compass: Explorer Chapters|
 |-|
 |Unit Testing|
-|Generics|
-|HttpClient|
+|:car:[Generics](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/GENERICS_INTRO.md)|
+|:cat:[HttpClient](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-3-web-api/chapters/HTTPCLIENT.md)|
 |:bike: Owner Profile|
 
 |:test_tube: Projects|
