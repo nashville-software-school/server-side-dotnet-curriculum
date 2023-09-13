@@ -34,7 +34,21 @@ public class Service
 }
 ```
 
-EF core will notice that a `Service` has many (a List!) `Appointment`s, and will notice that an `Appointment` has many `Service`s for the same reason. In the database it will still create an `AppointmentService` table, but you do not need to represent it in your C# code. Neat!
+EF core will notice that a `Service` has many (a List!) `Appointment`s, and will notice that an `Appointment` has many `Service`s for the same reason. In the database it will still create an `AppointmentService` table, but you do not need to represent it in your C# code with its own class. Neat!
+
+### Seeding Data for Inferred Many-To-Many Relationships
+Because there is no `AppointmentService` class in your program, you will have to seed data for that table in your database slightly differently, using a string to identify the table. Here is an example that would work for Hillary's Hair Care:
+``` csharp
+modelBuilder.Entity("AppointmentService").HasData(new object[]
+{
+    new {AppointmentsId = 1, ServicesId = 1},
+    new {AppointmentsId = 1, ServicesId = 6},
+    new {AppointmentsId = 2, ServicesId = 2},
+    new {AppointmentsId = 2, ServicesId = 3},
+    new {AppointmentsId = 3, ServicesId = 1},
+    new {AppointmentsId = 4, ServicesId = 4}
+});
+```
 
 ## Limitations
 This alternate way to define a many-to-many relationship has limitations:
