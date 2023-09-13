@@ -2,7 +2,7 @@
 In this chapter we will create the class that is able to access a PostgreSQL database and seed the database with data. We will then create the database using the dotnet cli migration tool. 
 
 ## Adding a DbContext class
-Add a file to the main directory of the project called `CreekRiverDbContext.cs`. paste the following code in it:
+Add a file to the main directory of the project called `CreekRiverDbContext.cs`. Paste the following code in it:
 ``` csharp
 using Microsoft.EntityFrameworkCore;
 using CreekRiver.Models;
@@ -56,7 +56,7 @@ This method introduces a number of new topics:
     });
     ```
 1. This adds one campsite to the database. Add at least five more to the `Campsite[]` so that you will have a number of campsites with which to test your code.
-1. use the `HasData` method to add one `UserProfile` and at least one `Reservation` to the database as well. In all cases, make sure that the foreign keys you choose match a primary key in the corresponding table. 
+1. Use the `HasData` method to add one `UserProfile` and at least one `Reservation` to the database as well. In all cases, make sure that the foreign keys you choose match a primary key in the corresponding table. 
 
 ## Configure the web API to use EF Core
 Add the following using directives at the top of `Program.cs`:

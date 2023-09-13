@@ -78,7 +78,7 @@ Creating the data models for this application will be almost identical to the pr
     ```
     - Here, too, `UserProfileId` and `CampsiteId` will be set up as foreign keys in the database
     - Notice that we can have both `UserProfileId` and `UserProfile` in the model. `UserProfile` will be ignored by EF Core when creating the UserProfile table, because it knows that this type cannot correspond to a separate column on the table, but we can use it to store the `UserProfile` data from the UserProfile table that corresponds to `UserProfileId`. 
-1. Finally, and a `UserProfile.cs` file to the `Models` folder and paste the following code:
+1. Finally, add a `UserProfile.cs` file to the `Models` folder and paste the following code:
     ```csharp
     using System.ComponentModel.DataAnnotations;
 

@@ -27,8 +27,8 @@ export const completeOrder = async (orderId) => {
 
 ## Creating the endpoint in the API
 Your task is to create an endpoint in the API that:
-1. marks the order matching the provided `orderId` as fulfilled. You will have to add a property to the `Order` class to store this value. 
-1. will be triggered by the client-side code above. pay attention to the URL, the request method, and whether any data is being sent with the request. 
+1. Marks the order matching the provided `orderId` as fulfilled. You will have to add a property to the `Order` class to store this value. 
+1. Will be triggered by the client-side code above. Pay attention to the URL, the request method, and whether any data is being sent with the request. 
 
 Test the endpoint to make sure that it works. How will you confirm that the endpoint did what you expected it to do?
 

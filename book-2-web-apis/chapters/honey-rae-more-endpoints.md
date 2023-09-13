@@ -21,7 +21,7 @@ Create an endpoint to return employees not currently assigned to an incomplete s
 Create an endpoint to return all of the customers for whom a given employee has been assigned to a service ticket (whether completed or not)
 
 ### 6. Employee of the month
-Create and endpoint to return the employee who has completed the most service tickets last month. 
+Create an endpoint to return the employee who has completed the most service tickets last month. 
 
 ### 7. Past Ticket review
 Create an endpoint to return completed tickets in order of the completion data, oldest first. (This will required a Linq method you haven't learned yet...)
