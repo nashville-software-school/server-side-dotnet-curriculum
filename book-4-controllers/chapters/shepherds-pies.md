@@ -8,7 +8,11 @@ Giuseppe Shepherd learned how to make the perfect pizza as a child from his nonn
 ## Project Description
 
 ### Orders
-Giuseppe's (Joe, to his friends) restaurant has a dining room and delivery service available, and an order can either be placed for a particular table number or for delivery. Joe can tell if an order is for delivery if an employee has been assigned to deliver it. Orders are also always associated with the employee that took the order (at a table or over the phone). Each order at the restaurant can have multiple pizzas on it. Joe needs to see what the total cost for the order will be based on the total cost of all of the pizzas. He also needs to see if the customer left a tip. Joe's restaurant is located in a magical place with no sales tax. For record-keeping purposes, Joe also needs to know the date and time an order was placed.    
+Giuseppe's (Joe, to his friends) restaurant has a dining room and delivery service available, and an order can either be placed for a particular table number or for delivery. Each order at the restaurant can have multiple pizzas on it.
+
+Each order can potentially have two employees assigned to it for different purposes - Joe can tell if an order is for delivery if an employee has been assigned as the deliverer for that order. Orders are also _always_ associated with the employee that took the order (at a table or over the phone).  
+
+Joe needs to see what the total cost for the order will be based on the total cost of all of the pizzas on that order. He also needs to see if the customer left a tip. Joe's restaurant is located in a magical place with no sales tax. For record-keeping purposes, Joe also needs to know the date and time an order was placed.    
 
 ### Pizza
 Eventually there will be other items available, but for the restaurant opening Joe is going to only serve pizzas. The pizzas come in three sizes - small, medium, and large. Each pizza on an order can have a cheese type, a sauce type, and then any number of toppings chosen from a list on the menu.
@@ -51,7 +55,7 @@ Joe provided us with a draft menu to help build our data model:
 ## Application Requirements
 Only employees will use this system as logged on users. They need to be able to:
 1. Create an order (there are lots of design questions here - should the user be able to add pizzas on this view, or only after the order has been created?)
-1. View all orders (should be filtered by day, with today being the default), ordered by order datetime (newest first).
+1. View all orders (should be filtered by day, with today being the default when first viewing the list), ordered by order datetime (newest first).
 1. View an order's details (including a list of pizzas)
 1. Update an order
     - Add a pizza to an order ( linked from order details view)

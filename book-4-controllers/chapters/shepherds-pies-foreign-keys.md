@@ -2,7 +2,7 @@
 In this chapter we will cover how to add two properties to an entity that reference the same related entity. This will be important for properly configuring an `Order` in Shepherd's Pies to have `Driver` and `Employee` properties that both reference the `Employee` entity. 
 
 ## The `ForeignKey` Attribute
-So far we have been relying on naming conventions for EF Core to correctly configure the foreign keys in the databases we have built. For example, the `ChoreAssignment` entity in `HouseRules` has `ChoreId` and `UserProfileId` properties that EF Core can easily understanding as foreign keys to the  `Chore` and `UserProfile` entities. 
+So far we have been relying on naming conventions for EF Core to correctly configure the foreign keys in the databases we have built. For example, the `ChoreAssignment` entity in `HouseRules` has `ChoreId` and `UserProfileId` properties that EF Core can easily understand as foreign keys to the  `Chore` and `UserProfile` entities. 
 
 However, sometimes foreign keys cannot follow this naming convention, and one common reason for that is that an entity will reference two different rows from the same related table. Here is an example from an application to manage pen pal letters. 
 
@@ -36,7 +36,7 @@ public class Letter
 ```
 You can see above that a `Letter` has both a `RecipientId` and a `WriterId`. Neither of them are called `PalId`, which is the normal naming convention for a foreign key, because if one were called `PalId`, it would be impossible to tell whether it is indicating the writer or the recipient. 
 
-To let EF Core know that both `WriterId` and `RecipientId` refer to instances of the `Pal` entity, `Letter` has two `Pal` properties called `Writer` and `Recipient`. The `ForeignKey` data annotation is used to tell EF Core that another property in the class is the foreign key that can populate the `Pal` property that it matches. 
+To let EF Core know that both `WriterId` and `RecipientId` refer to instances of the `Pal` entity, `Letter` has two properties of type `Pal`. One is called `Writer` and the other is called `Recipient`. The `ForeignKey` data annotation over each of those properties is used to tell EF Core that another property in the class is the foreign key that can populate the `Pal` property that it matches. 
 
 With these properties configured properly, we are able to add the recipient and the writer to letters when we query the database for them:
 ``` csharp
@@ -97,4 +97,4 @@ This will return JSON that looks like this:
 ]
 ```
 
-Use this strategy when configuring the `Order` entity in Shepherd's pies to include both a `Driver` (an optional property that indicates who is delivering the order, if it is for delivery), and an `Employee`, which is not optional, and represents the employee that took the order. 
+Use this strategy when configuring the `Order` entity in Shepherd's Pies to include both a `Driver` (an optional property that indicates who is delivering the order, if it is for delivery), and an `Employee`, which is not optional, and represents the employee that took the order. 
