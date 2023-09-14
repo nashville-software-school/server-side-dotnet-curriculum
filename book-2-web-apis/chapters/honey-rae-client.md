@@ -20,7 +20,7 @@ Add a delete button to the service tickets list rows to remove a service ticket.
 Add a button next to the delete button to mark a request as complete, and correctly update the API database with the right HTTP request when it is clicked. The Complete button should only appear when the request is 1. assigned and 2. not complete. 
 
 ### Assigning an employee (challenge)
-1. Add a `Assign` button to the service ticket details routes the user to the following component: 
+1. Add an `Assign` button to the service ticket details routes the user to the following component: 
 1. Create a component that allows the user to choose an employee to assign to a service ticket. The component should submit the ticket data to the API so that the database can be updated.  After submission, the app should navigate back to the details for that ticket. 
 1. The assign button should appear in the "Employee" column instead of "Unassigned", otherwise display the assigned employee name
 

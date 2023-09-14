@@ -3,7 +3,7 @@ In this chapter you will use EF Core to query the PostgreSQL database for campsi
 
 ## Getting all campsites
 1. Remove all of the weather forecast related code from `Program.cs` as we have done in previous projects
-1. add this endpoint to `Program.cs`: 
+1. Add this endpoint to `Program.cs`: 
     ``` csharp
    app.MapGet("/api/campsites", (CreekRiverDbContext db) =>
     {

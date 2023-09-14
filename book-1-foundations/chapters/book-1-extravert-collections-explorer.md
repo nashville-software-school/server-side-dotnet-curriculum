@@ -48,14 +48,14 @@ foreach (KeyValuePair<string, int> kv in vehicleInventory)
 ```
 Each item in the loop is a `KeyValuePair`, and will have the same types as the Dictionary's key and value types. You can access each with the `Key` and `Value` properties on the key value pair. 
 
-By know you should have noticed that though dictionaries can be useful, most of the cases in which you would have used an object in Javascript, you will instead create a user-defined class, with all of the benefits that come with it (strong types for each property on the class, dot notation accessibility, safe property access). 
+By now you should have noticed that though dictionaries can be useful, most of the cases in which you would have used an object in Javascript, you will instead create a user-defined class, with all of the benefits that come with it (strong types for each property on the class, dot notation accessibility, safe property access). 
 
 Let's implement a feature in Extravert that is a good use case for a Dictionary: 
 
 ### Showing Plant Inventory by Species
 1. Add a method to `Program.cs` called `InventoryBySpecies` that returns `void`.
 1. Create a Dictionary with `string` as the type for keys, and `int` as the type for the values
-1. iterate through the plants. Check the dictionary to see if the species is already recorded in the dictionary. If it is already there, increment the value by 1. 
+1. Iterate through the plants. Check the dictionary to see if the species is already recorded in the dictionary. If it is already there, increment the value by 1. 
 1. If it is not already there, add a new key value pair with the species name and `1` as the value. 
 1. After iterating through the products, iterate through the Dictionary and print out a report of the inventory by species.
 

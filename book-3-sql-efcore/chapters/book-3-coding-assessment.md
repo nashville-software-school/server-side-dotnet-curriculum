@@ -56,7 +56,6 @@ Implement the following endpoints in the API (return the correct HTTP status cod
 
 ### `/products`
 1. Get all products with categories. If the `search` query string param is present, return only products whose names or category names include the `search` value (ignore case).
-1. `/products/popular` - Get the most popular products, determined by which products have been ordered the most times (HINT: this requires using `GroupBy` to group the OrderProducts by ProductId, then using `Sum` to add up all the Quantities of the OrderProducts in each group). Check for a query string param called `amount` that says how many products to return. Return five by default.
 1. Add a product
 1. Update a product
 ### `/orders`
@@ -67,4 +66,9 @@ Implement the following endpoints in the API (return the correct HTTP status cod
 
 
 When you have completed all of the tasks, push the result to the main branch (you can push more often, just make sure that the final working result is pushed as well). 
+
+## Extra Challenge
+This feature is not required for the tests to pass, but is a fun challenge if you would like to try it:
+
+`/products/popular` - Get the most popular products, determined by which products have been ordered the most times (HINT: this requires using `GroupBy` to group the OrderProducts by ProductId, then using `Sum` to add up all the Quantities of the OrderProducts in each group). Check for a query string param called `amount` that says how many products to return. Return five by default.
 

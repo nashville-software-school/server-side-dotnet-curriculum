@@ -2,7 +2,7 @@
 In this chapter we will connect to our PostgreSQL database programmatically inside the HoneyRaesAPI project, and create the query to get all Employees inside the handler for that endpoint.
 
 ## Adding the `Npgsql` dependency to the project
-the .NET runtime does not include by default a library for connecting to PostgreSQL, so we will have to add a package to the project that does that for use. We can download just such a package (called Npgsql) from the Nuget package registry (kind of like the `npm install ...` of .NET). 
+The .NET runtime does not include by default a library for connecting to PostgreSQL, so we will have to add a package to the project that does that for use. We can download just such a package (called Npgsql) from the Nuget package registry (kind of like the `npm install ...` of .NET). 
 
 Run this command in the directory of HoneyRaesAPI that includes the `csproj` file:
 ``` bash

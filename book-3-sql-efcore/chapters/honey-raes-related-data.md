@@ -142,9 +142,9 @@ The second `if` in the `while` loop is checking to see whether that row includes
 ## Summary
 As you can see, this is quite a lot of code inside the handler. But it's important to note all the things that this code is doing:
 - Managing a connection to the database (over the network)
-- sending a SQL query to get data
-- _parsing_ that tabular data into strongly-typed .NET objects that our .NET API understands
-- returning that data in the HTTP response as JSON.  
+- Sending a SQL query to get data
+- _Parsing_ that tabular data into strongly-typed .NET objects that our .NET API understands
+- Returning that data in the HTTP response as JSON.  
 
 If you are having a hard time understanding _why_ the `while` and `if` statements are necessary, take a look at the results of this query in pgAdmin again. the reader object will go through the table of results row-by-row, one row per iteration of the `while` loop. Think about what needs to be done with each row, and try to map that to the code in the handler above. 
 
