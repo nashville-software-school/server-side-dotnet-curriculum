@@ -32,7 +32,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |#|:tent: <br> Creek River Campground <br> (guided tour) | :book: <br> Loncotes County Library | :haircut: <br> Hillary's Hair Care |
 |:-:|:-:|:-:|:-:|
 |1| [Project Setup](./chapters/creek-river-setup.md) |[Project Requirements](./chapters/loncotes-setup.md)|[Project Intro](./chapters/hillarys-project-requirements.md)|
-|2| [Creating the database](./chapters/creek-river-db-context.md) <br><sub style="font-size: 0.85rem;">#encapsulation #inheritance #protected #override #constructor #base</sub>|[Basic Features](./chapters/loncotes-basic-features.md)<br><sub style="font-size: 0.85rem;">#soft-delete</sub>|[Many-To-Many](./chapters/hillarys-inferred-many-to-many.md)|
+|2| [Creating the database](./chapters/creek-river-db-context.md) <br><sub style="font-size: 0.85rem;">#encapsulation #inheritance #protected #override #constructor #base</sub>|[Basic Features](./chapters/loncotes-basic-features.md)<br><sub style="font-size: 0.85rem;">#soft-delete</sub>||
 |3| [Get campsites](./chapters/creek-river-get-campsites.md) <br><sub style="font-size: 0.85rem;">#Include #Single</sub>|[Get Available Materials](./chapters/loncotes-get-available-materials.md)<br><sub style="font-size: 0.85rem;">#All</sub>||
 |4| [Create a campsite](./chapters/creek-river-create-campsite.md) |[Get Overdue Checkouts](./chapters/loncontes-overdue-checkouts.md)||
 |5| [Delete a campsite](./chapters/creek-river-delete-campsite.md) |[Late Fees](./chapters/loncontes-calculate-fees.md)||
@@ -49,6 +49,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |🍯 💻 [Finishing Honey Rae's with Npgsql](./chapters/honey-raes-complete.md) |
 |🍯 💻 [Organize Data Access with Repositories](./chapters/honey-raes-repositories.md) |
 |:tent: [Data Validation and Algorithmic Reasoning](./chapters/creek-river-reservation-validation.md) |
+|:haircut:[Direct Many-To-Many](./chapters/hillarys-inferred-many-to-many.md)|
 
 
 |:gear: Object-Oriented Programming |

@@ -39,8 +39,7 @@ export default function UserProfileList({ loggedInUser }) {
 
   return (
     <>
-      <h2>Open Work Orders</h2>
-      <Link to="/workorders/create">New Work Order</Link>
+      <h2>User Profiles</h2>
       <Table>
         <thead>
           <tr>

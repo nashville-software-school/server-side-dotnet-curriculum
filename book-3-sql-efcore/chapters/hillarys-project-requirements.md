@@ -30,8 +30,7 @@ Hillary needs the ability to add new customers and stylists to her system. Occas
 
 ## Setting up the codebase
 1. Follow the [steps](./creek-river-setup.md) for creating an api in column one (don't forget to create a gitignore file) 
-1. Follow the [steps for creating the database](./creek-river-db-context.md) from column one.
-    - Note: For the many-to-many relationship between `Service` and `Appointments`, EF Core can create the extra table in the database without having an `AppointmentService` class in your .NET API. If you have a `Services` property on the `Appointment` class, and an `Appointments` property on the `Service` class, EF Core can infer the many-to-many relationship from that! You can try using this setup instead of an `AppointmentService` if you would like. Checkout [this](./hillarys-inferred-many-to-many.md) chapter for more details. Ask an instructor if this is still unclear. 
+1. Follow the [steps for creating the database](./creek-river-db-context.md) from column one. 
 1. run `git init`
 1. run `git remote add origin` with the SSH address of the GH repo you created with the issue tickets
 1. create a `client` directory inside the project
@@ -45,5 +44,3 @@ Hillary needs the ability to add new customers and stylists to her system. Occas
 Once you have finished planning, and set up the code base, it's time to start implementing features! Order the tickets on your project board so that they are in the order you want to complete them. Move the top ticket into the "In Progress" column, and checkout a new branch from main. Use pull requests to merge features into the main branch, and make sure that the ticket moves to the "Done" column. Then start the process again with a new ticket until you have completed the project. 
 
 > Note: You should not build the entire API, and then build the entire client. Add endpoints to the API as you need them for the feature you are currently working on. 
-
-Up Next: [Many-To-Many with EF Core](./hillarys-inferred-many-to-many.md)
