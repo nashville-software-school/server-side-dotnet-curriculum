@@ -36,7 +36,7 @@ You will need a connection string in order to create and modify your postgres da
 1. Initialize user-secrets
     - ```dotnet user-secrets init```
 1. Add your connection string
-    - ```dotnet user-secrets set DogGoDbConnectionString "Host=localhost;Database=DogGo;Username=postgres;Password=<your password>"```
+    - ```dotnet user-secrets set DogGoDbConnectionString "Host=localhost;Port=5432;Database=DogGo;Username=postgres;Password=<your password>"```
 
 ## Install the necessary tools
 
