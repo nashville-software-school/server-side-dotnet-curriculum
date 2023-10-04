@@ -8,7 +8,7 @@ As part of the exercises in the previous chapter, you should have already create
 
 Let's build out a form for us to be able to add a new Owner. Open the DogGo application you created in the previous chapter, go to the Owner controller, and find the `Create` action. You might notice...there are two Create methods! How can this be? Think about interactions we have in real life involving filling out forms. Doctors' visits comes to mind... When you go to the doctor, you're likely to have 2 interactions with a person behind the counter. The first interaction is when you go to the receptionist and ask for a blank form. The receptionist gives you the form so you can go back to your chair and fill it out. Once you're done, you can go back up to the counter and give that form back so they can process it. This is the same sort of interaction end users have with a server. Notice the comments above the two `Create` methods--one says GET and the other says POST. When a user navigates to the url `/owners/create`, they are making a GET request to that url. This is the request that will give the user the html of the empty form. When the user clicks a "submit" button, that is going to make a POST request to the same url. 
 
-Go to the `Create` action for the GET request. Currently all it does is return a View. Since the only thing the server needs to do is hand the user a blank html form, this is actually fine. The only thing we have to do is create that html form. Right click the "Create" method name and select "Add View". Name the view "Create", give it the template of "Create", and the model class Owner
+Go to the `Create` action for the GET request. Currently all it does is return a View. Since the only thing the server needs to do is hand the user a blank html form, this is actually fine. The only thing we have to do is create that html form. Make sure the view is using the model class `Owner`.
 
 ### Building the form
 
@@ -99,7 +99,7 @@ public ActionResult Delete(int id)
 }
 ```
 
-Now create the view by right clicking the method name and selecting Add View. Keep the name of the template "Delete", choose "Delete" from the template dropdown, and set the model to Owner.
+Make sure the the model for the view is set to Owner.
 
 Instead of having the text say "Are you sure you want to delete this?", change it to include the name of the owner.
 
@@ -174,7 +174,7 @@ public ActionResult Edit(int id, Owner owner)
 }
 ```
 
-Now create the view for Edit by right clicking the method name and going through the same steps. 
+Make sure that the view is using the proper model class.
 
 Same as before, we don't want to give the user a form field for the Id--users should be able to update their Ids. You can try removing the input like we did before with the `Create` view, but that won't work this time. Give it a try anyway...
 
@@ -187,12 +187,3 @@ The trick is to _hide_ the input field in the view, but keep it in the form. Put
     <input asp-for="Id" type="hidden" />
 </div>
 ```
-
-## Exercise
-
-Create a model for `Dog` and implement a `DogRepository` and `DogController` that gives users the following functionality:
-
-- View a list of all Dogs
-- Create a new Dog (for now, capture the OwnerId as simple input field)
-- Edit a Dog
-- Delete a Dog

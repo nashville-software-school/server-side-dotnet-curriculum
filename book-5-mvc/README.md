@@ -25,7 +25,8 @@ An alternative to server-side rendering is client-side rendering. In the front e
 |4|[Get All Walkers/Single Walker](./chapters/GetAllWalkers.md) <br><sub style="font-size: 0.85rem;"></sub>|[...]()||
 |5|[Get All Owners/Single Owner](./chapters/GetAllOwners.md)|[...]()||
 |6|[Adding and Updating Data with MVC](./chapters/AddingAndUpdatingData.md)|[...]()<br><sub style="font-size: 0.85rem;"></sub>||
-|7|[ViewModels]()|[./chapters/ViewModels.md](./chapters/ViewModels.md)||
+|7|[Implementing CRUD for the Dog Entity](./chapters/DogCrud.md)|[...]()<br><sub style="font-size: 0.85rem;"></sub>||
+|7|[ViewModels][./chapters/ViewModels.md](./chapters/ViewModels.md)|||
 |8|[Routing & Http Requests](https://github.com/nashville-software-school/bangazon-inc/blob/cohort-63/book-2-mvc/chapters/ROUTING.md)|||
 |9|[Validation & Customize with Attributes](https://github.com/nashville-software-school/bangazon-inc/blob/cohort-63/book-2-mvc/chapters/MODEL_ATTRIBUTES.md)|||
 

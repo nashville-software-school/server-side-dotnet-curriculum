@@ -49,6 +49,7 @@ You will need a connection string in order to create and modify your postgres da
     - ```dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0```
     - ```dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.0```
     - ```dotnet add package Npgsql --version 6.0.0```
+    - ```dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 6.0```
     <br/>
     <br/>
     - The Preceding Commands add:
@@ -122,6 +123,35 @@ namespace DogGo.Models
     }
 }
 ```
+
+## Create DbContext class
+- Create a new class in the main directory of the project called `DogGoDbContext.cs`, at this point you should be familiar with the DbContext class. I challenge you to create a new DbContext given the classes provided above. Make sure that your class inherites from `DbContext`
+
+
+
+## CONFIGURE APP TO USE EF CORE
+1. Open the program.cs file in VS Code
+    - Add the following Using Statements:
+    ```csharp
+        using DogGo.Models;
+        using Microsoft.EntityFrameworkCore;
+        using System.Text.Json.Serialization;
+        using Microsoft.AspNetCore.Http.Json;
+    ```
+    - Add the following code right above var app = builder.Build(); in Program.cs:
+    ```csharp
+        // allows passing datetimes without time zone data 
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+        // allows our api endpoints to access the database through Entity Framework Core
+        builder.Services.AddNpgsql<DogGoDbContext>(builder.Configuration["DogGoDbConnectionString"]);
+
+        // Set the JSON serializer options
+        builder.Services.Configure<JsonOptions>(options =>
+        {
+            options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        });
+    ```
 
 
 
