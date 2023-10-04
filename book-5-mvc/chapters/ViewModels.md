@@ -91,18 +91,16 @@ namespace DogGo.Models.ViewModels
 }
 ```
 
-We have a controller method already for getting a single owner, but we'll also need a method for getting a list of dogs by an owner Id, and method for getting a list of walkers in a given neighborhood.
-
-Now that the Owner Details view will need to know about more than just the owner.
+We have a controller method already for getting a single owner, but we'll also need a method for getting a list of dogs by an owner Id, and method for getting a list of walkers in a given neighborhood. Now that the Owner Details view will need to know about more than just the owner.
 
 
-
+```csharp 
 // GET: Owners/Details/5
 public ActionResult Details(int id)
 {
-    Owner owner = _ownerRepo.GetOwnerById(id);
-    List<Dog> dogs = _dogRepo.GetDogsByOwnerId(owner.Id);
-    List<Walker> walkers = _walkerRepo.GetWalkersInNeighborhood(owner.NeighborhoodId);
+    Owner owner = //...
+    List<Dog> dogs = //...
+    List<Walker> walkers = //...
 
     ProfileViewModel vm = new ProfileViewModel()
     {
@@ -229,6 +227,7 @@ namespace DogGo.Models.ViewModels
         public List<Neighborhood> Neighborhoods { get; set; }
     }
 }
+```
 
 Update the GET `Create` method to now create a view model and pass it to the view
 
@@ -238,7 +237,7 @@ Update the GET `Create` method to now create a view model and pass it to the vie
 // GET: Owners/Create
 public ActionResult Create()
 {
-    List<Neighborhood> neighborhoods = _neighborhoodRepo.GetAll();
+    List<Neighborhood> neighborhoods = //...
 
     OwnerFormViewModel vm = new OwnerFormViewModel()
     {
