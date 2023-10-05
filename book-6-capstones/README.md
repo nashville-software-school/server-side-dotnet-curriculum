@@ -17,4 +17,4 @@ The following chapters will walk you through how to deploy your client applicati
 
 | # | ⛅️ Deployment  |
 |--|--|
-| 1 | [Digital Ocean Deploy]() |
+| 1 | [Digital Ocean Deploy](./chapters/deployment-digital-ocean.md) |
