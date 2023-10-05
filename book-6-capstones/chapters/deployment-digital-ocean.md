@@ -42,7 +42,9 @@ You can use `ssh` to connect to your droplet from your terminal. When you do tha
 1. `sudo ufw enable`
 
 ## Register a domain name
-You will need a domain for your users to find your app on the web. There are many services with which to register a domain, at varying costs. In [this Digital Ocean article](https://docs.digitalocean.com/products/networking/dns/getting-started/dns-registrars/), you can find some common domain registrars, along with instructions on pointing to DO nameservers from those registrars. Once you've picked a registrar and registered a name, follow the instructions in the article to update the nameservers to use Digital Ocean's.  
+You will need a domain for your users to find your app on the web. There are many services with which to register a domain, at varying costs. In [this Digital Ocean article](https://docs.digitalocean.com/products/networking/dns/getting-started/dns-registrars/), you can find some common domain registrars, along with instructions on pointing to DO nameservers from those registrars. Once you've picked a registrar and registered a name, follow the instructions in the article to update the nameservers to use Digital Ocean's. After you have configured the nameservers, use the `Networking` tab on the Digital Ocean dashboard, choose the domain that you added, and add two `A` records for that domain. Use `@` for the first hostname (which will correspond to `your-domain.com`), and `www` for the second hostname (which will correspond to `www.your-domain.com`). You should be able to choose your droplet in the `Will Direct To` input. Leave the default TTL for both.
+
+Once this process is complete, Digital Ocean's nameservers will be able to point requests to `your-domain.com` and `www.your-domain.com` to the IP address of your droplet.
 
 ## Install and configure `nginx`
 `nginx` is a very popular HTTP server that we will use as a proxy server for both our front end code as well as the API.  
@@ -66,7 +68,18 @@ You will need a domain for your users to find your app on the web. There are man
             server_name your-domain www.your-domain;
 
             location / {
-                    try_files $uri $uri/ =404;
+                    try_files $uri /index.html =404;
+            }
+
+            location /api/ {
+            proxy_pass https://localhost:5001;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection keep-alive;
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
             }
 
 	}
@@ -92,7 +105,7 @@ You will need a domain for your users to find your app on the web. There are man
 ## Clone your repository code
 1. Run `mkdir ~/app && cd $_`
 1. Run `git clone <https address for your repo>`
-1. Run `cd <your project name>`
+1. Run `cd <your project repo name>`
 1. Run `dotnet restore`
 1. Run `dotnet build`
 1. Run `dotnet publish`
@@ -115,6 +128,7 @@ You will need a domain for your users to find your app on the web. There are man
 1. When you have made the edits, type `ctrl + X` to exit, and `Y` to save the changes. 
 1. If your initial migration is in the source code from Github, skip to the next step, otherwise, inside your project directory, run: `dotnet ef migrations add InitialCreate`
 1. Run `dotnet ef database update`
+1. Once you have migrated the database, you can remove the `AdminPassword` property from `appsettings.json`.  
 
 ## Run the .NET app as a service
 We could run the app on the droplet like we run it on our local machines, but it's better to run it as a linux system service, so that if the droplet is restarted, we can rely on the .NET app restarting (as well other benefits to running the app as a service).
@@ -157,18 +171,12 @@ We want to have a production-ready build of the react code as well. This is the 
 1. `sudo chown -R $USER:$USER /var/www/your_app`
 1. `sudo chmod -R 755 /var/www/your-app`
 
-```
-  location /api/ {
-            proxy_pass https://localhost:5001;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection keep-alive;
-            proxy_set_header Host $host;
-            proxy_cache_bypass $http_upgrade;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
-            }
-```
+## Testing your site
+1. Navigate to `your-domain.com`
+1. If you see the login view, the nginx server is correctly serving the react code
+1. Log in with the `AdminPassword` and admin user email that you configured for the project
+1. If you successfull login, the server is also successfully proxying requests to the .NET API
+1. Congratulations!
 
 
 
