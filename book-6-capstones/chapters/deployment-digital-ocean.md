@@ -85,7 +85,8 @@ Once this process is complete, Digital Ocean's nameservers will be able to point
 	}
     ```
 1. When you have made the edits, type `ctrl + X` to exit, and `Y` to save the changes. 
-1. `sudo ln -s /etc/nginx/sites-available/your-app /etc/nginx/sites-enabled/` to add the site to the enable sites. 
+1. `sudo ln -s /etc/nginx/sites-available/your-domain /etc/nginx/sites-enabled/` to add the site to the enable sites. 
+1. `sudo systemctl restart nginx`
 1. `sudo apt install certbot python3-certbot-nginx`
 1.  `sudo certbot --nginx -d your-domain -d www.your-domain` (change to your domain name)
 1. `sudo systemctl restart nginx`
@@ -112,11 +113,11 @@ Once this process is complete, Digital Ocean's nameservers will be able to point
 
 ## Build the database
 1. Install the dotnet Entity Framework cli tool: `dotnet tool install --global dotnet-ef`
-1. Add it to the path: 
+1. Add it to the path (change username to the non-root user): 
     ``` bash
     cat << \EOF >> ~/.bash_profile
     # Add .NET Core SDK tools
-    export PATH="$PATH:/root/.dotnet/tools"
+    export PATH="$PATH:/home/username/.dotnet/tools"
     EOF
     ```
 1. Update the bash session with the new path: `source ~/.bash_profile`
