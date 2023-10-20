@@ -42,7 +42,7 @@ This component gets each of the options objects from the database directly. Let'
 ## Adding related data properties to `Order`
 
 1. [Add properties](./honey-raes-get-emps-cust.md#including-related-data) for the various options to the `Order` class. Currently, the model only has, for example, `WheelId`, but you also need a `Wheels` property.
-1. [Update the `GET` `/orders` endpoint](./honey-raes-get-emps-cust.md#include-the-employees-data-in-the-service-ticket-details) to look up the various options based on the foreign keys, and add them to the order before returning it.
+1. Update the `GET` `/orders` endpoint to look up the various options based on the foreign keys, and add them to the order before returning it.
 1. In the `Orders` component on the front end, you can remove the logic that gets all of the options and finds the correct one for each option type. It should now be possible to access those directly on the order. For example:
    ```javascript
    `<section class="order">
