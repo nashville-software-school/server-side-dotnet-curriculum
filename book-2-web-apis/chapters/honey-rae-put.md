@@ -8,18 +8,23 @@ Add this endpoint to allow for updating a service ticket:
 app.MapPut("/servicetickets/{id}", (int id, ServiceTicket serviceTicket) =>
 {
     ServiceTicket ticketToUpdate = serviceTickets.FirstOrDefault(st => st.Id == id);
-    int ticketIndex = serviceTickets.IndexOf(ticketToUpdate);
+
     if (ticketToUpdate == null)
     {
         return Results.NotFound();
     }
-    //the id in the request route doesn't match the id from the ticket in the request body. That's a bad request!
     if (id != serviceTicket.Id)
     {
         return Results.BadRequest();
     }
-    serviceTickets[ticketIndex] = serviceTicket;
-    return Results.Ok();
+
+    ticketToUpdate.CustomerId = serviceTicket.CustomerId;
+    ticketToUpdate.EmployeeId = serviceTicket.EmployeeId;
+    ticketToUpdate.Description = serviceTicket.Description;
+    ticketToUpdate.Emergency = serviceTicket.Emergency;
+    ticketToUpdate.DateCompleted = serviceTicket.DateCompleted;
+
+    return Results.NoContent();
 });
 ```
 
