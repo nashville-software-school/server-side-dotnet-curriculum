@@ -27,6 +27,7 @@ The main goal of this project is to help you think about how the APIs you are go
         - `TechnologyId`
         - `PaintId`
         - `InteriorId`
+1. Create a DTOs folder inside the Models folder, and add DTOs for each of the models. They can have identical properties as their corresponding Model classes for now. 
 1. Delete the weather-forecast related code.  
 1. Create collections at the top of `Program.cs` as the database for this project. Make sure that you have populated those collections with the data they need (you can leave the orders collection empty). If you don't want to make up your own options data, you can use these:
     ### Paint Color
