@@ -9,7 +9,7 @@ The librarians would like to see a list of all the circulating materials. Includ
 The librarians also like to search for materials by genre and type. Add query string parameters to the above endpoint for `materialTypeId` and `genreId`. Update the logic of the above endpoint to include both, either, or neither of these filters, depending which are passed in. Remember, query string parameters are always optional when making an HTTP request, so you have to account for the possibility that any of them will be missing. 
 
 ### Get Material 
-The librarians would like to see details for a material. Include the Genre, MaterialType, and Checkouts (as well as the Patron associated with each checkout using `ThenInclude`).
+The librarians would like to see details for a material. Include the Genre, MaterialType, and Checkouts (as well as the Patron associated with each checkout using `ThenInclude`). _Do not_ add the Material and MaterialType to each checkout.
 
 ### Add a Material
 Materials are often added to the library's collection. Add an endpoint to create a new material

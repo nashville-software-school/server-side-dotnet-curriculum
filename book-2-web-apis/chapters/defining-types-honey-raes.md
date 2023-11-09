@@ -73,3 +73,4 @@ Up Next: [Implementing Get All/Get One Service Ticket(s)](./honey-raes-get-ticke
 1. [namespace keyword](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace)
     - Note in this documentation, some namespaces are declared with a pair of `{}`, and the classes in that namespace are inside the curly braces. In older code this was the only way that you could create namespaces. 
     - C# recently added the ability to declare a "file scoped namespace declaration". This is what we did in HoneyRaesAPI, and is handy because it removes a level of curly brace nesting on the left-hand side of the code files. It puts all of the types declared in a file in that namespace, which is what we want!
+1. [More about DTOs](https://learn.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-5)
