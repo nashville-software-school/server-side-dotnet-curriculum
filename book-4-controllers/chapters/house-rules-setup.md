@@ -109,7 +109,7 @@ This project does not include template code, so there is some additional setup r
     ```
 1. Copy the contents of `Program.cs` from Bianca's Bikes into the House Rules `Program.cs`. Replace `BiancasBikes` with `HouseRules` everywhere it appears in the app (HINT: there are ways to use your code editor to do this to make sure you don't miss any).
 1. Create a `Data` folder. Add a file called `HouseRulesDbContext.cs`. Copy the content from `BiancasBikesDbContext.cs`. Change all references to `BiancasBikes` to `HouseRules`. Remove all of the `DbSet` properties _except for UserProfiles_. In the `OnModelCreating` method, remove all of data seeding for owners, bikes, bike types, and work orders. 
-1. Create a `Models` folder, and put a `UserProfile.cs` file in it. Copy the content from Bianca's Bikes' `UserProfile` class. Update the `namespace` to be `HouseRules.Models`. Remove the `WorkOrders` property (this was specifically for Bianca's Bikes). Copy `Registration.cs` over from Bianca's Bikes as well.
+1. Create a `Models` folder, and put a `UserProfile.cs` file in it. Copy the content from Bianca's Bikes' `UserProfile` class. Update the `namespace` to be `HouseRules.Models`. Remove the `WorkOrders` property (this was specifically for Bianca's Bikes). Create a `Dtos` folder and copy `RegistrationDto.cs` and `UserProfileDto.cs` over from Bianca's Bikes as well.
 1. Add a controller to the Controllers folder called `AuthController.cs`. Copy the corresponding code from Bianca's Bikes into this file. Change all references to `BiancasBikes` to `HouseRules`. 
 1. Initialize user secrets for this project
 1. Save the connection string for a database called `HouseRules` to the user secret `HouseRulesDbConnectionString`.

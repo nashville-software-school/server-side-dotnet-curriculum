@@ -1,7 +1,7 @@
 # Creating Controllers
 In this chapter we will create the controllers that require basic CRUD operations for Chores and UserProfiles.
 
-It might be helpful to use the app to create a few more users (write down their passwords!) to test the endpoints created in this chapter. 
+It might be helpful to use the app to create a few more users (write down their passwords or use the admin password!) to test the endpoints created in this chapter. 
 
 ## `UserProfileController`
 

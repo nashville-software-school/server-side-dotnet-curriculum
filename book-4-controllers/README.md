@@ -39,4 +39,4 @@ This book focuses on creating web APIs using a broader range of tools and techno
 |-|
 |[Heist II: Classy Heist](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/CLASSIC_HEIST.md)|
 |[Trestlesbridge Farms](https://github.com/nashville-software-school/Trestlebridge-Farms)|
-|Tabloid|
+|[Tabloid](https://github.com/nss-group-projects/Tabloid)|
