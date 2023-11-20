@@ -20,13 +20,13 @@ List<City> citiesFor1 = walkerCitiesForWalker1.Select(wc => cities.First(c => c.
 ```
 The second step returns a city that matches the `CityId` of each `WalkerCity` in the `List` stored in `walkerCitiesForWalker1` collection. 
 
-Putting it all together, we can finally add the cities to the `Walker` object stored in the `walker` variable:
+Putting it all together, we can finally add the cities to the `WalkerDTO` object stored in the `walker` variable:
 ``` csharp
 walker.Cities = citiesFor1; 
 ```
 
 ## Updating cities for a walker
-Updating cities associated with a walker are a bit more complicated. Let's say the client send a `walker` object to the server to do a `PUT` operation, with a list of `Cities` that represent the correct list of cities that the walker walks in. 
+Updating cities associated with a walker is a bit more complicated. Let's say the client sends a `walker` object to the server to do a `PUT` operation, with a list of `Cities` that represent the correct list of cities that the walker walks in. 
 
 Our first task is to remove the current `WalkerCity` items associated with the walker:
 ``` csharp
@@ -41,8 +41,8 @@ foreach (City city in walker.Cities)
         WalkerId = walker.Id,
         CityId = city.Id
     };
-    newWC.Id = walkerCities.Count > 0 ?walkerCities.Max(wc => wc.Id) + 1 : 1;
+    newWC.Id = walkerCities.Count > 0 ? walkerCities.Max(wc => wc.Id) + 1 : 1;
     walkerCities.Add(newWC);
 }
 ```
-The endpoint that implements this logic functions as the Create, Update, and Delete functionality for walker cities, because the client should send the entire list of correct cities every time the walker is updated (which will either be larger, smaller, or the same size as the previous list of cities for the walker).
+The endpoint that implements this logic functions as the Create, Update, and Delete functionality for walker cities, because the client should send the entire list of correct cities every time the walker is updated.

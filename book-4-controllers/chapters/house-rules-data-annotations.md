@@ -8,7 +8,7 @@ In this chapter we will use Data Annotations to:
 The attributes you will be using in this chapter come from the `System.ComponentModel.DataAnnotations`, so you will need to add a `using` directive for that namespace in each file in which you wish to use them. 
 
 ## Maximum Length for Chore Names
-The class definition for `Chore` should look something like this up to this point:
+The class definition for `Chore` and `ChoreDto` should look something like this up to this point:
 >Chore.cs
 ``` csharp
 namespace HouseRules.Models;
@@ -23,7 +23,7 @@ public class Chore
     public List<ChoreCompletion> ChoreCompletions { get; set; }
 }
 ```
-You can use the `MaxLength` Attribute to limit the length of Chore names by adding it to the property like this:
+You can use the `MaxLength` Attribute to limit the length of `Chore` and `ChoreDto` names by adding it to the property like this:
 ``` csharp
 [MaxLength(100)]
 public string Name { get; set; }

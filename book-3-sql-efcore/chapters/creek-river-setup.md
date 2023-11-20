@@ -98,6 +98,8 @@ Creating the data models for this application will be almost identical to the pr
 
     }
     ```
+1. Add the matching DTO classes for these types. They will not need the `Require` attribute anywhere, because the DTOs are describing how the data will be represented to the client, not describing how it is stored in the database. 
+
 In the next chapter we will use these models to configure and provide access to the database. 
 
 Up Next: [DbContext](./creek-river-db-context.md)

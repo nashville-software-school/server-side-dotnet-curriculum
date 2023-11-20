@@ -7,7 +7,7 @@ You have seen these in previous books, but calculated properties can also be use
 These properties _will not_ be stored in the database. In order for EF Core to create a column for it in the database, a property has to have both `get` and `set`. So properties that only have `get`, or which use the lambda expression syntax (`=>`) will not be created as columns in the database. However, they _will_ get serialized in the JSON response as long as they are marked as `public`. Let's see an example of how this works
 
 ## `TotalNights`
-Add this property to the `Reservation` model:
+Add this property to the `ReservationDTO` model:
 ``` csharp
 public int TotalNights => (CheckoutDate - CheckinDate).Days;
 ```
@@ -32,7 +32,7 @@ Test this out by hitting the `/api/reservations` endpoint. Now you will see a ca
 > :bulb: You might also ask - What's wrong with calculating this on the front end? In the first part of the course, most of the _business logic_ of your application - the code that contained logic specific to the domain for which your app provided a service (dog walking, shoe organization, calorie tracking, etc...) was in the front end because you did not have an API to handle more of this logic for you. Now, however, things are different. You can allow the code in your UI to focus on logic around how things should look, and let the API worry about the specific business rules of the application. Like everything with software development, there are _lots_ of reasonable exceptions to this rule, and sometimes it is unavoidable to have business logic on the front end.  
 
 ## `TotalCost`
-Add this line to the `Reservation` class:
+Add this line to the `ReservationDTO` class:
 ``` csharp
 private static readonly decimal _reservationBaseFee = 10M;
 ```
@@ -46,23 +46,19 @@ This is a small line, but there's a lot going on:
 
 The purpose of this field is to store the base reservation cost, which is charged no matter how many nights are reserved. It is the same for every reservation, so we want all reservation instances to share it, but we don't need to send it back with every reservation in the JSON. 
 
-Add this property to the `Reservation` model:
+Add this property to the `ReservationDTO` model:
 ``` csharp
-public decimal? TotalCost
+public decimal TotalCost
+{
+    get
     {
-        get
-        {
-            if (Campsite?.CampsiteType != null)
-            {
-                return Campsite.CampsiteType.FeePerNight * TotalNights + _reservationBaseFee;
-            }
-            return null;
-        }
+        return Campsite.CampsiteType.FeePerNight * TotalNights + _reservationBaseFee;
     }
+}
 ```
-This property multiplies the fee per night for this campsite by the total nights, and then adds the base reservation fee to calculate the total cost. Because the `Campsite` and `Campsite.CampsiteType` properties may not always be set on this model, the `get` first has to check to make sure that they have values. 
+This property multiplies the fee per night for this campsite by the total nights, and then adds the base reservation fee to calculate the total cost.
 
-Fortunately, the endpoint to get reservations already includes `CampsiteType`, so test it again to see the `totalCost` values appear in the JSON response for each reservation. 
+Fortunately, the endpoint to get reservations already includes `Campsite` and `CampsiteType`, so test it again to see the `totalCost` values appear in the JSON response for each reservation. 
 
 ## Summary
 This is the end of the walk-through for Entity Framework Core. Before moving to the second column, do the "Up Next" Chapter on Inheritance. After finishing the other columns, check out the explorer chapters for this project.
