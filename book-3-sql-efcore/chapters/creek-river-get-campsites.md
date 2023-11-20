@@ -7,7 +7,14 @@ In this chapter you will use EF Core to query the PostgreSQL database for campsi
     ``` csharp
    app.MapGet("/api/campsites", (CreekRiverDbContext db) =>
     {
-        return db.Campsites.ToList();
+        return db.Campsites
+        .Select(c => new CampsiteDTO
+        {
+            Id = c.Id,
+            Nickname = c.Nickname,
+            ImageUrl = c.ImageUrl,
+            CampsiteTypeId = c.CampsiteTypeId
+        }).ToList();
     });
     ```
 1. Start debugging the project, and test the endpoint. That's right! It should work with no other code. A few things to notice about the endpoint:
@@ -19,11 +26,27 @@ Add this endpoint to `Program.cs`:
 ``` csharp
 app.MapGet("/api/campsites/{id}", (CreekRiverDbContext db, int id) =>
 {
-    return db.Campsites.Include(c => c.CampsiteType).Single(c => c.Id == id);
+    return db.Campsites
+        .Include(c => c.CampsiteType)
+        .Select(c => new CampsiteDTO
+        {
+            Id = c.Id,
+            Nickname = c.Nickname,
+            CampsiteTypeId = c.CampsiteTypeId,
+            CampsiteType = new CampsiteTypeDTO
+            {
+                Id = c.CampsiteType.Id,
+                CampsiteTypeName = c.CampsiteType.CampsiteTypeName,
+                FeePerNight = c.CampsiteType.FeePerNight,
+                MaxReservationDays = c.CampsiteType.MaxReservationDays
+            }
+        })
+        .Single(c => c.Id == id);
 });
 ```
 A few more things to note:
-1. `Include` is a method that will add related data to an entity. Because our campsite has a `CampsiteType` property where we can store that data, `Include` will add a `JOIN` in the underlying SQL query to the `CampsiteTypes` table. This is the same functionality that JSON Server provided with the `_expand` query string param.  
+1. `Include` is a method that will add related data to an entity. Because our campsite has a `CampsiteType` property where we can store that data, `Include` will add a `JOIN` in the underlying SQL query to the `CampsiteTypes` table. This is the same functionality that JSON Server provided with the `_expand` query string param.
+1. We use the `CampsiteDTO` and `CampsiteTypeDTO` types to create the final objects that will be serialized to JSON.   
 1. `Single` is like `First` in that it looks for one matching item based on the expression, but unlike `First` will throw an Exception if it finds _more_ than one that matches. For something like a primary key, where there is definitely only one row that should match the query, `Single` is a good way to express that. 
 1. Test the endpoints with the following scenarios:
     - with an id for campsite that exists

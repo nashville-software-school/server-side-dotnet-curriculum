@@ -47,15 +47,25 @@ app.MapGet("/materials/available", (LoncotesLibraryDbContext db) =>
 
 To this query we need to add another `Where`, to filter out materials that have an unreturned checkout:
 ```csharp
-app.MapGet("/materials/available", (LoncotesLibraryDbContext db) =>
+app.MapGet("/api/materials/available", (LoncotesLibraryDbContext db) =>
 {
     return db.Materials
     .Where(m => m.OutOfCirculationSince == null)
     .Where(m => m.Checkouts.All(co => co.ReturnDate != null))
+    .Select(material => new MaterialDto
+    {
+        Id = material.Id,
+        MaterialName = material.MaterialName,
+        MaterialTypeId = material.MaterialTypeId,
+        GenreId = material.GenreId,
+        OutOfCirculationSince = material.OutOfCirculationSince
+    })
     .ToList();
 });
 ```
 The second `Where` says "only return materials where _all_ of the material's checkouts have a value for `ReturnDate`".
+
+Finally, we transform the `Material` objects into `MaterialDTO`s to send back to the client.
 
 Test the endpoint to make sure it works (you will need to have some materials in your database that are checked out currently to be able to properly test.)
 

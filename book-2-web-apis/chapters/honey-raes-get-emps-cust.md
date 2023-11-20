@@ -32,11 +32,16 @@ app.MapGet("/employees/{id}", (int id) =>
     {
         return Results.NotFound();
     }
-    return Results.Ok(employee);
+    return Results.Ok(new EmployeeDTO
+    {
+        Id = employee.Id,
+        Name = employee.Name,
+        Specialty = employee.Specialty
+    });
 });
 ```
 
-2. If you hover over the `NotFound` method, you'll see that it creates a `404` response for the endpoint. We return that if no employee is found with a matching `Id`. Otherwise, we return a `200` response with the employee data in the body (created by the call to `Ok()`, and passing in the employee object as an argument). 
+2. If you hover over the `NotFound` method, you'll see that it creates a `404` response for the endpoint. We return that if no employee is found with a matching `Id`. Otherwise, we return a `200` response with the employee data in the body (created by the call to `Ok()`, and passing in the employee DTO object as an argument). 
 
 3. Test the endpoint and make sure you get a `404` response in Postman when querying for an employee that doesn't exist in the database. 
 
@@ -53,17 +58,42 @@ public List<ServiceTicket> ServiceTickets { get; set; }
 ```
 Now there is a place on the `Employee` class where we can store the `ServiceTicket` objects that belong to any given employee.
 
-> :bulb: Notice that we did not have to use a `using` directive to have the `ServiceTicket` class in the `Employee.cs` file. This is because both classes are in the `HoneyRaesAPI.Models` namespace, so there is no need to "import" one into other!
+Similarly, we can add the same property to the `EmployeeDTO` class like this:
+``` csharp
+public List<ServiceTicketDTO> ServiceTickets { get; set; }
+```
+
+
+> :bulb: Notice that we did not have to use a `using` directive to have the `ServiceTicket` class in the `Employee.cs` file. This is because both classes are in the `HoneyRaesAPI.Models` namespace, so there is no need to "import" one into other! This is true of the DTO classes as well.
 
 ### Include service tickets in employee details
 
-Let's update the get-by-id endpoint for employee to include the service tickets to which the employee is assigned. Add this line to that endpoint right before returning the `Ok` result:
+Let's update the get-by-id endpoint for employee to include the service tickets to which the employee is assigned. Add these lines to that endpoint right before returning the `Ok` result:
 ```csharp
-employee.ServiceTickets = serviceTickets.Where(st => st.EmployeeId == id).ToList();
+List<ServiceTicket> tickets = serviceTickets.Where(st => st.EmployeeId == id).ToList();
 ```
 
-This line uses Linq to find the service tickets that match the employee's id, and then sets the value of that employee's `ServiceTickets` property to whatever tickets are found. 
+This line uses Linq to find the service tickets that match the employee's id.
 
+Then, change the `return` statement to this:
+``` csharp
+return Results.Ok(new EmployeeDTO
+{
+    Id = employee.Id,
+    Name = employee.Name,
+    Specialty = employee.Specialty,
+    ServiceTickets = tickets.Select(t => new ServiceTicketDTO
+    {
+        Id = t.Id,
+        CustomerId = t.CustomerId,
+        EmployeeId = t.EmployeeId,
+        Description = t.Description,
+        Emergency = t.Emergency,
+        DateCompleted = t.DateCompleted
+    }).ToList()
+});
+```
+This new code adds the service tickets to the `EmployeeDTO` data by using `Select` to turn all of the `ServiceTicket` object retrieved from the database into `ServiceTicketDTO` objects. 
 
 Restart your app, and then using an employee id that has service tickets assigned to them, send a request to get one employee. In Postman, you should now see another property in the JSON (`serviceTickets` - yes, ASP.NET automatically converts the C# PascalCase properties to camelCase for Javascript), which will be an array of service ticket objects.  
 
@@ -72,19 +102,45 @@ Just like an `Employee` has many `ServiceTicket`s, a `ServiceTicket` has at most
 ```csharp
 public Employee Employee { get; set; }
 ```
-Yes, it's perfectly fine for the property name to be the same as its type; in fact you will see this all over C# codebases. Here is what the updated endpoint for getting a service ticket should look like:
+Yes, it's perfectly fine for the property name to be the same as its type; in fact you will see this all over C# codebases. 
+
+We also need to update the corresponding DTO:
+```csharp
+public EmployeeDTO Employee { get; set; }
+```
+
+Here is what the updated endpoint for getting a service ticket should look like:
 ```csharp
 app.MapGet("/servicetickets/{id}", (int id) =>
 {
     ServiceTicket serviceTicket = serviceTickets.FirstOrDefault(st => st.Id == id);
+    
     if (serviceTicket == null)
     {
         return Results.NotFound();
     }
-    serviceTicket.Employee = employees.FirstOrDefault(e => e.Id == serviceTicket.EmployeeId);
-    return Results.Ok(serviceTicket);
+    
+    Employee employee = employees.FirstOrDefault(e => e.Id == serviceTicket.EmployeeId);
+    
+    return Results.Ok(new ServiceTicketDTO
+    {
+        Id = serviceTicket.Id,
+        CustomerId = serviceTicket.CustomerId,
+        EmployeeId = serviceTicket.EmployeeId,
+        Employee = employee == null ? null : new EmployeeDTO
+        {
+            Id = employee.Id,
+            Name = employee.Name,
+            Specialty = employee.Specialty
+        },
+        Description = serviceTicket.Description,
+        Emergency = serviceTicket.Emergency,
+        DateCompleted = serviceTicket.DateCompleted
+    });
 });
 ```
+In this `return` statement, we are using a _ternary_ to first check whether an employee was found before trying to access its properties. If no employee was found, then this ticket is not yet assigned, and the `Employee` property on the output data should also be `null`. 
+
 Test this endpoint to see that you get a service ticket that has an `employee` object on it with the correct data. 
 
 ### `null` values

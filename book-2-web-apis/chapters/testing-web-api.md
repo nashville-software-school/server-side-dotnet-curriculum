@@ -9,7 +9,7 @@ Postman is a great tool for exploring APIs. If you want to use Postman to test t
 1. Download it [here](https://www.postman.com/downloads/). There are versions for Windows, Linux, and Intel or Apple chip MacBooks. 
 1. You will need to open the file your browser downloaded to set it up.
 1. Open the application
-1. After opening, you can work locally in what Postman calls the "Scratch Pad." Click on the plus sign to create a new HTTP request 
+1. After opening, click on the plus sign to create a new HTTP request 
 1. In your terminal, in the top-level directory for the `HoneyRaesAPI` project (this will be wherever the `csproj` file is), run `dotnet watch run`.
 1. In the console, you will once again see the host addresses for the api while it is running. It is serving `http` and `https` options. For Postman, use the `http` host and port. We are going to test the weather forecast endpoint. In `Program.cs` you can see the `url` that goes with that endpoint (`/weatherforecast`). So, in order to make a request to that endpoint, the full address will be `http://localhost:<port>/weatherforecast`. Paste this address into the URL bar in Postman.
 1. To the left of the URL bar, you have the option of choosing an HTTP method. GET is chosen by default, which is what we want, because the endpoint in `Program.cs` uses `MapGet`, not `MapPost` (there are others as well...)
