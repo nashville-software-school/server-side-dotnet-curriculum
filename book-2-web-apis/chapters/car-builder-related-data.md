@@ -1,9 +1,12 @@
 # Calculating the Total Price
-In this chapter we will use _composition_ and _calculated properties_ to move the logic for calculating the order total from the front end to the API. 
+
+In this chapter we will use _composition_ and _calculated properties_ to move the logic for calculating the order total from the front end to the API.
 
 ## Car Builder's current logic
+
 In the current front end app, the `Orders` component should look something like this:
-``` javascript
+
+```javascript
 export const Orders = async () => {
   const orders = await getOrders();
   return `${orders
@@ -33,10 +36,11 @@ export const Orders = async () => {
     .join("")}`;
 };
 ```
+
 This component gets each of the options objects from the database directly. Let's update the API so that it sends those objects directly, without having to look them up!
 
 ## Adding related data properties to `Order`
-1. Add properties for the various options to the `Order` class. Currently, the model only has, for example, `WheelId`, but you also need a `Wheels` property.  
+1. [Add properties](./honey-raes-get-emps-cust.md#including-related-data) for the various options to the `Order` class. Currently, the model only has, for example, `WheelId`, but you also need a `Wheels` property.  
 1. Do the same for the corresponding DTO classes.
 1. Update the `GET` `/orders` endpoint to look up the various options based on the foreign keys, and add them to the `OrderDTO` before returning it. Refer back to [this chapter](./honey-raes-get-emps-cust.md) if you forget how to do that.
 1. In the `Orders` component on the front end, you can remove the logic that gets all of the options and finds the correct one for each option type. It should now be possible to access those directly on the order. For example:
