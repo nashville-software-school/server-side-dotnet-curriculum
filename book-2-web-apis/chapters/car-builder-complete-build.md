@@ -36,4 +36,4 @@ Test the endpoint to make sure that it works. How will you confirm that the endp
 Finally, update the `Get` `/orders` endpoint to only return orders that are unfulfilled using the `Where` Linq method, and test your solution. When you complete an order, you should see it disappear from the browser without refreshing. 
 
 
-Up Next: [DeShawn's Dog Walking](./deshawns-setup.md)
+Up Next: [Query String Params](./car-builder-query-string.md)
