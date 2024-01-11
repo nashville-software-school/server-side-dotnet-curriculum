@@ -32,4 +32,4 @@ Up Next: [Searching for Sunlight](./extravert-search.md)
 
 ## 🔍 Additional Materials
 
-[.NET Random class](https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-6.0)
+[.NET Random class](https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-8.0)

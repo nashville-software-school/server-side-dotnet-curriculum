@@ -43,7 +43,7 @@ if (!response) {
 ```
 In Javascript, it is possible to put expressions that evaluate to "falsy" values as conditions for `if`, ternaries, `for` and `while` loops. Values like `null`, `undefined`, `0`, and importantly here, `""`, are treated as `false` for the sake of evaluating the expression.  _This is not true in C#_. 
 
-In C#, the _expression_ inside the parentheses after `if` **must evaluate to `true` or `false`**.  This is one of the reasons why the `IsNullOrEmpty` method is helpful to us, because it _returns_ a `boolean`. The `string` type has many other useful methods, some of which it shares with the string type in JS, but many others which are unique. Check them out in the documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0#methods). 
+In C#, the _expression_ inside the parentheses after `if` **must evaluate to `true` or `false`**.  This is one of the reasons why the `IsNullOrEmpty` method is helpful to us, because it _returns_ a `boolean`. The `string` type has many other useful methods, some of which it shares with the string type in JS, but many others which are unique. Check them out in the documentation [here](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0#methods). 
 
 ### Let the User Try Again
 Let's change our program so that if the user doesn't provide input, the program asks for valid input again. To accomplish this, we can use a `while` loop. Just like `if`, while requires an actual `boolean` (`true` or `false`) inside the parentheses. We can replace our `if` with the loop:
@@ -87,6 +87,6 @@ Test the program again to make sure that it works as expected. What cases do you
 Up Next: [Working with Integers](./working-with-integers.md)
 
 ## 🔍 Additional Materials
-1. [Microsoft string documentation](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+1. [Microsoft string documentation](https://learn.microsoft.com/en-us/dotnet/api/system.string?view=net-8.0)
 1. [Falsy in Javascript](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 1. [Edge Cases](https://en.wikipedia.org/wiki/Edge_case)

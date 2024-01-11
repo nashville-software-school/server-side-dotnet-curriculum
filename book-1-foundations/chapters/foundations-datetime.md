@@ -68,7 +68,7 @@ We have just scratched the surface of what `DateTime` can do for us, but this ch
 Up Next: [Working with other number types](./doubles-and-decimals.md)
 
 ## 🔍 Additional Materials
-[DateTime documentation](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+[DateTime documentation](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-8.0)
 
 
 

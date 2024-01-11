@@ -44,11 +44,11 @@ There is also a `Program.cs` file, which is the entrypoint to the application, j
 
 ### What's different
 
-In the `csproj` file, you'll notice that there is a `PackageReference` node for something called `Swashbuckle`. Package references in .NET are a lot like dependencies in the `package.json` file in an npm project. They are references for outside libraries and projects that your project needs to work correctly. This particular library will help you create a nice little UI in the browser to test your API. There is an explorer chapter with a tutorial in its use. 
+In the `csproj` file, you'll notice that there are `PackageReference` nodes for something called `Swashbuckle` and `OpenApi`. Package references in .NET are a lot like dependencies in the `package.json` file in an npm project. They are references for outside libraries and projects that your project needs to work correctly. This particular library will help you create a nice little UI in the browser to test your API. There is an explorer chapter with a tutorial in its use. 
 
 There are two more new files called `appsettings.json` and `appsettings.Development.json`. They hold configuration data for the application that gets used when starting the app. We will use these files later, but you can leave them alone for now.
 
-The `Properties` folder holds a file called `launch.json`. This is for another code editor (Visual Studio - NOT Visual Studio Code) that we are not using right now. It can also be ignored, but don't delete it. 
+The `Properties` folder holds a file called `launch.json`. This file holds configuration settings for launching the app (this is where you can find the urls you can use to access the app in Postman or a browser).
  
 `Program.cs` looks _very_ different from our console app template. Let's use the code that is there to introduce some important concepts in building web APIs. 
 
@@ -103,14 +103,15 @@ app.MapGet("/weatherforecast", () =>
     var forecast =  Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
-            DateTime.Now.AddDays(index),
+            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             Random.Shared.Next(-20, 55),
             summaries[Random.Shared.Next(summaries.Length)]
         ))
         .ToArray();
     return forecast;
 })
-.WithName("GetWeatherForecast");
+.WithName("GetWeatherForecast")
+.WithOpenApi();
 ```
 
 This code creates an _endpoint_ in the application. This is an important concept that is a basic building block of a web API. An endpoint is essentially a _route_ (a URL to make a request), and a _handler_, which is a function that determines the logic for what to do when a request is made to that route. Because `MapGet` is getting called here, we also know that this endpoint is for a `GET` request only. So in this case: 
