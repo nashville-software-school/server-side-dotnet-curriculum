@@ -93,6 +93,6 @@ By making a second call to `MapGet` in our program, we added another _endpoint_ 
 ## 🔍 Additional Materials
 
 1. [MDN docs for HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) (save for reference)
-1. [ASP.NET Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-6.0)
+1. [ASP.NET Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0)
 
 Up Next: [Defining types for HoneyRaesAPI](./defining-types-honey-raes.md)
