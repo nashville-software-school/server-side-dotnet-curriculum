@@ -92,4 +92,4 @@ Now that the error message is more helpful, you can update the handler to check 
 Up Next: [More features for House Rules](./house-rules-more-features.md)
 
 ## 🔍 Additional Materials
-1. [ Available Data Annotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-6.0)
+1. [ Available Data Annotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations?view=net-8.0)

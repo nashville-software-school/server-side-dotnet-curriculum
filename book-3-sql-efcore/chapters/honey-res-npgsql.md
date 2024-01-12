@@ -6,7 +6,7 @@ The .NET runtime does not include by default a library for connecting to Postgre
 
 Run this command in the directory of HoneyRaesAPI that includes the `csproj` file:
 ``` bash
-dotnet add package Npgsql --version 6.0.9
+dotnet add package Npgsql --version 8.0.1
 ```
 Now we will have access to the classes in that package that we will use to access our SQL database. 
 

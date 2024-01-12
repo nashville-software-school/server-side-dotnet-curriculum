@@ -35,7 +35,7 @@ Hillary needs the ability to add new customers and stylists to her system. Occas
 1. run `git remote add origin` with the SSH address of the GH repo you created with the issue tickets
 1. create a `client` directory inside the project
 1. `cd` into that directory, and run `npx create-react-app .` (Don't forget the `.` at the end). 
-1. In `Properties/launchSettings.json` in the .NET project folder, change the urls for the API to be `5001` for https and `5000` for http (make sure you are changing this on the profile with the same name as the .NET project, not the profile labled "IIS" or "IIS Express"). 
+1. In `Properties/launchSettings.json` in the .NET project folder, change the urls for the API to be `5001` for https and `5000` for http (make sure you are changing this on the `https` and `http` profiles, not the profile labled "IIS" or "IIS Express"). 
 1. In `package.json` of the client folder, add a `"proxy"` property with the value of `"https://localhost:5001"`.
 1. In the `client` folder, you will need to run `npm install --save react-router-dom` to install the router. 
 1. At this point, you may want to add, commit, and push this initial code to the remote repository.    

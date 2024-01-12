@@ -43,13 +43,13 @@ You will need a connection string in order to create and modify your postgres da
 1. Neither VS Code or the .NET CLI support scaffolding directly. Therefore, you need to install the dotnet-aspnet-codegenerator tool, which provides scaffolding capabilities. You can install it using the following commands in your terminal:
 
     - ```dotnet tool uninstall --global dotnet-aspnet-codegenerator```
-    - ```dotnet tool install --global dotnet-aspnet-codegenerator --version 6.0.0```
+    - ```dotnet tool install --global dotnet-aspnet-codegenerator --version 8.0```
     - ```dotnet tool uninstall --global dotnet-ef```
-    - ```dotnet tool install --global dotnet-ef --version 6.0.0```
-    - ```dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0```
-    - ```dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.0```
-    - ```dotnet add package Npgsql --version 6.0.0```
-    - ```dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 6.0```
+    - ```dotnet tool install --global dotnet-ef --version 8.0```
+    - ```dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0```
+    - ```dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0```
+    - ```dotnet add package Npgsql --version 8.0```
+    - ```dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0```
     <br/>
     <br/>
     - The Preceding Commands add:

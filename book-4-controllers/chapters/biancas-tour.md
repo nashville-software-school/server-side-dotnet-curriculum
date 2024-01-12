@@ -40,5 +40,5 @@ This class has a number of _attributes_ on it and on the methods that you haven'
 Up Next: [Bianca's Tour II: Auth](./biancas-auth.md)
 
 ## 🔍 Additional Materials
-1. [ControllerBase class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-6.0)
-1. [ApiController Attribute](https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-6.0#apicontroller-attribute-1)
+1. [ControllerBase class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-8.0)
+1. [ApiController Attribute](https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-8.0#apicontroller-attribute-1)

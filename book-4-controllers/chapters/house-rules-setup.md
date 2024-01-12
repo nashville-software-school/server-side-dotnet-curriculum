@@ -101,11 +101,11 @@ This project does not include template code, so there is some additional setup r
     ```
 1. In the `HouseRules` directory, install the required dependencies:
     ``` bash
-    dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 6.0
+    dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 8.0
 
-    dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0
+    dotnet add package Microsoft.EntityFrameworkCore.Design -v 8.0
 
-    dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL -v 6.0
+    dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL -v 8.0
     ```
 1. Copy the contents of `Program.cs` from Bianca's Bikes into the House Rules `Program.cs`. Replace `BiancasBikes` with `HouseRules` everywhere it appears in the app (HINT: there are ways to use your code editor to do this to make sure you don't miss any).
 1. Create a `Data` folder. Add a file called `HouseRulesDbContext.cs`. Copy the content from `BiancasBikesDbContext.cs`. Change all references to `BiancasBikes` to `HouseRules`. Remove all of the `DbSet` properties _except for UserProfiles_. In the `OnModelCreating` method, remove all of data seeding for owners, bikes, bike types, and work orders. 

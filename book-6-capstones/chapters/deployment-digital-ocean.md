@@ -101,7 +101,7 @@ Once this process is complete, Digital Ocean's nameservers will be able to point
 1. Run `sudo systemctl restart postgresql.service`
 
 ## Install the dotnet sdk
-1. Run `sudo apt install dotnet-sdk-6.0`
+1. Run `sudo apt install dotnet-sdk-8.0`
 
 ## Clone your repository code
 1. Run `mkdir ~/app && cd $_`
@@ -143,7 +143,7 @@ We could run the app on the droplet like we run it on our local machines, but it
 
     [Service]
     WorkingDirectory=/home/username/app/your-app
-    ExecStart=/usr/bin/dotnet /home/username/app/your-app/bin/Debug/net6.0/publish/YourApp.dll
+    ExecStart=/usr/bin/dotnet /home/username/app/your-app/bin/Debug/net8.0/publish/YourApp.dll
     Restart=always
     RestartSec=10
     SyslogIdentifier=your-app

@@ -6,11 +6,11 @@ In this project we will build an API for the reservations website of Creek River
 1. Inside the `CreekRiver` directory, run `dotnet new gitignore`
 1. Install these required dependencies with:
     ``` bash
-    dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 6.0
+    dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0
     ```
     and: 
     ``` bash
-    dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0
+    dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0
     ```
 1. Run this to be able to store secrets for this app: 
     ``` bash

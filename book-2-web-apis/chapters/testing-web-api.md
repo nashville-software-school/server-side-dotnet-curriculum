@@ -11,7 +11,7 @@ Postman is a great tool for exploring APIs. If you want to use Postman to test t
 1. Open the application
 1. After opening, click on the plus sign to create a new HTTP request 
 1. In your terminal, in the top-level directory for the `HoneyRaesAPI` project (this will be wherever the `csproj` file is), run `dotnet watch run`.
-1. In the console, you will once again see the host addresses for the api while it is running. It is serving `http` and `https` options. For Postman, use the `http` host and port. We are going to test the weather forecast endpoint. In `Program.cs` you can see the `url` that goes with that endpoint (`/weatherforecast`). So, in order to make a request to that endpoint, the full address will be `http://localhost:<port>/weatherforecast`. Paste this address into the URL bar in Postman.
+1. In the console, you will once again see the host addresses for the api while it is running. It is serving the `http` only option (this is the default when using `dotnet run`). For Postman, use the `http` host and port. We are going to test the weather forecast endpoint. In `Program.cs` you can see the `url` that goes with that endpoint (`/weatherforecast`). So, in order to make a request to that endpoint, the full address will be `http://localhost:<port>/weatherforecast`. Paste this address into the URL bar in Postman.
 1. To the left of the URL bar, you have the option of choosing an HTTP method. GET is chosen by default, which is what we want, because the endpoint in `Program.cs` uses `MapGet`, not `MapPost` (there are others as well...)
 1. To the right, there is a Send button. Click it. 
 1.  Below you should see the HTTP response. The body should have data similar to this:
@@ -93,6 +93,6 @@ By making a second call to `MapGet` in our program, we added another _endpoint_ 
 ## 🔍 Additional Materials
 
 1. [MDN docs for HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) (save for reference)
-1. [ASP.NET Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-6.0)
+1. [ASP.NET Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0)
 
 Up Next: [Defining types for HoneyRaesAPI](./defining-types-honey-raes.md)

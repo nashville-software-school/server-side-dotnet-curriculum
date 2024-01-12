@@ -18,14 +18,6 @@ You can see how class names are recognized across files in your program like thi
 1. You should see a compiler error that says `The namespace '<global namespace>' already contains a definition for 'Product' [ThrownForALoop]`. 
 1. See? The compiler doesn't see `Product.cs` as a different "module" than what's in `Program.cs`. 
 1. You can remove the extra code and close `ThrownForALoop`
-1. Add the following code after this line: `var builder = WebApplication.CreateBuilder(args);`
-    ``` csharp
-    // Set the JSON serializer options
-    builder.Services.Configure<JsonOptions>(options =>
-    {
-        options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-    });
-    ```
 
 ### Namespace for our Models
 
