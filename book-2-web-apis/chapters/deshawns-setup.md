@@ -6,7 +6,7 @@ In this project you will have the opportunity to build a full stack application 
 1. Use [this](https://github.com/nss-group-projects/dotnet-deshawns-react) template to create your own repo, and clone it locally
 1. the React app is in a folder called `client`. Navigate to that directory and run `npm install`
 1. Start the API with the VS Code debugger. 
-1. in the `client` directory, run `npm start` to start the React App. 
+1. in the `client` directory, run `npm run dev` to start the React App. 
 1. Explore the codebase to see what is there. Pay particular attention to `index.jsx`, `apiManager.js`, and `App.jsx`. Write down any questions you have so that you can ask a colleague or your instructors. 
 
 ## Proxy Settings
