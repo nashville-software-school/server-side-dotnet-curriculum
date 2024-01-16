@@ -2,8 +2,8 @@
 In this chapter we will add an API endpoint to get work orders and a component in the front end to view them. 
 
 ## Create a WorkOrder List in the UI
-Add a folder to the `components` folder of the React code called `workorders`. Add a file to the new folder called `WorkOrderList.js` and paste the following code:
->WorkOrderList.js
+Add a folder to the `components` folder of the React code called `workorders`. Add a file to the new folder called `WorkOrderList.jsx` and paste the following code:
+>WorkOrderList.jsx
 ``` javascript
 import { useEffect, useState } from "react";
 import { Table } from "reactstrap";
@@ -119,7 +119,7 @@ export default function WorkOrderList({ loggedInUser }) {
 ```
 - This component has some test data in it. You can do this when you are building components that don't have endpoints yet. If you just want to work on the UI, create some fake data!
 
-Replace the current `workorders` endpoint in `ApplicationViews.js with this one:
+Replace the current `workorders` endpoint in `ApplicationViews.jsx with this one:
 ``` jsx
 <Route
     path="workorders"
@@ -188,7 +188,7 @@ export const getIncompleteWorkOrders = () => {
 };
 ```
 Finally, update the component to use the `getIncompleteWorkOrders` function:
->WorkOrderList.js
+>WorkOrderList.jsx
 ``` javascript
 useEffect(() => {
     getIncompleteWorkOrders().then(setWorkOrders);

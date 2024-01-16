@@ -26,7 +26,7 @@ Bianca's Bike Shop has asked us to build an application that Bianca, her mechani
     ```
 1. In the `client` directory inside the project directory, run `npm install`
 1. Start the C# debugger
-1. In the client folder, run `npm start`. 
+1. In the client folder, run `npm run dev`. 
 
 ## Logging In
 The React client should show the login view when it starts. Look for the email address of the `IdentityUser` already seeded in the database in the `OnModelCreating` method of the `BiancasBikesDbContext` class. Login with that email address and the password you saved to the user-secrets as `AdminPassword`. (If you just used "password", as it is in the bash command above, use "password"). After logging in, you should see an error (we will fix that in a future chapter).  

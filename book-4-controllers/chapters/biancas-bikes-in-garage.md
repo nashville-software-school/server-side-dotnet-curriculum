@@ -46,13 +46,13 @@ public IActionResult Inventory()
 - `Authorize` ensures that this endpoint is only accesible to logged in users
 
 ## Accessing the Endpoint in the Client
-> bikeManager.js
+> bikeManager.jsx
 ``` javascript
 export const getBikesInShopCount = () => {
   return fetch(`${apiUrl}/inventory`).then((res) => res.json());
 };
 ```
->NavBar.js
+>NavBar.jsx
 ``` javascript
  const getInventory = () => {
     getBikesInShopCount().then(setInventory);

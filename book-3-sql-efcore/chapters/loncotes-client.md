@@ -1,10 +1,10 @@
 # Loncotes React Client
-The library has asked us to build a new client application. Initially, this will just be for librarian usage. Another developer on the team has already gotten started on the project, and you will pick it up from here. Go to [this](https://github.com/nashville-software-school/dotnet-loncotes-client) repo to get the template code to start the project. Follow the directions in the README to get it set up. The repo uses [`reactstrap`](https://reactstrap.github.io/?path=/story/home-installation--page), a library of Bootstrap-styled React components. If you wish, you can use it to add the new components you are going to build. It is also fine to not use it. Some of the styles from Bootstrap will be applied even if you don't use any `reactstrap` components. Reacstrap (and other component libraries) are worth getting familiar with, but you do not have to do so right away.  
+The library has asked us to build a new client application. Initially, this will just be for librarian usage. Another developer on the team has already gotten started on the project, and you will pick it up from here. Go to [this](https://github.com/nashville-software-school/dotnet-loncotes-client) repo to get the template code to start the project. Follow the directions in the README to get it set up. The repo uses [`reactstrap`](https://reactstrap.github.io/?path=/story/home-installation--page), a library of Bootstrap-styled React components. If you wish, you can use it to add the new components you are going to build. It is also fine to not use it. Some of the styles from Bootstrap will be applied even if you don't use any `reactstrap` components. Reactstrap (and other component libraries) are worth getting familiar with, but you do not have to do so right away.  
 
 ## Exploring the existing repo
 Examine the existing codebase and how it is structured. Pay particular attention to the following areas:
 1. the `data` directory with the various managers. Try to use these manager modules to keep your `fetch` calls out of your components. 
-1. `index.js` which holds the router and routes. 
+1. `index.jsx` which holds the router and routes. 
 1. the `components` directory, which is further separated into directories for different resources. There is only one, `materials` directory holding components related to that resource. 
 
 If you have any questions about how the repo works, ask an instructor for help. 

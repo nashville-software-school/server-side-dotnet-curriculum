@@ -16,12 +16,33 @@ This project does not include template code, so there is some additional setup r
 1. Initialize a git repo:
     ``` bash
     git init
-    ```
-1. In the `Properties` folder, change the `HouseRules` profile application urls to this: `"applicationUrl": "https://localhost:5001;http://localhost:5000",`. 
-1. Create the client:
-    ``` bash
-    mkdir client && cd $_
-    npx create-react-app .
+    ``` 
+1. create a `client` directory inside the project
+1. `cd` into that directory, and run `npm create vite@latest . -- --template react` (Don't forget the `.`). 
+1. In `Properties/launchSettings.json` in the .NET project folder, change the urls for the API to be `5001` for https and `5000` for http (make sure you are changing this on the `https` and `http` profiles, not the profile labled "IIS" or "IIS Express"). 
+1. Replace all of the code in `vite.config.js` in the client folder with this:
+    ``` js
+    import { defineConfig } from "vite";
+    import react from "@vitejs/plugin-react";
+
+    export default defineConfig(() => {
+    return {
+        server: {
+        open: true,
+        proxy: {
+            "/api": {
+            target: "https://localhost:5001",
+            changeOrigin: true,
+            secure: false,
+            },
+        },
+        },
+        build: {
+        outDir: "build",
+        },
+        plugins: [react()],
+    };
+    });
     ```
 1. Install `react-router-dom`:
     ``` bash
@@ -31,14 +52,13 @@ This project does not include template code, so there is some additional setup r
     ``` bash
     npm install --save bootstrap reactstrap
     ```
-1. In `package.json`, add the proxy property like this: `"proxy": "https://localhost:5001",`
 1. Create `components` and `managers` folders in `src`
 1. In the `managers` folder, create an `authManager` and copy all of the contents into it from the `authManager` in Bianca's Bikes. 
 1. Copy the entire `auth` folder from Bianca's bikes into the `components` folder. 
-1. In `index.js`, replace the `React.StrictMode` tags with `BrowserRouter` tags.
-1. Replace the code in `App.js` with the code from Bianca's Bikes
-1. Copy `ApplicationViews.js` from Bianca's Bikes to the House Rules `components` directory. Remove the `bikes`, `workorders`, and `employees` routes. 
-1. Create a `NavBar.js` component in the `components` directory with the following code:
+1. In `index.jsx`, replace the `React.StrictMode` tags with `BrowserRouter` tags.
+1. Replace the code in `App.jsx` with the code from Bianca's Bikes
+1. Copy `ApplicationViews.jsx` from Bianca's Bikes to the House Rules `components` directory. Remove the `bikes`, `workorders`, and `employees` routes. 
+1. Create a `NavBar.jsx` component in the `components` directory with the following code:
     ``` javascript
     import { useState } from "react";
     import { NavLink as RRNavLink } from "react-router-dom";
