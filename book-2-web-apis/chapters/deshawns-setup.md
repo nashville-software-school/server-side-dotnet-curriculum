@@ -64,4 +64,4 @@ Up Next: [User Stories](./deshawns-user-stories.md)
 
 
 ## 🔍 Additional Materials
-1. [Proxy API Requests locally](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
+1. [Proxy API Requests locally](https://vitejs.dev/config/server-options.html#server-proxy)
