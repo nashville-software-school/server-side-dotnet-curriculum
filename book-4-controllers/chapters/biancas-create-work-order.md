@@ -137,7 +137,7 @@ export const createWorkOrder = (workOrder) => {
 ```
 
 Finally, use that API access function in the `CreateWorkOrder` component:
-> CreateWorkOrder.js
+> CreateWorkOrder.jsx
 ``` javascript
 const navigate = useNavigate();
 
