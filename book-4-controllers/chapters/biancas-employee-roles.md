@@ -16,7 +16,7 @@ The Employees menu item links to a route that requires admin privileges:
 />
 ```
 Create a new component for this route called `UserProfileList` in a new `components` folder called `userprofiles`:
-> components/userprofiles/UserProfileList.js
+> components/userprofiles/UserProfileList.jsx
 ``` javascript
 import { useEffect, useState } from "react";
 import { Button, Table } from "reactstrap";
@@ -186,7 +186,7 @@ export const demoteUser = (userId) => {
 };
 ```
 Finally, update the functions in `UserProfileList` to use the data access functions from `userProfileManager`:
->UserProfileList.js
+>UserProfileList.jsx
 ``` javascript
  const promote = (id) => {
     promoteUser(id).then(() => {
@@ -201,7 +201,7 @@ Finally, update the functions in `UserProfileList` to use the data access functi
 ```
 You should now be able to test the promote and demote functionality for users. Promotion and Demotion is only allowed by admins (because `Roles = "Admin"`) is passed into the `Authorize` attribute on the controller methods. The route should only even be visible to admins because of the `roles={["Admin"]}` prop passed to `AuthorizedRoute` for the route. 
 
-Sign in as a non-admin to see that an attemp to navigate to `/employees` results in a redirect to the `Login` component. `Employees` shouldnot appear on the navbar for no-admins. 
+Sign in as a non-admin to see that an attempt to navigate to `/employees` results in a redirect to the `Login` component. `Employees` shouldnot appear on the navbar for no-admins. 
 
 The code in this chapter is complex, and you only are responsible for knowing how to use the `Authorize` attribute to protect an endpoint based on roles.
 

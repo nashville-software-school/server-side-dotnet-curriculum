@@ -6,15 +6,21 @@ In this project you will have the opportunity to build a full stack application 
 1. Use [this](https://github.com/nss-group-projects/dotnet-deshawns-react) template to create your own repo, and clone it locally
 1. the React app is in a folder called `client`. Navigate to that directory and run `npm install`
 1. Start the API with the VS Code debugger. 
-1. in the `client` directory, run `npm start` to start the React App. 
-1. Explore the codebase to see what is there. Pay particular attention to `index.js`, `apiManager.js`, and `App.js`. Write down any questions you have so that you can ask a colleague or your instructors. 
+1. in the `client` directory, run `npm run dev` to start the React App. 
+1. Explore the codebase to see what is there. Pay particular attention to `index.jsx`, `apiManager.js`, and `App.jsx`. Write down any questions you have so that you can ask a colleague or your instructors. 
 
 ## Proxy Settings
-This project uses a different method for handling CORS. In `package.json` (for the client app), this property has been added:
-``` 
-"proxy": "https://localhost:5001",
+This project uses a different method for handling CORS. In `vite.config.js` (for the client app), this code has been added:
+``` js
+proxy: {
+        "/api": {
+          target: "https://localhost:5001",
+          changeOrigin: true,
+          secure: false,
+        },
+      },
 ```
-This line tells the server that is serving the javascript app to send any unknown requests to `http://localhost:3000` on to `https://localhost:5001`. This is useful for a few reasons: 
+This code tells the server that is serving the javascript app to send any unknown requests to the react server  on to `https://localhost:5001`. This is useful for a few reasons: 
 1. You can make calls to the API to the _same origin_ that the front-end application is running on. This means that you do not need to provide a domain when specifying URLs in your fetch calls. For example, the fetch in the `apiManager.js` module in the template code looks like this:
     ``` javascript
     export const getGreeting = async () => {
@@ -32,7 +38,7 @@ This is a good time to point out that in the `Properties` folder of the API proj
 There are two profiles in the JSON. This is the one that the debugger is using:
 ``` JSON
 "profiles": {
-    "DeShawnsDogWalking": {
+    "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -58,4 +64,4 @@ Up Next: [User Stories](./deshawns-user-stories.md)
 
 
 ## 🔍 Additional Materials
-1. [Proxy API Requests locally](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
+1. [Proxy API Requests locally](https://vitejs.dev/config/server-options.html#server-proxy)

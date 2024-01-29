@@ -52,7 +52,7 @@ export const getBikesInShopCount = () => {
   return fetch(`${apiUrl}/inventory`).then((res) => res.json());
 };
 ```
->NavBar.js
+>NavBar.jsx
 ``` javascript
  const getInventory = () => {
     getBikesInShopCount().then(setInventory);

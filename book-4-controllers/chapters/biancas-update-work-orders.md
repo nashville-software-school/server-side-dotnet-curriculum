@@ -3,7 +3,7 @@ In this chapter we will add to the `WorkOrderList` component to allow users to a
 
 ## Update `WorkOrderList`
 The `Action` column is currently empty in the table of work orders. The `Mechanic` column just display a mechanic if there is one. Replace those `td` elements with these:
-> WorkOrderList.js
+> WorkOrderList.jsx
 ``` javascript
 <td>
 <Input
@@ -54,7 +54,7 @@ export const getUserProfiles = () => {
   return fetch(_apiUrl).then((res) => res.json());
 };
 ```
->WorkOrderList.js
+>WorkOrderList.jsx
 ``` javascript
 const [mechanics, setMechanics] = useState([]);
 
@@ -110,7 +110,7 @@ export const updateWorkOrder = (workOrder) => {
 };
 ```
 Finally, update the component to use the above function:
-> WorkOrderList.js
+> WorkOrderList.jsx
 ``` javascript
 const assignMechanic = (workOrder, mechanicId) => {
     const clone = structuredClone(workOrder);

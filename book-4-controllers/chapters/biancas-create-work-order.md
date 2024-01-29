@@ -3,7 +3,7 @@ In this chapter we will add the ability to create a new work order
 
 ## Building the UI
 ### Creating the Form Component
-Add another file to the `components/workorders` folder called `CreateWorkOrder.js` with the following code:
+Add another file to the `components/workorders` folder called `CreateWorkOrder.jsx` with the following code:
 ``` javascript
 import { useEffect, useState } from "react";
 import { getBikes } from "../../managers/bikeManager";
@@ -74,7 +74,7 @@ export default function CreateWorkOrder({ loggedInUser }) {
 - This component logs the form data to the console rather than submitting it to the database. we'll add the logic for submitting to the API later. 
 
 ### Routing
-Replace the `workorders` route in `ApplicationViews.js` with these routes:
+Replace the `workorders` route in `ApplicationViews.jsx` with these routes:
 ``` jsx
 <Route path="workorders">
     <Route
@@ -98,7 +98,7 @@ Replace the `workorders` route in `ApplicationViews.js` with these routes:
 - The Route group create two routes for `workorders`. The route marked `index` will match to `workorders` with no extra url segments. The create route will match `/workorders/create`. 
 
 Let's add a link to the form in the list component:
->WorkOrderList.js
+>WorkOrderList.jsx
 ``` javascript
 <h2>Open Work Orders</h2>
 <Link to="/workorders/create">New Work Order</Link>
@@ -137,7 +137,7 @@ export const createWorkOrder = (workOrder) => {
 ```
 
 Finally, use that API access function in the `CreateWorkOrder` component:
-> CreateWorkOrder.js
+> CreateWorkOrder.jsx
 ``` javascript
 const navigate = useNavigate();
 

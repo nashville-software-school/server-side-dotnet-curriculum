@@ -130,7 +130,7 @@ The following files and modules contain the code related to auth:
 1. `AuthController.cs`
 1. `Program.cs`
 1. `authManager.js`
-1. `AuthorizedRoute.js`
+1. `AuthorizedRoute.jsx`
 
 You are _not responsible_ for the auth-related code in those modules, but you are expected to be able to _use_ them properly. In this book you will see multiple examples of how to do so, but you do not need to know _how the code works_, as it is outside the scope of the course.
 

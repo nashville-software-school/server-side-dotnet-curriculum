@@ -12,7 +12,7 @@ Fair question. For web development, server has two meanings which are relevant t
 
  You have already been using and interacting with a number of web servers in the client-side part of the course:
  1. You might not be surprised to find out that `serve` is an application that runs a web server. When it starts, it will look for content in whatever directory you supplied when you start the application.  
- 1. When you run `npm start`, the webpack development server listens for requests to `localhost:3000` and returns all of the javascript needed to run your React app in the browser. 
+ 1. When you run `npm run dev`, the vite development server listens for requests to `localhost:5173` and returns all of the javascript needed to run your React app in the browser. 
  1. `json-server` is a program that listens for network requests and tries to map the url of the network request to data in a provided json file. We are going to talk a lot more about this idea of mapping routes (urls) to data resources later in the course. 
 
 ### The Request/Response Cycle
