@@ -29,9 +29,10 @@ dotnet add package Automapper
 ```
 dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
 ```
-2. Create Automapper Profiles and configure
+2. Create Automapper Profiles and configure.
 
-  *Create AutoMapperProfiles.cs class
+    * Create AutoMapperProfiles.cs class
+
 ```csharp
 using System.Runtime.CompilerServices;
 using AutoMapper;
@@ -58,7 +59,7 @@ public class AutoMapperProfiles : Profile
 ```
 3.Register Automapper *Dependency Injection* in program.cs
 
-* 
+    * add using statement for automapper
 ```csharp
 using AutoMapper;
 
@@ -67,7 +68,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 ```
 
 4. Inject mapper into minimal API Endpoints and use Automapper.QueryableExtensions to map from the model to the DTO.
-* The automapper.queryableextensions library gives us access to the ProjectTo<T> extension method so that we can map 
+    * The automapper.queryableextensions library gives us access to the ProjectTo<T> extension method so that we can map 
 ```csharp
 using AutoMapper.QueryableExtensions;
 
@@ -90,4 +91,5 @@ app.MapGet("/patrons", async (LoncotesLibraryDbContext db, IMapper mapper) =>
 ```
 
 5. Perform mapping on the remaining api endpoints that call for it
+
 6. Test Your API
