@@ -21,8 +21,10 @@ Yes, there can be a performance impact when using Automapper for mapping between
 
 It's worth noting that the performance impact might not be significant for smaller projects or when the mapping operations are not performed frequently. However, for larger projects or high-throughput scenarios, the impact could become noticeable. In such cases, it's recommended to measure the performance costs and optimize the usage of AutoMapper accordingly
 
+>Please take a look at the documentation for Automapper[^1]. and QueryableExtensions [^2].
+
 ## Setup
-1. Install AutoMapper using 
+1. Install AutoMapper 
 ```
 dotnet add package Automapper
 ```
@@ -93,3 +95,6 @@ app.MapGet("/patrons", async (LoncotesLibraryDbContext db, IMapper mapper) =>
 5. Perform mapping on the remaining api endpoints that call for it
 
 6. Test Your API
+
+[^1]: https://docs.automapper.org/en/
+[^2]: https://docs.automapper.org/en/stable/Queryable-Extensions.html
