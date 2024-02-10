@@ -3,12 +3,12 @@
 > Automapper > Manually Mapping from Model to DTO?
 
 ### Why use automapper?
-By using Automapper, developers can avoid writing boilerplate mapping code, reduce errors from manual mapping, and make the codebase cleaner and easier to understand. It's important to note that Automapper should not be used to perform business logic and should only be responsible for mapping data between objects
+By using Automapper, developers can avoid writing boilerplate mapping code, reduce errors from manual mapping, and make the codebase cleaner and easier to understand. It's important to note that Automapper should not be used to perform business logic and should only be responsible for mapping data between objects.
 
 ### How does automapper work?
-Automapper operates based on conventions and reflection to map properties between objects without requiring extensive configuration. It can automatically match properties with similar names and types, and it can flatten complex object models into simpler DTOs. This means that if you have a domain model with associations to other entities, AutoMapper can map this to a DTO with properties that combine the associated entity's properties
+Automapper operates based on conventions and reflection to map properties between objects without requiring extensive configuration. It can automatically match properties with similar names and types, and it can flatten complex object models into simpler DTOs. This means that if you have a domain model with associations to other entities, AutoMapper can map this to a DTO with properties that combine the associated entity's properties.
 
-To use Automapper, you would typically define mappings in a configuration file, often during the application startup. These mappings tell Automapper how to convert from one type to another. Once configured, you can use the IMapper interface to perform the actual mapping within your application layers, such as controllers in a Web API project. This involves calling the Map method with the source object and the desired target type, which returns a new instance of the target type with properties copied over from the source
+To use Automapper, you would typically define mappings in a configuration file, often during the application startup. These mappings tell Automapper how to convert from one type to another. Once configured, you can use the IMapper interface to perform the actual mapping within your application layers, such as controllers in a Web API project. This involves calling the Map method with the source object and the desired target type, which returns a new instance of the target type with properties copied over from the source.
 
 ### Performance Impact
 Yes, there can be a performance impact when using Automapper for mapping between models and DTOs. AutoMapper uses *<b>reflection</b>*, which inherently adds overhead to the process of mapping because reflection operations are generally slower compared to direct assignments.
@@ -17,11 +17,11 @@ Yes, there can be a performance impact when using Automapper for mapping between
 
 ##### Initial Setup: Configuring AutoMapper, especially during application startup, can introduce a slight delay. This is because the mapping configurations are being established, which includes creating mapping profiles and setting up rules for property matching.
 
-##### Runtime Processing: When the mapping occurs during the execution of the application, the performance cost is also present. Complex mappings, including those involving nested objects or conditional logic, can slow down the mapping process. This is where keeping the mappings as simple and straightforward as possible is beneficial 25.
+##### Runtime Processing: When the mapping occurs during the execution of the application, the performance cost is also present. Complex mappings, including those involving nested objects or conditional logic, can slow down the mapping process. This is where keeping the mappings as simple and straightforward as possible is beneficial .
 
 It's worth noting that the performance impact might not be significant for smaller projects or when the mapping operations are not performed frequently. However, for larger projects or high-throughput scenarios, the impact could become noticeable. In such cases, it's recommended to measure the performance costs and optimize the usage of AutoMapper accordingly
 
->Please take a look at the documentation for Automapper[^1]. and QueryableExtensions [^2].
+>Please take a look at the documentation for Automapper[^1] and QueryableExtensions [^2].
 
 ## Setup
 1. Install AutoMapper 
