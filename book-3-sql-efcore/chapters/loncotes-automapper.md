@@ -1,100 +1,125 @@
- Mapping from Model to DTO with Automapper
- ===============================================
-> Automapper > Manually Mapping from Model to DTO?
+ # Mapping from Model to DTO with Automapper
 
-### Why use automapper?
-By using Automapper, developers can avoid writing boilerplate mapping code, reduce errors from manual mapping, and make the codebase cleaner and easier to understand. It's important to note that Automapper should not be used to perform business logic and should only be responsible for mapping data between objects.
 
-### How does automapper work?
-Automapper operates based on conventions and reflection to map properties between objects without requiring extensive configuration. It can automatically match properties with similar names and types, and it can flatten complex object models into simpler DTOs. This means that if you have a domain model with associations to other entities, AutoMapper can map this to a DTO with properties that combine the associated entity's properties.
+### Why use AutoMapper?
+After finishing the projects in this book and Book 2, you will have noticed that the use of DTO classes has significantly increased the amount of code you need to write for each endpoint. You will also have noticed that much of this code is repetitive and tedious to write.
 
-To use Automapper, you would typically define mappings in a configuration file, often during the application startup. These mappings tell Automapper how to convert from one type to another. Once configured, you can use the IMapper interface to perform the actual mapping within your application layers, such as controllers in a Web API project. This involves calling the Map method with the source object and the desired target type, which returns a new instance of the target type with properties copied over from the source.
+What do we do when we have tedious, repetitive code? Make it DRYer! How do we do that? We write reusable code that can be used everywhere that we need to create DTO objects. 
 
-### Performance Impact
-Yes, there can be a performance impact when using Automapper for mapping between models and DTOs. AutoMapper uses *<b>reflection</b>*, which inherently adds overhead to the process of mapping because reflection operations are generally slower compared to direct assignments.
+What would this reusable code need to do? It would need to take an object of one type and convert that object to another type. Using Loncotes County Library as an example, if we have an instance of `Material`, we want to be able to turn its data into an instance of `MaterialDto`. If we have an instance of `Genre`, we want to turn it into a `GenreDto`. Aside from the fact that `Material` and `Genre` have different properties, the process is exactly the same (you know this, because you have written a lot of endpoints that map instances of a model class to instances of a DTO class).  
 
-#### The performance cost can manifest itself in two main areas:
+What if we had code that could be told which classes map to which other classes? What if it had methods that would take an object of one type as an input along with a target type, and return a new object of the target type with the data from the input object?
 
-##### Initial Setup: Configuring AutoMapper, especially during application startup, can introduce a slight delay. This is because the mapping configurations are being established, which includes creating mapping profiles and setting up rules for property matching.
-
-##### Runtime Processing: When the mapping occurs during the execution of the application, the performance cost is also present. Complex mappings, including those involving nested objects or conditional logic, can slow down the mapping process. This is where keeping the mappings as simple and straightforward as possible is beneficial .
-
-It's worth noting that the performance impact might not be significant for smaller projects or when the mapping operations are not performed frequently. However, for larger projects or high-throughput scenarios, the impact could become noticeable. In such cases, it's recommended to measure the performance costs and optimize the usage of AutoMapper accordingly
-
->Please take a look at the documentation for Automapper[^1] and QueryableExtensions [^2].
-
-## Setup
-1. Install AutoMapper 
-```
-dotnet add package Automapper
-```
-```
-dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
-```
-2. Create Automapper Profiles and configure.
-
-    * Create AutoMapperProfiles.cs class
-
-```csharp
-using System.Runtime.CompilerServices;
-using AutoMapper;
-
-public class AutoMapperProfiles : Profile
+Here is some pseudo-code of the above to help you understand the goal (this is not compilable C# code):
+``` csharp
+public targetType Map<targetType, inputType>(inputType inputObject)
 {
-    public AutoMapperProfiles()
+    // create a new instance of the target type
+    targetType newObject = new targetType();
+    // get the input object's properties
+    var properties = GetObjectProperties(inputObj);
+    // set each of the new object's properties with the values from the input object
+    for (var property of properties)
     {
-
-        CreateMap<Material, MaterialDTO>();
-        CreateMap<MaterialDTO, Material>();
-        CreateMap<MaterialType, MaterialTypeDTO>();
-        CreateMap<MaterialTypeDTO, MaterialType>();
-        CreateMap<Genre, GenreDTO>();
-        CreateMap<GenreDTO, Genre>();
-        CreateMap<Patron, PatronDTO>();
-        CreateMap<PatronDTO, Patron>();
-        CreateMap<Checkout, CheckoutDTO>();
-        CreateMap<CheckoutDTO, Checkout>();
-        CreateMap<Checkout, CheckoutWithLateFeeDTO>();
-        CreateMap<CheckoutWithLateFeeDTO, Checkout>();
-    }
+        newObject.SetProperty(property.Name, property.Value);
+    } 
+    //return the new object with all of the property values from the old object
+    return newObject;
 }
 ```
-3.Register Automapper *Dependency Injection* in program.cs
 
-    * add using statement for automapper
-```csharp
-using AutoMapper;
-
-//Configure AutoMapper
-builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+Here's an example of our theoretical `Map` method in use:
+``` csharp
+MaterialDto material = Map<MaterialDto, Material>(inputMaterialObject);
 ```
 
-4. Inject mapper into minimal API Endpoints and use Automapper.QueryableExtensions to map from the model to the DTO.
-    * The automapper.queryableextensions library gives us access to the ProjectTo<T> extension method so that we can map 
-```csharp
-using AutoMapper.QueryableExtensions;
+We could implement code to do this on our own. But someone else already did, when they wrote `AutoMapper`! The rest of this chapter is a demo on implementing AutoMapper in Loncotes County Library.
 
-app.MapGet("/materialtypes", async (LoncotesLibraryDbContext db, IMapper mapper) =>
-{
-    return await db.MaterialTypes.ProjectTo<MaterialDTO>(mapper.ConfigurationProvider).ToListAsync();
-});
+## Setup
+1. Install AutoMapper (run this command in the same directory as the `csproj` file for Loncotes County Library)
+    ```
+    dotnet add package AutoMapper
+    ```
+1. Create AutoMapper Profiles and configure.
 
-// //Get Genres
-app.MapGet("/genres", async (LoncotesLibraryDbContext db, IMapper mapper) =>
-{
-    return await db.Genres.ProjectTo<GenreDTO>(mapper.ConfigurationProvider).ToListAsync();
-});
+   - This class tells AutoMapper which classes correspond to which other classes. If the property names match for the classes in question, this is all the configuration you need! It should be noted that you can configure these mappings more specifically.
+   
 
-// //Get Patrons
-app.MapGet("/patrons", async (LoncotesLibraryDbContext db, IMapper mapper) =>
+    ```csharp
+    using AutoMapper;
+
+    public class AutoMapperProfiles : Profile
+    {
+        public AutoMapperProfiles()
+        {
+
+            CreateMap<Material, MaterialDTO>();
+            CreateMap<MaterialDTO, Material>();
+            CreateMap<MaterialType, MaterialTypeDTO>();
+            CreateMap<MaterialTypeDTO, MaterialType>();
+            CreateMap<Genre, GenreDTO>();
+            CreateMap<GenreDTO, Genre>();
+            CreateMap<Patron, PatronDTO>();
+            CreateMap<PatronDTO, Patron>();
+            CreateMap<Checkout, CheckoutDTO>();
+            CreateMap<CheckoutDTO, Checkout>();
+            CreateMap<Checkout, CheckoutWithLateFeeDTO>();
+            CreateMap<CheckoutWithLateFeeDTO, Checkout>();
+        }
+    }
+    ```
+1. Register AutoMapper using _dependency injection_ in Program.cs
+
+    ```csharp
+    using AutoMapper;
+
+    //Configure AutoMapper
+    builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+    ```
+
+1. Inject the mapper into  the minimal API endpoints and use Automapper QueryableExtensions to map from the model to the DTO.
+    * The AutoMapper.QueryableExtensions library gives us access to the `ProjectTo<T>` extension method so that we can map an object to the target type `T` as part of our Linq query.
+    ```csharp
+    using AutoMapper.QueryableExtensions;
+
+    app.MapGet("/materialtypes", (LoncotesLibraryDbContext db, IMapper mapper) =>
+    {
+        return db.MaterialTypes.ProjectTo<MaterialDTO>(mapper.ConfigurationProvider).ToList();
+    });
+
+    // //Get Genres
+    app.MapGet("/genres", (LoncotesLibraryDbContext db, IMapper mapper) =>
+    {
+        return db.Genres.ProjectTo<GenreDTO>(mapper.ConfigurationProvider).ToList();
+    });
+
+    //Get Patrons
+    app.MapGet("/patrons", (LoncotesLibraryDbContext db, IMapper mapper) =>
+    {
+        return db.Patrons.ProjectTo<PatronDTO>(mapper.ConfigurationProvider).ToList();
+    });
+    ```
+
+1. Test these three endpoints to make sure that they work.
+
+## Getting Single Items and Related Data
+Replace the endpoint to get a single material with the following code:
+``` csharp
+app.MapGet("/api/materials/{id}", (IMapper mapper, LoncotesLibraryDbContext db, int id) =>
 {
-    return await db.Patrons.ProjectTo<PatronDTO>(mapper.ConfigurationProvider).ToListAsync();
+    var material = db.Materials
+    .ProjectTo<MaterialDto>(mapper.ConfigurationProvider)
+    .SingleOrDefault(m => m.Id == id);
+
+    return material != null ? Results.Ok(material) : Results.NotFound();
 });
 ```
+Test the endpoint out and examine the data in the response. Notice that the material data includes the materialType, genre, and checkout data even though this code does not use `Include` to join the data. This is because, by default, `ProjectTo` will try to populate any properties present in the target class (in this case, `MaterialDto`). This means that practically speaking, if you have properties that you want to _exclude_ for a certain query, one of the easiest ways to do that is to create another DTO with exactly the properties that you want that endpoint to return. Often this will mean that you might have up to as many DTO classes as GET endpoints in your application (and that's fine!).
 
-5. Perform mapping on the remaining api endpoints that call for it
+Second, notice that `ProjectTo` comes before `SingleOrDefault` in the method chain. This is because `SingleOrDefault` returns a `Material` instance, which doesn't have access to the `ProjectTo` method.
 
-6. Test Your API
+Try using AutoMapper for the rest of the GET endpoints in Loncotes County Library! 
 
-[^1]: https://docs.automapper.org/en/
-[^2]: https://docs.automapper.org/en/stable/Queryable-Extensions.html
+## 🔍 Additional Materials
+1. [AutoMapper docs](https://docs.automapper.org/en/)
+1. [Queryable Extensions](https://docs.automapper.org/en/stable/Queryable-Extensions.html)
