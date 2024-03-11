@@ -45,6 +45,7 @@ Because of the large scope of this book, it is split into three parts, roughly c
 ## 🔍 Additional Materials
 |:compass: Explorer Chapters|
 |-|
+| :book: [Automapper to Map Models to DTO's](./chapters/loncotes-automapper.md) |
 |🍯 💻 [Handling Related Data On Delete](./chapters/honey-raes-cascade-delete.md) |
 |🍯 💻 [Finishing Honey Rae's with Npgsql](./chapters/honey-raes-complete.md) |
 |🍯 💻 [Organize Data Access with Repositories](./chapters/honey-raes-repositories.md) |
