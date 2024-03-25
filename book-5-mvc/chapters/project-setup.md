@@ -4,31 +4,17 @@ In this chapter you'll create a new MVC project to start the Nashville dog walki
 
 ## Getting Started
 1. Create a new MVC project <br/>
-    - ```dotnet mvc -o DogGo```
-1. Build the project to ensure everything was scaffolded properly
+    - ```dotnet new mvc -o DogGo```
+1. Use `cd` to navigate to the `DogGo` directory that was created. Build the project to ensure everything was scaffolded properly
     - ```dotnet build```
 1. Trust the HTTPS development certificate by running the following command:
     - ```dotnet dev-certs https --trust```
     - Select Yes to agree to trust the HTTPS certificate
 1. Open your new MVC project in VS Code
-    - ```code DogGo```
 
     Take a look around at the project files that come out of the box with a new ASP.NET MVC project. It already has folders for Models, Views, and Controllers. It has a `wwwroot` folder which contains some static assets like javascript and css files.
 
-1. Launch the App without debugging by selecting Ctrl+F5
-    - Visual Studio Code:
-        - Starts Kestrel
-        - Launches a browser
-        - Navigats to https://localhost:<port#>
-    - Launching the app without debugging by selecting Ctrl+F5 allows you to:
-        - Make code changes
-        - Save the file
-        - Quickly refresh the browser and see the code changes
-
-
-
-
-
+1. Launch the App with the debugger. If you see a welcome landing page, the template is set up correctly.
 
 ## Configuration
 You will need a connection string in order to create and modify your postgres database.  Let's do that now.
@@ -125,9 +111,9 @@ namespace DogGo.Models
 ```
 
 ## Create DbContext class
-- Create a new class in the main directory of the project called `DogGoDbContext.cs`, at this point you should be familiar with the DbContext class. I challenge you to create a new DbContext given the classes provided above. Make sure that your class inherites from `DbContext`
+- Create a new class in the main directory of the project called `DogGoDbContext.cs`, at this point you should be familiar with the DbContext class. Create a new DbContext given the classes provided above. Make sure that your class inherites from `DbContext`
 
-- Seed the Database by copy pastaing the code below into your DbContext class\
+- Seed the Database by copy pasting the code below into your DbContext class
 ```csharp
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -212,7 +198,7 @@ namespace DogGo.Models
 ```
 
 
-## CONFIGURE APP TO USE EF CORE
+## Configure the App to use EF Core
 1. Open the program.cs file in VS Code
     - Add the following Using Statements:
     ```csharp

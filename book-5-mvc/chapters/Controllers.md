@@ -2,7 +2,7 @@
 
 ## Controller
 
-We can use the dotnet-aspnet-codegenerator to scaffold us the skeleton of a controller. Give it the name `WalkersController`
+We can use the dotnet-aspnet-codegenerator to scaffold the skeleton of a controller. Give it the name `WalkersController`
 
 1. 
     ```
