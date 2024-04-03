@@ -21,15 +21,13 @@ This code will get all the walkers in the Walker table, convert it to a List and
 ### Viewing the list of walkers
 
 Go to the `Index` Method of your `WalkersController`, Add in the appropriate EF Core methods where needed to get a collection of all walkers, and pass it off to the view. 
-    -
-    - Razor Pages can be individually scaffolded by specifying the name of the new page and the template to use. i.e. ```
-        dotnet aspnet-codegenerator view Walker Index List -outDir Views/Walkers
-        ```. The supported templates are:
+   - Razor Pages can be individually scaffolded by specifying the name of the new page and the template to use. i.e. ` dotnet aspnet-codegenerator view Walker Index List -outDir Views/Walkers`. 
+   - The supported templates are:
         - Empty, Create, Edit, Delete, Details, List
 
-    - The generated view creates an html table and iterates over each walker in the list and creates a new row for each one.
+   - The generated view creates an html table and iterates over each walker in the list and creates a new row for each one.
 
-#### Razor Templates
+### Razor Templates
 
 You'll notice a couple things about the code in the view. For one, it's not in an html file--it's in a cshtml file. This is called a _razor template_. With razor we can write a mix of C# and html code. It's similar to JSX in that it can dynamically create html. Once data gets passed into the view, the razor engine will convert it to an html page that can be returned to the browser. Here's an example of what razor code might look like
 
@@ -37,7 +35,7 @@ You'll notice a couple things about the code in the view. For one, it's not in a
 <h1>@Model.Name</h1>
 ```
 
-And here is what the dynamically outputted html might look like
+And here is what the dynamically-created html might look like:
 
 ```html
 <h1>Mo Silvera<h1>
