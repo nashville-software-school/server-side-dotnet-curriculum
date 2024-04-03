@@ -12,7 +12,7 @@ We can use the dotnet-aspnet-codegenerator to scaffold the skeleton of a control
 
 dotnet-aspnet-codegenerator kindly just created a whole bunch of code for us.
 
-when you use the dotnet-aspnet-codegenerator tool to create a new MVC controller, it will also generate all CRUD (Create, Read, Update, Delete) actions in the controller by default. Moreover, it will also generate the associated views for each of these actions. This process is also known as scaffolding.
+When you use the dotnet-aspnet-codegenerator tool to create a new MVC controller, it will also generate all CRUD (Create, Read, Update, Delete) actions in the controller by default. Moreover, it will also generate the associated views for each of these actions. This process is also known as scaffolding.
 
 Specifically, the generated controller will include the following methods:
 

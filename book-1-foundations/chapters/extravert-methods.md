@@ -43,7 +43,6 @@ string result = AddingMachine(4, 5);
 ```
 and: 
 ```csharp
-```csharp
 int AddingMachine(int firstNumber, int secondNumber)
 {
     int result = firstNumber + secondNumber;
@@ -78,4 +77,4 @@ Instructions:
 1. Refactor it so that it returns a string in the same format you are already using in the app. Notice that `plant` has the type of `Plant`, so you can use dot notation to access any of the plant's properties you might need.
 1. Use this method everywhere in your app where you were using this format before. Now your code is DRY-er (Don't Repeat Yourself), because you created a method to remove duplicated logic.
 
-Up Next: [Reduction & Absurdum](./red-and-abe-requirements.md)
+Up Next: [Reductio & Absurdum](./red-and-abe-requirements.md)

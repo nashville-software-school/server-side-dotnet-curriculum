@@ -12,8 +12,7 @@ In this chapter you'll create a new MVC project to start the Nashville dog walki
     - Select Yes to agree to trust the HTTPS certificate
 1. Open your new MVC project in VS Code
 
-    Take a look around at the project files that come out of the box with a new ASP.NET MVC project. It already has folders for Models, Views, and Controllers. It has a `wwwroot` folder which contains some static assets like javascript and css files.
-
+    Take a look around at the project files that come out of the box with a new ASP.NET MVC project. It already has folders for Models, Views, and Controllers. It has a `wwwroot` folder which contains some static assets like javascript and css files. This is similar to the `public` folder in the front-end React projects you are already familiar with
 1. Launch the App with the debugger. If you see a welcome landing page, the template is set up correctly.
 
 ## Configuration
@@ -26,7 +25,7 @@ You will need a connection string in order to create and modify your postgres da
 
 ## Install the necessary tools
 
-1. Neither VS Code or the .NET CLI support scaffolding directly. Therefore, you need to install the dotnet-aspnet-codegenerator tool, which provides scaffolding capabilities. You can install it using the following commands in your terminal:
+1. One advantage of using MVC for starting a new project is that there are tools that let you scaffold starter code for the view files for your project. You need to install the dotnet-aspnet-codegenerator tool, which provides scaffolding capabilities. You can install it using the following commands in your terminal:
 
     - ```dotnet tool uninstall --global dotnet-aspnet-codegenerator```
     - ```dotnet tool install --global dotnet-aspnet-codegenerator --version 8.0```
@@ -47,7 +46,7 @@ You will need a connection string in order to create and modify your postgres da
 
 ## Models
 
-Create a `Neighborhood.cs`, `Walker.cs`, `Owner.cs`, `Dog.cs` file in the Models folder and add the following code
+Create a `Neighborhood.cs`, `Walker.cs`, `Owner.cs`, `Dog.cs` file in the Models folder and add the following code.
 
 > Neighborhood.cs
 ```csharp
@@ -106,6 +105,22 @@ namespace DogGo.Models
         public string Notes { get; set; }
         public string ImageUrl { get; set; }
         public Owner DogOwner { get; set; }
+    }
+}
+```
+
+> Walk.cs
+``` csharp
+namespace DogGo.Models
+{
+    public class Walk
+    {
+        public int Id { get; set; }
+        public int DogId { get; set; }
+        public Dog Dog { get; set; }
+        public int WalkerId {get; set; }
+        public Walker Walker { get; set;}
+        public int Duration { get; set; }
     }
 }
 ```
