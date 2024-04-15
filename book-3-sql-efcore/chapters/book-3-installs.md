@@ -12,5 +12,5 @@ In this chapter you will install two important applications, the PostgreSQL serv
 
 Run this command in your terminal:
 ``` bash
-dotnet tool install --global dotnet-ef -v 8.0
+dotnet tool install --global dotnet-ef --framework net8.0
 ```
