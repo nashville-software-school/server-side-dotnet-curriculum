@@ -16,7 +16,7 @@ MVC has its own syntax to do this with C# - it's called Razor syntax.
 |:-:|:-:|
 |1|[Project Setup](./chapters/project-setup.md)|
 |2|[Initial Migration](./chapters/initial-migration.md)|
-|3|[Controllers](./chapters/controllers.md)|
+|3|[Controllers](./chapters/Controllers.md)|
 |4|[Get All Walkers/Single Walker](./chapters/get-all-walkers.md) <br><sub style="font-size: 0.85rem;"></sub>|
 |5|[Get All Owners/Single Owner](./chapters/get-all-owners.md)|
 |6|[Adding and Updating Data with MVC](./chapters/adding-and-updating-data.md)
