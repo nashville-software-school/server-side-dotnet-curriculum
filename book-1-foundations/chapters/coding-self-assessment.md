@@ -6,6 +6,8 @@ In this self-assessment, you will be working on a console application named "Bra
 
 ## Instructions
 
+> 🧨 At any point during development, you can run the `dotnet test` command in your terminal to run the suite of tests for this program and see how you're doing.
+
 ### Create the Project
 1. Request the Github Classroom link for the assignment from your instructor.
 1. Clone your new repo that Github classroom created to your local computer and open it in VS Code.
@@ -52,6 +54,8 @@ To test whether these methods work, add logic to the program loop to call the ap
 
 1. `UpdateProduct`
 
+Now run `dotnet test` to see if the tests for this feature pass.
+
 ### Implement the `DisplayMenu` Method
 
 1. The DisplayMenu method should display the following options to the console:
@@ -64,16 +68,22 @@ To test whether these methods work, add logic to the program loop to call the ap
    5. Exit
    ```
 
+Now run `dotnet test` to see if the tests for this feature pass.
+
 ### Implement the DisplayAllProducts Method
 
 1. Iterate over the products and display each product's name and price on a new line in the console. Start the line with the number of that product in the `List` (have the list start with `1`, not `0`).
 1. Add the product type title to the product display. HINT: You will need to use a Linq method to get the product type for each product. 
+
+Now run `dotnet test` to see if the tests for this feature pass.
 
 ### Implement the DeleteProduct Method
 
 1. Display the products and prompt the user to enter the number of the product they want to delete.
 1. Remember that the list should start from `1`.
 1. Find the product with the provided number and remove it from the list of products.
+
+Now run `dotnet test` to see if the tests for this feature pass.
 
 ### Implement the AddProduct Method
 
@@ -82,6 +92,8 @@ To test whether these methods work, add logic to the program loop to call the ap
 1. Create a new instance of the Product class using the provided information.
 1. Add the newly created product to the list of products.
 
+Now run `dotnet test` to see if the tests for this feature pass.
+
 ### Implement the UpdateProduct Method
 
 1. Display the products and prompt the user to enter the number of the product they want to update.
@@ -89,3 +101,5 @@ To test whether these methods work, add logic to the program loop to call the ap
 1. Remember that the list should start from `1`.
 1. Prompt the user to enter the updated name, price and product type for the product (in that order). If the user presses enter without typing anything, leave the property unchanged. 
 1. Update the product's properties with the provided information.
+
+Now run `dotnet test` to see if the tests for this feature pass.

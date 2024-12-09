@@ -42,6 +42,12 @@ Because of the large scope of this book, it is split into three parts, roughly c
 |9| [Calculating fees](./chapters/creek-river-calculated.md) <br><sub style="font-size: 0.85rem;">#field #static #private</sub>|[Loncotes Client App](./chapters/loncotes-client.md)||
 |10|:car:[Inheritance](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/INHERITANCE_INTRO.md)|:tv:[Advanced Linq: Nineties TV](https://github.com/nashville-software-school/bangazon-inc/blob/server-side-curriculum/book-1-orientation/chapters/LINQ_INTRO.md)|:convenience_store:[Coding Self-Assessment](./chapters/book-3-coding-assessment.md)|
 
+## Troubleshooting Entity Framework Issues
+
+| Issue | Resolution |
+|---|---|
+| Cannot apply migrations because of pending changes to DBContext | [Override OnConfiguring](./chapters/UPDATE_DBCONTEXT.md) |
+
 ## 🔍 Additional Materials
 |:compass: Explorer Chapters|
 |-|
